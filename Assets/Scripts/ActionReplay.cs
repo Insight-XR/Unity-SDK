@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ActionReplay : MonoBehaviour
 {
@@ -14,10 +17,15 @@ public class ActionReplay : MonoBehaviour
     private float                                       indexChangeRate;
     private bool                                        isInReplayMode;
     private bool                                        canShot;
+
+    public TMP_Text status;
+    public XRController left;
     private void Start(){
         rigidbody = GetComponent<Rigidbody>();
         ShotEventChannel.NetworkCallbackRequested           += ProceedDataCollection;
         DataDistributionChannel.DistributionRequestEvent    += CollectDataFromSaveFile;
+
+        status = GameObject.Find("Status").GetComponent<TMP_Text>();
     }
     private void OnDisable() { 
         ShotEventChannel.NetworkCallbackRequested           -= ProceedDataCollection;
@@ -46,6 +54,8 @@ public class ActionReplay : MonoBehaviour
             SetTransform(isInReplayMode ? 0 : actionReplayRecords.Count - 1);
             rigidbody.isKinematic = isInReplayMode;
             DataCollectionChannel.RaiseEvent(gameObject.GetInstanceID().ToString(), actionReplayRecords);
+            
+            
         }
         if(Input.GetKeyDown(KeyCode.S)){
             SetTransform(0);

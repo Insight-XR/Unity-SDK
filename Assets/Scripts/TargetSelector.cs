@@ -27,4 +27,12 @@ public class TargetSelector : MonoBehaviour
             ShotEventChannel.RaiseEvent(true);
         }
     }
+
+    public void Shoot(Vector3 position)
+    {
+        Vector3 distanceToTarget = position - transform.position;
+        Vector3 forceDirection   = distanceToTarget.normalized;
+
+        rigidbody.AddForce(forceDirection * forceSize, ForceMode.Impulse);
+    }
 }

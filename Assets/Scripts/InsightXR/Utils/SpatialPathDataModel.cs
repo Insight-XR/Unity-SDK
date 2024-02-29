@@ -32,5 +32,22 @@ namespace InsightXR.Utils
             };
             return transformRotation;
         }
+
+        /*
+        Utils helper funtion for debugging
+        Will discuss on this if needed to ship.
+        */
+
+        public void Print(){
+            print(
+                " posX " + posX
+              + " posY " + posY
+              + " posZ " + posZ
+              + " rotx " + rotx
+              + " roty " + roty
+              + " rotz " + rotz
+              + " rotw " + rotw
+            );
+        }
     }
 }

@@ -18,5 +18,4 @@ public class ComponentDataDistributionChannel : ScriptableObject
             Debug.LogWarning("A internal event channel is broadcasted, no one picked up");
         }
     }
-
 }

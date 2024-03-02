@@ -130,6 +130,8 @@ GameObject:
   m_Component:
   - component: {fileID: 109615452}
   - component: {fileID: 109615451}
+  - component: {fileID: 109615453}
+  - component: {fileID: 109615454}
   m_Layer: 0
   m_Name: DataHandleLayer
   m_TagString: Untagged
@@ -144,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109615450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e1078c803acf4782889879de0522cb4, type: 3}
   m_Name: 
@@ -166,6 +168,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109615453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109615450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97c832a0bc8469f821bc02a10930bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S3Region: ap-south-1
+  CognitoIdentityRegion: sa-east-1
+  IdentityPoolId: shivam
+--- !u!114 &109615454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109615450}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa7de8866404054591507da4f1293de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdentityPoolId: 
+  CognitoIdentityRegion: us-east-1
+  S3Region: us-east-1
+  S3BucketName: 
+  SampleFileName: 
+  GetBucketListButton: {fileID: 0}
+  PostBucketButton: {fileID: 0}
+  GetObjectsListButton: {fileID: 0}
+  DeleteObjectButton: {fileID: 0}
+  GetObjectButton: {fileID: 0}
+  ResultText: {fileID: 0}
 --- !u!1001 &432993707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_Name
       value: CarboardBox_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -273,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 0}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1 &606383817
 GameObject:
@@ -380,6 +425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarboardBox_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -475,6 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 0}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1 &937526347
 GameObject:
@@ -519,6 +569,10 @@ PrefabInstance:
     - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_Name
       value: CarboardBox_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1001 &1124260518
 PrefabInstance:
@@ -627,6 +682,10 @@ PrefabInstance:
     - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_Name
       value: CarboardBox_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -723,6 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 0}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1001 &1572195974
 PrefabInstance:
@@ -735,6 +795,10 @@ PrefabInstance:
     - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_Name
       value: CarboardBox_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 0}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1 &1610736591
 GameObject:
@@ -1042,6 +1107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarboardBox_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1192641458597302, guid: c350023b68bece943928351ad0df5c3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4333507836982010, guid: c350023b68bece943928351ad0df5c3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -1137,6 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 0}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

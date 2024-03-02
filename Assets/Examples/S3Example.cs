@@ -30,7 +30,7 @@ namespace AWSSDK.Examples
 {
     public class S3Example : MonoBehaviour
     {
-        public string IdentityPoolId = "";
+        public string IdentityPoolId = "ap-south-1:659eb33e-3579-45e7-b510-43228b10bb16";
         public string CognitoIdentityRegion = RegionEndpoint.USEast1.SystemName;
         private RegionEndpoint _CognitoIdentityRegion
         {

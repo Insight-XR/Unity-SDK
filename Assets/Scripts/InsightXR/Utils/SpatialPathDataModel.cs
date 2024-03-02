@@ -33,6 +33,9 @@ namespace InsightXR.Utils
             return transformRotation;
         }
 
+        public Vector3 GetPosition() => new(posX, posY, posZ);
+
+        public Quaternion GetQuaternion() => new(rotx, roty, rotz, rotw);
         /*
         Utils helper funtion for debugging
         Will discuss on this if needed to ship.

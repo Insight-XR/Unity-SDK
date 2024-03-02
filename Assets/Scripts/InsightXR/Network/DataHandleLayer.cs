@@ -1,5 +1,6 @@
 using UnityEngine;
 using InsightXR.Utils;
+using InsightXR.Channels;
 using System.Collections.Generic;
 
 namespace InsightXR.Core
@@ -8,6 +9,10 @@ namespace InsightXR.Core
     {
         [Header("Listening to")]
         [SerializeField] private ComponentDataDistributionChannel DataCollector;
+        [Space]
+        [Header("Broadcasting to")]
+        [SerializeField] private ComponentWeb3DataRecievingChannel DataDistributor;
+
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
@@ -18,7 +23,6 @@ namespace InsightXR.Core
 
 
         // This funtion will listen on the data coming in every frame.
-        // 
         private void SortAndStoreData(string gameObjectName, SpatialPathDataModel gameObjectData){
             if (UserInstanceData == null) UserInstanceData = new();
 
@@ -28,6 +32,8 @@ namespace InsightXR.Core
 
             UserInstanceData[gameObjectName].Add(gameObjectData);
         }
+
+
 
         /*
         * This is for debbuging this part of the code will not ship.

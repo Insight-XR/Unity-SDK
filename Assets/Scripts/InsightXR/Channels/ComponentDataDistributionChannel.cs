@@ -2,20 +2,23 @@ using UnityEngine;
 using InsightXR.Utils;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Events/XR Component Distribution Channel")]
-public class ComponentDataDistributionChannel : ScriptableObject
+namespace InsightXR.Channels
 {
-    public UnityAction<string, SpatialPathDataModel> CollectionRequestEvent;
-
-    public void RaiseEvent(string objectName, SpatialPathDataModel dataPoints)
+    [CreateAssetMenu(menuName = "Events/XR Component Distribution Channel")]
+    public class ComponentDataDistributionChannel : ScriptableObject
     {
-        if (!(CollectionRequestEvent == null))
+        public UnityAction<string, SpatialPathDataModel> CollectionRequestEvent;
+
+        public void RaiseEvent(string objectName, SpatialPathDataModel dataPoints)
         {
-            CollectionRequestEvent.Invoke(objectName, dataPoints);
-        }
-        else
-        {
-            Debug.LogWarning("A internal event channel is broadcasted, no one picked up");
+            if (!(CollectionRequestEvent == null))
+            {
+                CollectionRequestEvent.Invoke(objectName, dataPoints);
+            }
+            else
+            {
+                Debug.LogWarning("A internal event channel is broadcasted, no one picked up");
+            }
         }
     }
 }

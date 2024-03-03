@@ -28,9 +28,9 @@ namespace InsightXR.Core
         // }
         private void FixedUpdate() => DistributionChannel.RaiseEvent(name, new(transform.position, transform.rotation));
 
-        private void MoveObject(string name, SpatialPathDataModel setToPoint){
+        private void MoveObject(string name, ObjectData setToPoint){
             if(gameObject.name.Equals(name))
-                transform.SetPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetQuaternion());
+                transform.SetPositionAndRotation(setToPoint.ObjectPosition, setToPoint.ObjectRotation);
         }
     }
 }

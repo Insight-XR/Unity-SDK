@@ -1,9 +1,16 @@
+using System;
 using UnityEngine;
 using InsightXR.Utils;
 using InsightXR.Channels;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.UnityConverters;
+using Unity.VisualScripting;
+using UnityEngine.Rendering;
+using Object = UnityEngine.Object;
 
-namespace InsightXR.Core
+namespace InsightXR.Network
 {
     public class DataHandleLayer : MonoBehaviour
     {
@@ -16,14 +23,14 @@ namespace InsightXR.Core
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
-        private Dictionary<string, List<SpatialPathDataModel>> UserInstanceData;
+        private Dictionary<string, List<ObjectData>> UserInstanceData;
 
         private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
         private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
 
         // This funtion will listen on the data coming in every frame.
-        private void SortAndStoreData(string gameObjectName, SpatialPathDataModel gameObjectData){
+        private void SortAndStoreData(string gameObjectName, ObjectData gameObjectData){
             if (UserInstanceData == null) UserInstanceData = new();
 
             if(!UserInstanceData.ContainsKey(gameObjectName)){
@@ -31,6 +38,12 @@ namespace InsightXR.Core
             }
 
             UserInstanceData[gameObjectName].Add(gameObjectData);
+        }
+
+        public string GetObjectData()
+        {
+            //Return a string that is the Json Version of UserInstanceData
+            return "Json for the Dictionary";
         }
 
 
@@ -43,12 +56,69 @@ namespace InsightXR.Core
                 Debug.Log("testing the data ");
                 foreach(var i in UserInstanceData){
                     foreach(var k in i.Value){
-                        k.Print();
+                       Debug.Log(k.ObjectPosition);
                     }
                     Debug.Log(i.Key + " <= key || value => " + i.Value);
 
                 }
             }
         }
+        
+        public bool CheckForNullsInUserInstanceData( Dictionary<string, List<ObjectData>> UserInstanceData)
+        {
+            // Check if the dictionary itself is null
+            if (UserInstanceData == null)
+            {
+                Debug.LogError("UserInstanceData is null");
+                return true; // Found null
+            }
+
+            // Iterate through each key-value pair in the dictionary
+            foreach (var entry in UserInstanceData)
+            {
+                // Check if the list for this key is null
+                if (entry.Value == null)
+                {
+                    Debug.LogError($"List for key {entry.Key} is null");
+                    return true; // Found null
+                }
+
+                // Iterate through the list associated with this key
+                foreach (var objectData in entry.Value)
+                {
+                    Debug.Log(JsonConvert.SerializeObject(objectData));
+                    // Check if any ObjectData in the list is null
+                    if (objectData == null)
+                    {
+                        Debug.LogError($"Null ObjectData found in list for key {entry.Key}");
+                        Debug.Log(JsonConvert.SerializeObject(objectData) + "NULL VALUE");
+                        return true; // Found null
+                    }
+                    
+
+                    // Here you can also add checks for properties inside ObjectData if necessary
+                    // For example, checking if ObjectPosition or ObjectRotation is null (though these being structs typically means they can't be null)
+                }
+            }
+
+            // No nulls found
+            return false;
+        }
     }
+
+    [Serializable]
+    public class SingleObjectData
+    {
+        public string name;
+        public string move_records;
+    
+        public SingleObjectData(string n, List<ObjectData> movedata)
+        {
+            name = n;
+            Debug.Log(movedata);
+            move_records = JsonConvert.SerializeObject(movedata);
+        }
+    }
+    
+    
 }

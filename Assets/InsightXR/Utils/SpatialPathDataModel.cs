@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace InsightXR.Utils
 {
-    public class SpatialPathDataModel : MonoBehaviour
+    public class SpatialPathDataModel
     {
         private readonly float posX;
         private readonly float posY;
@@ -42,7 +43,7 @@ namespace InsightXR.Utils
         */
 
         public void Print(){
-            print(
+            Debug.Log(
                 " posX " + posX
               + " posY " + posY
               + " posZ " + posZ

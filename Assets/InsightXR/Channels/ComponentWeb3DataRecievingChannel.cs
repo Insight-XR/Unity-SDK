@@ -7,9 +7,9 @@ namespace InsightXR.Channels
     [CreateAssetMenu(menuName = "Event/ XR Component Web3 distribution")]
     public class ComponentWeb3DataRecievingChannel : ScriptableObject
     {
-        public UnityAction<string, SpatialPathDataModel> DistributionRequestEvent;
+        public UnityAction<string, ObjectData> DistributionRequestEvent;
 
-        public void RaiseEvent(string objectName, SpatialPathDataModel dataPoints){
+        public void RaiseEvent(string objectName, ObjectData dataPoints){
             if (!(DistributionRequestEvent == null))
             {
                 DistributionRequestEvent.Invoke(objectName, dataPoints);

@@ -32,14 +32,14 @@ public class NetworkUploader : MonoBehaviour
     {
         string fileName     = "tempFileTest"; // Set a meaningful filename
         string uploadThis   = "In the heart of an ancient forest, where the trees whispered secrets of old and the air carried tales of forgotten realms, there existed a peculiar clearing. This was not an ordinary clearing, but one that shimmered with an ethereal glow when the moon was full and high in the sky. It was said that this place held the power to bridge worlds";
-        // var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+        var stream = new FileStream(Application.persistentDataPath + "/Saves/Cameradata.json", FileMode.Open, FileAccess.Read, FileShare.Read);
 
         byte[] cata         = Encoding.UTF8.GetBytes(uploadThis);
         var uploadStream    = new MemoryStream(cata);
         var request         = new PutObjectRequest{
             BucketName      = AmazonS3.BUCKET_NAME,
             Key             = fileName,
-            InputStream     = uploadStream,
+            InputStream     = stream,
             CannedACL       = S3CannedACL.Private
         };
 

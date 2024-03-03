@@ -31,10 +31,10 @@ namespace InsightXR.Network
     }
 
     //This funtion takes up the file from a location and put it on configured s3 bucket.
-    public void UploadFileToServerAsync()
+    public void UploadFileToServerAsync(string data)
     {
-        string fileName     = "tempFileTest"; // Set a meaningful filename
-        string uploadThis   = "Dhruv Testing AWS";
+        string fileName     = "Replay Data"; // Set a meaningful filename
+        string uploadThis   = data;
         // var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
 
         byte[] cata         = Encoding.UTF8.GetBytes(uploadThis);

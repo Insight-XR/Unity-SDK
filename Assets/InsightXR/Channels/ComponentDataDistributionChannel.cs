@@ -7,9 +7,9 @@ namespace InsightXR.Channels
     [CreateAssetMenu(menuName = "Events/XR Component Distribution Channel")]
     public class ComponentDataDistributionChannel : ScriptableObject
     {
-        public UnityAction<string, SpatialPathDataModel> CollectionRequestEvent;
+        public UnityAction<string, ObjectData> CollectionRequestEvent;
 
-        public void RaiseEvent(string objectName, SpatialPathDataModel dataPoints)
+        public void RaiseEvent(string objectName, ObjectData dataPoints)
         {
             if (!(CollectionRequestEvent == null))
             {

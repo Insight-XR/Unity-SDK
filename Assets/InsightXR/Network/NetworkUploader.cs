@@ -6,8 +6,11 @@ using System.Text;
 using Amazon.Runtime;
 using Amazon.S3.Model;
 using Amazon.CognitoIdentity;
+using Unity.VisualScripting;
 
-public class NetworkUploader : MonoBehaviour
+namespace InsightXR.Network
+{
+    public class NetworkUploader : MonoBehaviour
 {
     public static AmazonS3Client s3Client;
     private AWSCredentials awsCredentials;
@@ -24,14 +27,14 @@ public class NetworkUploader : MonoBehaviour
 
         awsCredentials  = new CognitoAWSCredentials(IdentityPoolId, RegionEndpoint.APSouth1);
         s3Client        = new AmazonS3Client(awsCredentials, RegionEndpoint.APSouth1);
-        UploadFileToServerAsync();
+        // UploadFileToServerAsync();
     }
 
     //This funtion takes up the file from a location and put it on configured s3 bucket.
     public void UploadFileToServerAsync()
     {
         string fileName     = "tempFileTest"; // Set a meaningful filename
-        string uploadThis   = "In the heart of an ancient forest, where the trees whispered secrets of old and the air carried tales of forgotten realms, there existed a peculiar clearing. This was not an ordinary clearing, but one that shimmered with an ethereal glow when the moon was full and high in the sky. It was said that this place held the power to bridge worlds";
+        string uploadThis   = "Dhruv Testing AWS";
         // var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
 
         byte[] cata         = Encoding.UTF8.GetBytes(uploadThis);
@@ -64,4 +67,5 @@ public class NetworkUploader : MonoBehaviour
     public void DownloadFileToServerAsync(){
 
     }
+}
 }

@@ -40,10 +40,10 @@ namespace InsightXR.Network
             UserInstanceData[gameObjectName].Add(gameObjectData);
         }
 
+        //Supposed to return Json string thats is serialized from the UserInstanceData
         public string GetObjectData()
         {
-            //Return a string that is the Json Version of UserInstanceData
-            return "Json for the Dictionary";
+            return JsonConvert.SerializeObject(UserInstanceData);
         }
 
 
@@ -64,7 +64,7 @@ namespace InsightXR.Network
             }
         }
         
-        public bool CheckForNullsInUserInstanceData( Dictionary<string, List<ObjectData>> UserInstanceData)
+        public bool CheckForNullsInUserInstanceData()
         {
             // Check if the dictionary itself is null
             if (UserInstanceData == null)
@@ -86,15 +86,12 @@ namespace InsightXR.Network
                 // Iterate through the list associated with this key
                 foreach (var objectData in entry.Value)
                 {
-                    Debug.Log(JsonConvert.SerializeObject(objectData));
                     // Check if any ObjectData in the list is null
                     if (objectData == null)
                     {
                         Debug.LogError($"Null ObjectData found in list for key {entry.Key}");
-                        Debug.Log(JsonConvert.SerializeObject(objectData) + "NULL VALUE");
                         return true; // Found null
                     }
-                    
 
                     // Here you can also add checks for properties inside ObjectData if necessary
                     // For example, checking if ObjectPosition or ObjectRotation is null (though these being structs typically means they can't be null)
@@ -105,20 +102,7 @@ namespace InsightXR.Network
             return false;
         }
     }
-
-    [Serializable]
-    public class SingleObjectData
-    {
-        public string name;
-        public string move_records;
     
-        public SingleObjectData(string n, List<ObjectData> movedata)
-        {
-            name = n;
-            Debug.Log(movedata);
-            move_records = JsonConvert.SerializeObject(movedata);
-        }
-    }
     
     
 }

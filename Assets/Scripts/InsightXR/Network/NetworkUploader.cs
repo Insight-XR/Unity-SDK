@@ -1,12 +1,11 @@
 using Amazon;
 using Amazon.S3;
-using Amazon.S3.Model;
 using UnityEngine;
-using Amazon.CognitoIdentity;
-using Amazon.Runtime;
 using System.IO;
 using System.Text;
-using UnityEditorInternal;
+using Amazon.Runtime;
+using Amazon.S3.Model;
+using Amazon.CognitoIdentity;
 
 public class NetworkUploader : MonoBehaviour
 {

@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 109615452}
   - component: {fileID: 109615451}
   - component: {fileID: 109615453}
-  - component: {fileID: 109615454}
   m_Layer: 0
   m_Name: DataHandleLayer
   m_TagString: Untagged
@@ -180,32 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d97c832a0bc8469f821bc02a10930bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  S3Region: ap-south-1
-  CognitoIdentityRegion: sa-east-1
-  IdentityPoolId: shivam
---- !u!114 &109615454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109615450}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa7de8866404054591507da4f1293de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IdentityPoolId: 
-  CognitoIdentityRegion: us-east-1
-  S3Region: us-east-1
-  S3BucketName: 
-  SampleFileName: 
-  GetBucketListButton: {fileID: 0}
-  PostBucketButton: {fileID: 0}
-  GetObjectsListButton: {fileID: 0}
-  DeleteObjectButton: {fileID: 0}
-  GetObjectButton: {fileID: 0}
-  ResultText: {fileID: 0}
 --- !u!1001 &432993707
 PrefabInstance:
   m_ObjectHideFlags: 0

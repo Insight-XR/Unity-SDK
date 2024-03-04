@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Mime;
 using System.Runtime.InteropServices;
 using InsightXR.Network;
@@ -29,10 +30,9 @@ namespace InsightXR.VR
         void Start()
         {
             
-            // GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback",
-            //     "https://gist.githubusercontent.com/DhruvInsight/302c34cde8532b1d1a86256d241b4d21/raw/8787613553b406677993fd98949c5f6aa8a47b85/save.json");
-            //StartCoroutine(LoadStreamingAsset());
-
+            //  GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
+            // Debug.Log("Check");
+             callback(File.ReadAllText(Application.dataPath+"/Saves/Save.json"));
             // MotionPackage loadedData =
             //     JsonConvert.DeserializeObject<MotionPackage>(
             //         File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
@@ -46,14 +46,6 @@ namespace InsightXR.VR
             // Debug.Log("Loaded Data");
             //
             // loaded = true;
-
-            path = Application.dataPath;
-            callback(File.ReadAllText(path + "/Saves/Save.json"));
-
-            foreach (var obj in GameObject.FindObjectsOfType<replayObject>())
-            {
-                obj.GetComponent<Rigidbody>().isKinematic = true;
-            }
         }
 
         // Update is called once per frame

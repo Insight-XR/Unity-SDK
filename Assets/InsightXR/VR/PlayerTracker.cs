@@ -100,7 +100,7 @@ public class PlayerTracker : MonoBehaviour
                 
                 Debug.Log(DATA.objectdata);
 
-                Objectcollect.gameObject.GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(DATA));
+                //Objectcollect.gameObject.GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(DATA));
             }
         }
 

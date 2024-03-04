@@ -30,9 +30,9 @@ namespace InsightXR.VR
         void Start()
         {
             
-            //  GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
+            GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
             // Debug.Log("Check");
-             callback(File.ReadAllText(Application.dataPath+"/Saves/Save.json"));
+             //callback(File.ReadAllText(Application.dataPath+"/Saves/Save.json"));
             // MotionPackage loadedData =
             //     JsonConvert.DeserializeObject<MotionPackage>(
             //         File.ReadAllText(Application.dataPath + "/Saves/Save.json"));

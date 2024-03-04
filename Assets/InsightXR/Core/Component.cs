@@ -26,7 +26,10 @@ namespace InsightXR.Core
         // private void OnEnable(){
         //     componentHistory = new();
         // }
-        private void FixedUpdate() => DistributionChannel.RaiseEvent(name, new(transform.position, transform.rotation));
+        private void FixedUpdate() {
+            
+            DistributionChannel.RaiseEvent(name, new(transform.position, transform.rotation));
+        } 
 
         private void MoveObject(string name, ObjectData setToPoint){
             if(gameObject.name.Equals(name))

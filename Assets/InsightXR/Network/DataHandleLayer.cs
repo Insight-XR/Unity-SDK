@@ -1,17 +1,15 @@
-using System;
 using UnityEngine;
-using InsightXR.Utils;
 using InsightXR.Channels;
 using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.UnityConverters;
-using Unity.VisualScripting;
-using UnityEngine.Rendering;
-using Object = UnityEngine.Object;
 
 namespace InsightXR.Network
 {
+    public enum InsightXRMODE{
+        Recording,
+        Normal,
+        Replay
+    }
     public class DataHandleLayer : MonoBehaviour
     {
         [Header("Listening to")]
@@ -20,14 +18,16 @@ namespace InsightXR.Network
         [Header("Broadcasting to")]
         [SerializeField] private ComponentWeb3DataRecievingChannel DataDistributor;
 
+        //This needed to hide in future.
+        [SerializeField] private InsightXRMODE SDK_MODE;
+
+        private int distributeDataIndex;
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
         private Dictionary<string, List<ObjectData>> UserInstanceData;
-
         private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
         private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
-
 
         // This funtion will listen on the data coming in every frame.
         private void SortAndStoreData(string gameObjectName, ObjectData gameObjectData){
@@ -45,9 +45,6 @@ namespace InsightXR.Network
         {
             return JsonConvert.SerializeObject(UserInstanceData);
         }
-
-
-
         /*
         * This is for debbuging this part of the code will not ship.
         */
@@ -59,11 +56,30 @@ namespace InsightXR.Network
                        Debug.Log(k.ObjectPosition);
                     }
                     Debug.Log(i.Key + " <= key || value => " + i.Value);
-
                 }
             }
         }
-        
+
+        private void FixedUpdate(){
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Debug.Log("In Replay Mode");
+                SDK_MODE = InsightXRMODE.Replay;
+                DistributeData();
+                distributeDataIndex++;
+            }else{
+                distributeDataIndex = 0;
+            }
+        }
+
+        private void DistributeData(){
+            foreach(var k in UserInstanceData){
+                if(distributeDataIndex < k.Value.Count){
+                    DataDistributor.RaiseEvent(k.Key.ToString(), k.Value[distributeDataIndex]);
+                }
+            }
+        }
+
         public bool CheckForNullsInUserInstanceData()
         {
             // Check if the dictionary itself is null
@@ -102,8 +118,4 @@ namespace InsightXR.Network
             return false;
         }
     }
-    
-    
-    
-    
 }

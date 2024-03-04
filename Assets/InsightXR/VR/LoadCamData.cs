@@ -43,9 +43,9 @@ namespace InsightXR.VR
             
             loaded = true;
 
-            foreach (var VARIABLE in GameObject.FindObjectsOfType<replayObject>())
+            foreach (var obj in GameObject.FindObjectsOfType<replayObject>())
             {
-                
+                obj.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
 
@@ -70,29 +70,29 @@ namespace InsightXR.VR
             }
         }
 
-        //
-        // [DllImport("__Internal")]
-        // public static extern void GetCamData(string path, string ObjectName, string callback, string fallback,
-        //     string url);
-        //
-        // public void callback(string camdata)
-        // {
-        //     Debug.Log("JsLib works!");
-        //     Debug.Log(camdata);
-        //     //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));
-        //     MotionRecord = JsonConvert.DeserializeObject<List<VRPlayerRecord>>(camdata);
-        //     loaded = true;
-        //     totalframes = MotionRecord.Count;
-        //     frame = 0;
-        //     Debug.Log("Loaded Data");
-        //
-        //     loaded = true;
-        // }
-        //
-        // public void fallback()
-        // {
-        //     Debug.Log("JsLib not working correctly");
-        // }
+        
+        [DllImport("__Internal")]
+        public static extern void GetCamData(string path, string ObjectName, string callback, string fallback,
+            string url);
+        
+        public void callback(string camdata)
+        {
+            Debug.Log("JsLib works!");
+            Debug.Log(camdata);
+            //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));
+            MotionRecord = JsonConvert.DeserializeObject<List<VRPlayerRecord>>(camdata);
+            loaded = true;
+            totalframes = MotionRecord.Count;
+            frame = 0;
+            Debug.Log("Loaded Data");
+        
+            loaded = true;
+        }
+        
+        public void fallback()
+        {
+            Debug.Log("JsLib not working correctly");
+        }
 
     }
 }

@@ -43,6 +43,11 @@ public class PlayerTracker : MonoBehaviour
 
     void Start()
     {
+        foreach (var obj in GameObject.FindObjectsOfType<replayObject>())
+        {
+            obj.GetComponent<Rigidbody>().isKinematic = false;
+        }
+        
         path = Application.dataPath;
         //resetting all default values
         _Camtans = XRhead.transform;

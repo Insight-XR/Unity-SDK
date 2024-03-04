@@ -60,6 +60,7 @@ namespace InsightXR.Network
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
         {
             UserInstanceData = loadedData;
+            Debug.Log("Data Loaded");
         }
         /*
         * This is for debbuging this part of the code will not ship.
@@ -77,11 +78,12 @@ namespace InsightXR.Network
         }
 
         // private void FixedUpdate(){
-        //     if (Input.GetKeyDown(KeyCode.R))
+        //     
+        //     if (Input.GetKey(KeyCode.R))
         //     {
         //         Debug.Log("In Replay Mode");
         //         SDK_MODE = InsightXRMODE.Replay;
-        //         DistributeData();
+        //         DistributeData(0);
         //         distributeDataIndex++;
         //     }else{
         //         distributeDataIndex = 0;
@@ -92,6 +94,7 @@ namespace InsightXR.Network
         public void DistributeData(int index){
             foreach(var k in UserInstanceData){
                 DataDistributor.RaiseEvent(k.Key.ToString(), k.Value[index]);
+                Debug.Log(k.Key);
             }
         }
 

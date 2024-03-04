@@ -95,8 +95,8 @@ public class PlayerTracker : MonoBehaviour
                 DATA.Playerdata = JsonConvert.SerializeObject(Movementrecord);
 
                 //Saving all the data to a file
-                // File.WriteAllText(path + "/Saves/Save.json",JsonConvert.SerializeObject(DATA));
-                // Debug.Log("Saved Movement Data");
+                File.WriteAllText(path + "/Saves/Save.json",JsonConvert.SerializeObject(DATA));
+                Debug.Log("Saved Movement Data");
                 
                 Debug.Log(DATA.objectdata);
 

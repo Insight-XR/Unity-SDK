@@ -80,13 +80,14 @@ public class PlayerTracker : MonoBehaviour
                 // status.color = Color.red;
                 Movementrecord.Clear();
                 Objectcollect.enabled = true;
+                Objectcollect.StartRecording();
             }
             else
             {
                 Debug.Log("Recording Done");
                 // status.text = "Simulation";
                 // status.color = Color.yellow;
-
+                Objectcollect.StopRecording();
                 MotionPackage DATA = new MotionPackage();
                 DATA.objectdata = Objectcollect.GetObjectData();
                 Objectcollect.enabled = false;

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using InsightXR.Channels;
 using System.Collections.Generic;
@@ -29,6 +30,16 @@ namespace InsightXR.Network
         private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
         private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
+        public void StartRecording()
+        {
+            DataCollector.CollectionRequestEvent += SortAndStoreData;
+        }
+
+        public void StopRecording()
+        {
+            DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        }
+
         // This funtion will listen on the data coming in every frame.
         private void SortAndStoreData(string gameObjectName, ObjectData gameObjectData){
             if (UserInstanceData == null) UserInstanceData = new();
@@ -45,6 +56,11 @@ namespace InsightXR.Network
         {
             return JsonConvert.SerializeObject(UserInstanceData);
         }
+
+        public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
+        {
+            UserInstanceData = loadedData;
+        }
         /*
         * This is for debbuging this part of the code will not ship.
         */
@@ -60,26 +76,33 @@ namespace InsightXR.Network
             }
         }
 
-        private void FixedUpdate(){
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("In Replay Mode");
-                SDK_MODE = InsightXRMODE.Replay;
-                DistributeData();
-                distributeDataIndex++;
-            }else{
-                distributeDataIndex = 0;
-            }
-        }
+        // private void FixedUpdate(){
+        //     if (Input.GetKeyDown(KeyCode.R))
+        //     {
+        //         Debug.Log("In Replay Mode");
+        //         SDK_MODE = InsightXRMODE.Replay;
+        //         DistributeData();
+        //         distributeDataIndex++;
+        //     }else{
+        //         distributeDataIndex = 0;
+        //     }
+        // }
+        
 
-        private void DistributeData(){
+        public void DistributeData(int index){
             foreach(var k in UserInstanceData){
-                if(distributeDataIndex < k.Value.Count){
-                    DataDistributor.RaiseEvent(k.Key.ToString(), k.Value[distributeDataIndex]);
-                }
+                DataDistributor.RaiseEvent(k.Key.ToString(), k.Value[index]);
             }
         }
 
+
+        public void SetRigidbidyoff()
+        {
+            foreach (var obj in GameObject.FindObjectsOfType<InsightXR.Core.Component>())
+            {
+                obj.GetComponent<Rigidbody>().isKinematic = true;
+            }
+        }
         public bool CheckForNullsInUserInstanceData()
         {
             // Check if the dictionary itself is null

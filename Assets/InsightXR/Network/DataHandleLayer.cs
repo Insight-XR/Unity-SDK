@@ -23,12 +23,14 @@ namespace InsightXR.Network
         [SerializeField] private InsightXRMODE SDK_MODE;
 
         private int distributeDataIndex;
+
+        public int trackerupdate;
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
-        private Dictionary<string, List<ObjectData>> UserInstanceData;
-        private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
-        private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        public Dictionary<string, List<ObjectData>> UserInstanceData;
+        // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
+        // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
         public void StartRecording()
         {
@@ -38,6 +40,7 @@ namespace InsightXR.Network
         public void StopRecording()
         {
             DataCollector.CollectionRequestEvent -= SortAndStoreData;
+            Debug.Log("Objects: "+trackerupdate);
         }
 
         // This funtion will listen on the data coming in every frame.
@@ -49,6 +52,7 @@ namespace InsightXR.Network
             }
 
             UserInstanceData[gameObjectName].Add(gameObjectData);
+            trackerupdate++;
         }
 
         //Supposed to return Json string thats is serialized from the UserInstanceData

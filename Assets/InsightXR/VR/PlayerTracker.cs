@@ -7,6 +7,7 @@ using InsightXR.VR;
 using Newtonsoft.Json;
 
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -21,7 +22,7 @@ public class PlayerTracker : MonoBehaviour
     public TriggerInputDetector InputDetector;
     //public TMP_Text status;
 
-    
+
     private Transform _Camtans;
     private RaycastHit hit;
     private Ray r;
@@ -31,6 +32,7 @@ public class PlayerTracker : MonoBehaviour
     private List<VRPlayerRecord> Movementrecord;
     public DataHandleLayer Objectcollect;
     private string path;
+    public int trackerupdate;
 
 
     // Start is called before the first frame update
@@ -39,15 +41,15 @@ public class PlayerTracker : MonoBehaviour
     {
         //Set active depending if everything is assigned
         this.enabled = CheckRefs();
+        // if (XRhead.GetComponent<InsightXR.Core.Component>() != null)
+        // {
+        //     XRhead.AddComponent<InsightXR.Core.Component>();
+        // }
     }
 
     void Start()
     {
-        foreach (var obj in GameObject.FindObjectsOfType<replayObject>())
-        {
-            obj.GetComponent<Rigidbody>().isKinematic = false;
-        }
-        
+
         path = Application.dataPath;
         //resetting all default values
         _Camtans = XRhead.transform;
@@ -66,8 +68,9 @@ public class PlayerTracker : MonoBehaviour
 
     // Update is called once per frame
 
-    private void Update()
+    private void FixedUpdate()
     {
+        
         if (InputDetector.GetLeftPrimaryDown())
         {
             _recording = !_recording;
@@ -81,13 +84,18 @@ public class PlayerTracker : MonoBehaviour
                 Movementrecord.Clear();
                 Objectcollect.enabled = true;
                 Objectcollect.StartRecording();
+                
             }
             else
             {
+                Debug.Log("Player "+trackerupdate);
                 Debug.Log("Recording Done");
                 // status.text = "Simulation";
                 // status.color = Color.yellow;
                 Objectcollect.StopRecording();
+                
+                Debug.Log("Camera Records: " + Movementrecord.Count);
+                Debug.Log("Objects Record: "+ Objectcollect.UserInstanceData["Cardboard Box_1"].Count);
                 MotionPackage DATA = new MotionPackage();
                 DATA.objectdata = Objectcollect.GetObjectData();
                 Objectcollect.enabled = false;
@@ -95,12 +103,12 @@ public class PlayerTracker : MonoBehaviour
                 DATA.Playerdata = JsonConvert.SerializeObject(Movementrecord);
 
                 //Saving all the data to a file
-                // File.WriteAllText(path + "/Saves/Save.json",JsonConvert.SerializeObject(DATA));
-                // Debug.Log("Saved Movement Data");
+                File.WriteAllText(path + "/Saves/Save.json",JsonConvert.SerializeObject(DATA));
+                Debug.Log("Saved Movement Data");
                 
                 Debug.Log(DATA.objectdata);
 
-                Objectcollect.gameObject.GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(DATA));
+                //Objectcollect.gameObject.GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(DATA));
             }
         }
 
@@ -108,6 +116,7 @@ public class PlayerTracker : MonoBehaviour
         if (_recording)
         {
             Movementrecord.Add(new VRPlayerRecord(_Camtans.position, _Camtans.rotation));
+            trackerupdate++;
         }
     }
 

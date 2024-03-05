@@ -23,12 +23,14 @@ namespace InsightXR.Network
         [SerializeField] private InsightXRMODE SDK_MODE;
 
         private int distributeDataIndex;
+
+        public int trackerupdate;
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
-        private Dictionary<string, List<ObjectData>> UserInstanceData;
-        private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
-        private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        public Dictionary<string, List<ObjectData>> UserInstanceData;
+        // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
+        // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
         public void StartRecording()
         {
@@ -38,6 +40,7 @@ namespace InsightXR.Network
         public void StopRecording()
         {
             DataCollector.CollectionRequestEvent -= SortAndStoreData;
+            Debug.Log("Objects: "+trackerupdate);
         }
 
         // This funtion will listen on the data coming in every frame.
@@ -49,6 +52,7 @@ namespace InsightXR.Network
             }
 
             UserInstanceData[gameObjectName].Add(gameObjectData);
+            trackerupdate++;
         }
 
         //Supposed to return Json string thats is serialized from the UserInstanceData
@@ -60,6 +64,7 @@ namespace InsightXR.Network
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
         {
             UserInstanceData = loadedData;
+            Debug.Log("Data Loaded");
         }
         /*
         * This is for debbuging this part of the code will not ship.
@@ -77,11 +82,12 @@ namespace InsightXR.Network
         }
 
         // private void FixedUpdate(){
-        //     if (Input.GetKeyDown(KeyCode.R))
+        //     
+        //     if (Input.GetKey(KeyCode.R))
         //     {
         //         Debug.Log("In Replay Mode");
         //         SDK_MODE = InsightXRMODE.Replay;
-        //         DistributeData();
+        //         DistributeData(0);
         //         distributeDataIndex++;
         //     }else{
         //         distributeDataIndex = 0;
@@ -92,6 +98,7 @@ namespace InsightXR.Network
         public void DistributeData(int index){
             foreach(var k in UserInstanceData){
                 DataDistributor.RaiseEvent(k.Key.ToString(), k.Value[index]);
+                Debug.Log(k.Key);
             }
         }
 

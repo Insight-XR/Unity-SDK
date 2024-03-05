@@ -1,41 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using InsightXR.Network;
+using UnityEngine;
 using InsightXR.VR;
 using Newtonsoft.Json;
-
-using TMPro;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.InputSystem;
+using InsightXR.Network;
+using System.Collections.Generic;
 using UnityEngine.XR.Interaction.Toolkit;
-using XRController = UnityEngine.InputSystem.XR.XRController;
-
-
 public class PlayerTracker : MonoBehaviour
 {
     public ActionBasedController LeftHand;
     public ActionBasedController RightHand;
     public Camera XRhead;
     public TriggerInputDetector InputDetector;
-    //public TMP_Text status;
-
 
     private Transform _Camtans;
     private RaycastHit hit;
     private Ray r;
-
     public bool _recording;
-
     private List<VRPlayerRecord> Movementrecord;
     public DataHandleLayer Objectcollect;
     private string path;
     public int trackerupdate;
-
-
-    // Start is called before the first frame update
 
     private void OnEnable()
     {

@@ -42,9 +42,11 @@ public class InsightTrackerEditor : EditorWindow
         GameObject[] gameObjects = FindObjectsOfType<GameObject>();
 
         foreach(GameObject go in gameObjects){
-            go.AddComponent<Component>();
+            if (go.name.Equals("DataHandleLayer")) continue;
+            go.AddComponent<InsightXR.Core.Component>();
         }
 
+        Debug.Log("InsightXR, Track success");
     }
 
     //     public class BonsaiManageTrackedObjectsEditor : EditorWindow

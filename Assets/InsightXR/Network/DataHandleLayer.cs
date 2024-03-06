@@ -2,7 +2,10 @@ using System;
 using UnityEngine;
 using InsightXR.Channels;
 using System.Collections.Generic;
+using System.IO;
+using InsightXR.VR;
 using Newtonsoft.Json;
+using Unity.XR.CoreUtils;
 
 namespace InsightXR.Network
 {
@@ -25,23 +28,69 @@ namespace InsightXR.Network
         private int distributeDataIndex;
 
         public int trackerupdate;
+
+        public bool replay;
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
-        public Dictionary<string, List<ObjectData>> UserInstanceData;
-        private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
-        private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        private Dictionary<string, List<ObjectData>> UserInstanceData;
+        // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
+        // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
-        public void StartRecording()
+        private void OnEnable()
         {
-            DataCollector.CollectionRequestEvent += SortAndStoreData;
+            if (Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                Debug.Log("Not running on WebGL");
+                if (replay)
+                {
+                    Debug.Log("Replay is on, Loading the Data");
+                    FindObjectOfType<LoadCamData>().callback(File.ReadAllText(UnityEngine.Device.Application.dataPath + "/Saves/Save.json"));
+                }
+                else
+                {
+                    Debug.Log("Replay is Off, Recording the Session");
+                    DataCollector.CollectionRequestEvent += SortAndStoreData;
+                }
+            }
+            else
+            {
+                Debug.Log("Running on WebGL");
+            }
         }
 
-        public void StopRecording()
+        private void OnDisable()
         {
-            DataCollector.CollectionRequestEvent -= SortAndStoreData;
-            Debug.Log("Objects: "+trackerupdate);
+            if (UnityEngine.Device.Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                if (!replay)
+                {
+                    DataCollector.CollectionRequestEvent -= SortAndStoreData;
+                    if (Directory.Exists(Application.dataPath + "/Saves"))
+                    {
+                        Directory.CreateDirectory(Application.dataPath + "/Saves");
+                    }
+                    Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
+                    File.WriteAllText(Application.dataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    //We can instead call it directly with the file path and create a stream like that, but for now, this will do
+                    GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
+                }
+                
+            }
+
         }
+
+
+        // public void StartRecording()
+        // {
+        //     DataCollector.CollectionRequestEvent += SortAndStoreData;
+        // }
+        //
+        // public void StopRecording()
+        // {
+        //     DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        //     Debug.Log("Objects: "+trackerupdate);
+        // }
 
         // This funtion will listen on the data coming in every frame.
         private void SortAndStoreData(string gameObjectName, ObjectData gameObjectData){
@@ -54,13 +103,7 @@ namespace InsightXR.Network
             UserInstanceData[gameObjectName].Add(gameObjectData);
             trackerupdate++;
         }
-
-        //Supposed to return Json string thats is serialized from the UserInstanceData
-        public string GetObjectData()
-        {
-            return JsonConvert.SerializeObject(UserInstanceData);
-        }
-
+        
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
         {
             UserInstanceData = loadedData;
@@ -109,43 +152,6 @@ namespace InsightXR.Network
             {
                 obj.GetComponent<Rigidbody>().isKinematic = true;
             }
-        }
-        public bool CheckForNullsInUserInstanceData()
-        {
-            // Check if the dictionary itself is null
-            if (UserInstanceData == null)
-            {
-                Debug.LogError("UserInstanceData is null");
-                return true; // Found null
-            }
-
-            // Iterate through each key-value pair in the dictionary
-            foreach (var entry in UserInstanceData)
-            {
-                // Check if the list for this key is null
-                if (entry.Value == null)
-                {
-                    Debug.LogError($"List for key {entry.Key} is null");
-                    return true; // Found null
-                }
-
-                // Iterate through the list associated with this key
-                foreach (var objectData in entry.Value)
-                {
-                    // Check if any ObjectData in the list is null
-                    if (objectData == null)
-                    {
-                        Debug.LogError($"Null ObjectData found in list for key {entry.Key}");
-                        return true; // Found null
-                    }
-
-                    // Here you can also add checks for properties inside ObjectData if necessary
-                    // For example, checking if ObjectPosition or ObjectRotation is null (though these being structs typically means they can't be null)
-                }
-            }
-
-            // No nulls found
-            return false;
         }
     }
 }

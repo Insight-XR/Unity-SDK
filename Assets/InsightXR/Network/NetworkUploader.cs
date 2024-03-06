@@ -1,3 +1,4 @@
+using System.Collections;
 using Amazon;
 using Amazon.S3;
 using UnityEngine;
@@ -7,6 +8,7 @@ using Amazon.Runtime;
 using Amazon.S3.Model;
 using Amazon.CognitoIdentity;
 using Unity.VisualScripting;
+using UnityEditor;
 
 namespace InsightXR.Network
 {
@@ -53,6 +55,11 @@ namespace InsightXR.Network
              if (responseObj.Exception == null)
              {
                  Debug.Log($"Object {responseObj.Request.Key} posted to bucket ");
+#if UNITY_EDITOR
+                 UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
              }
              else
              {
@@ -67,5 +74,6 @@ namespace InsightXR.Network
     public void DownloadFileToServerAsync(){
 
     }
+    
 }
 }

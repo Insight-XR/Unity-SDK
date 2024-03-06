@@ -8,6 +8,7 @@ using InsightXR.Network;
 using InsightXR.VR;
 using Newtonsoft.Json;
 using TMPro;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -16,10 +17,13 @@ namespace InsightXR.VR
 
     public class LoadCamData : MonoBehaviour
     {
-        private List<VRPlayerRecord> MotionRecord;
+        // private List<VRPlayerRecord> MotionRecord;
 
         public int frame = 0;
         public int totalframes;
+        public List<ObjectData> MotionRecord;
+        public string VRCamName;
+
 
         public bool loaded;
         private string path;
@@ -29,10 +33,10 @@ namespace InsightXR.VR
         // Start is called before the first frame update
         void Start()
         {
-            
-            //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
+            if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
+            { GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
+            }
             // Debug.Log("Check");
-             callback(File.ReadAllText(Application.dataPath+"/Saves/Save.json"));
             // MotionPackage loadedData =
             //     JsonConvert.DeserializeObject<MotionPackage>(
             //         File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
@@ -56,17 +60,19 @@ namespace InsightXR.VR
             {
                 frame--;
 
-                transform.position = MotionRecord[frame].position;
-                transform.rotation = MotionRecord[frame].rotation;
+                // transform.position = MotionRecord[frame].position;
+                // transform.rotation = MotionRecord[frame].rotation;
+                transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
                 ObjectDataLoader.DistributeData(frame);
             }
 
-            if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < MotionRecord.Count - 1)
+            if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < totalframes)
             {
                 frame++;
 
-                transform.position = MotionRecord[frame].position;
-                transform.rotation = MotionRecord[frame].rotation;
+                // transform.position = MotionRecord[frame].position;
+                // transform.rotation = MotionRecord[frame].rotation;
+                transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
                 ObjectDataLoader.DistributeData(frame);
             }
         }
@@ -79,20 +85,20 @@ namespace InsightXR.VR
         public void callback(string camdata)
         {
             Debug.Log("JsLib works!");
-            Debug.Log(camdata);
+            // Debug.Log(camdata);
             //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));
-            var DownloadedData = JsonConvert.DeserializeObject<MotionPackage>(camdata);
-
-            MotionRecord = DownloadedData.GetPlayerData();
-            Debug.Log("Player: ");
-            Debug.Log(MotionRecord);
-            Debug.Log("Object Data");
-            Debug.Log("Object Data");
-            ObjectDataLoader.LoadObjectData(DownloadedData.GetObjectData());
+            var DownloadedData = JsonConvert.DeserializeObject<Dictionary<string, List<ObjectData>>>(camdata);
+            
+            ObjectDataLoader.LoadObjectData(DownloadedData);
             ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
-            totalframes = MotionRecord.Count;
+            totalframes = DownloadedData.First().Value.Count;
             frame = 0;
+
+            MotionRecord = DownloadedData[VRCamName];
+            transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
+            ObjectDataLoader.DistributeData(frame);
+            
             Debug.Log("Loaded Data");
         
             loaded = true;

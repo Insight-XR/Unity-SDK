@@ -511,17 +511,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
---- !u!114 &187778161 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5757518538163356987, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
-  m_PrefabInstance: {fileID: 187778160}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a87cfc124022a941a3c533850f47b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &187778162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
@@ -1296,6 +1285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
+      propertyPath: replay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5805486355617821152, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: m_Name
       value: DataHandleLayer
@@ -1986,14 +1979,13 @@ GameObject:
   - component: {fileID: 752309081}
   - component: {fileID: 752309080}
   - component: {fileID: 752309079}
-  - component: {fileID: 752309082}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &752309076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2023,7 +2015,7 @@ MonoBehaviour:
   m_Camera: {fileID: 983461410}
   m_OriginBaseGameObject: {fileID: 752309075}
   m_CameraFloorOffsetObject: {fileID: 1956814029}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
 --- !u!4 &752309078
 Transform:
@@ -2112,25 +2104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 752309077}
---- !u!114 &752309082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752309075}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cd0002daff5e14e8b0f7c577aae89b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeftHand: {fileID: 742780180}
-  RightHand: {fileID: 2067096876}
-  XRhead: {fileID: 983461410}
-  InputDetector: {fileID: 187778161}
-  _recording: 0
-  Objectcollect: {fileID: 699208746}
-  trackerupdate: 0
 --- !u!1 &814114169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4295245697537872211, guid: ddc91a0d642f5c8488f2757af1511e9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535762177328270782, guid: ddc91a0d642f5c8488f2757af1511e9c, type: 3}
+      propertyPath: VRCamName
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 7535762177328270782, guid: ddc91a0d642f5c8488f2757af1511e9c, type: 3}
       propertyPath: ObjectDataLoader

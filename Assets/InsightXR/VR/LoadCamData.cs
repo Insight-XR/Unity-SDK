@@ -70,7 +70,7 @@ namespace InsightXR.VR
                 ObjectDataLoader.DistributeData(frame);
             }
 
-            if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < totalframes)
+            if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < totalframes - 1)
             {
                 frame++;
 

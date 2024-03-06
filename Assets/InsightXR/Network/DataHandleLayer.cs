@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using InsightXR.Channels;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace InsightXR.Network
         Normal,
         Replay
     }
+    
     public class DataHandleLayer : MonoBehaviour
     {
         [Header("Listening to")]
@@ -27,7 +29,7 @@ namespace InsightXR.Network
 
         private int distributeDataIndex;
 
-        public int trackerupdate;
+        public KeyCode CloseKey;
 
         public bool replay;
         //This class will be listening to the same object 
@@ -45,7 +47,6 @@ namespace InsightXR.Network
                 if (replay)
                 {
                     Debug.Log("Replay is on, Loading the Data");
-                    FindObjectOfType<LoadCamData>().callback(File.ReadAllText(UnityEngine.Device.Application.dataPath + "/Saves/Save.json"));
                 }
                 else
                 {
@@ -57,6 +58,7 @@ namespace InsightXR.Network
             {
                 Debug.Log("Running on WebGL");
             }
+            
         }
 
         private void OnDisable()
@@ -65,6 +67,7 @@ namespace InsightXR.Network
             {
                 if (!replay)
                 {
+                    //Create a Save File incase the Application wants to close
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
                     if (Directory.Exists(Application.dataPath + "/Saves"))
                     {
@@ -72,8 +75,9 @@ namespace InsightXR.Network
                     }
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
                     File.WriteAllText(Application.dataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
-                    //We can instead call it directly with the file path and create a stream like that, but for now, this will do
-                    GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
+                    // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
+                    // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
+                    
                 }
                 
             }
@@ -101,7 +105,6 @@ namespace InsightXR.Network
             }
 
             UserInstanceData[gameObjectName].Add(gameObjectData);
-            trackerupdate++;
         }
         
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
@@ -113,14 +116,19 @@ namespace InsightXR.Network
         * This is for debbuging this part of the code will not ship.
         */
         private void Update(){
-            if(Input.GetKeyDown(KeyCode.T)){
-                Debug.Log("testing the data ");
-                foreach(var i in UserInstanceData){
-                    foreach(var k in i.Value){
-                       Debug.Log(k.ObjectPosition);
-                    }
-                    Debug.Log(i.Key + " <= key || value => " + i.Value);
-                }
+            // if(Input.GetKeyDown(KeyCode.T)){
+            //     Debug.Log("testing the data ");
+            //     foreach(var i in UserInstanceData){
+            //         foreach(var k in i.Value){
+            //            Debug.Log(k.ObjectPosition);
+            //         }
+            //         Debug.Log(i.Key + " <= key || value => " + i.Value);
+            //     }
+            // }
+
+            if (Input.GetKeyDown(CloseKey) && Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(UserInstanceData));
             }
         }
 
@@ -153,5 +161,8 @@ namespace InsightXR.Network
                 obj.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
+
+        
     }
+    
 }

@@ -36,6 +36,10 @@ namespace InsightXR.VR
             if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
             { GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
             }
+            else
+            {
+                callback(File.ReadAllText(UnityEngine.Device.Application.dataPath + "/Saves/Save.json"));
+            }
             // Debug.Log("Check");
             // MotionPackage loadedData =
             //     JsonConvert.DeserializeObject<MotionPackage>(

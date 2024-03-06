@@ -1287,7 +1287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: replay
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
+      propertyPath: CloseKey
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5805486355617821152, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: m_Name
@@ -1985,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &752309076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2621,7 +2625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4295245697537872211, guid: ddc91a0d642f5c8488f2757af1511e9c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7535762177328270782, guid: ddc91a0d642f5c8488f2757af1511e9c, type: 3}
       propertyPath: VRCamName

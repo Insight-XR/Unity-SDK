@@ -29,8 +29,8 @@ namespace InsightXR.Network
         //on which every other game object is making the 
         //the transaction of there data entry.
         public Dictionary<string, List<ObjectData>> UserInstanceData;
-        // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
-        // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
+        private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
+        private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
         public void StartRecording()
         {

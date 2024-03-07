@@ -29,7 +29,9 @@ namespace InsightXR.Network
 
         private int distributeDataIndex;
 
-        public KeyCode CloseKey;
+        public TriggerInputDetector ControllerInput;
+        public GameObject Player;
+        public GameObject ReplayCam;
 
         public bool replay;
         //This class will be listening to the same object 
@@ -47,16 +49,19 @@ namespace InsightXR.Network
                 if (replay)
                 {
                     Debug.Log("Replay is on, Loading the Data");
+                    ReplayCam.SetActive(true);
                 }
                 else
                 {
                     Debug.Log("Replay is Off, Recording the Session");
+                    Player.SetActive(true);
                     DataCollector.CollectionRequestEvent += SortAndStoreData;
                 }
             }
             else
             {
                 Debug.Log("Running on WebGL");
+                ReplayCam.SetActive(true);
             }
             
         }
@@ -69,12 +74,12 @@ namespace InsightXR.Network
                 {
                     //Create a Save File incase the Application wants to close
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
-                    if (Directory.Exists(Application.dataPath + "/Saves"))
+                    if (Directory.Exists(Application.persistentDataPath + "/Saves"))
                     {
-                        Directory.CreateDirectory(Application.dataPath + "/Saves");
+                        Directory.CreateDirectory(Application.persistentDataPath + "/Saves");
                     }
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
-                    File.WriteAllText(Application.dataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
                     
@@ -126,7 +131,7 @@ namespace InsightXR.Network
             //     }
             // }
 
-            if (Input.GetKeyDown(CloseKey) && Application.platform != RuntimePlatform.WebGLPlayer)
+            if (ControllerInput.GetLeftPrimary() && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(UserInstanceData));
             }
@@ -158,7 +163,11 @@ namespace InsightXR.Network
         {
             foreach (var obj in GameObject.FindObjectsOfType<InsightXR.Core.Component>())
             {
-                obj.GetComponent<Rigidbody>().isKinematic = true;
+                // obj.GetComponent<Rigidbody>().isKinematic = true;
+                if (obj.TryGetComponent<Rigidbody>(out Rigidbody Robj))
+                {
+                    Robj.isKinematic = true;
+                }
             }
         }
 

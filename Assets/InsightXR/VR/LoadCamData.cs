@@ -26,20 +26,23 @@ namespace InsightXR.VR
 
 
         public bool loaded;
-        private string path;
+        // private string path;
         public DataHandleLayer ObjectDataLoader;
 
 
         // Start is called before the first frame update
         void Start()
         {
-            if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
-            { GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
-            }
-            else
-            {
-                callback(File.ReadAllText(UnityEngine.Device.Application.dataPath + "/Saves/Save.json"));
-            }
+            // if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
+            // { GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
+            // }
+            // else
+            // {
+            //     callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
+            // }
+            
+            
+            
             // Debug.Log("Check");
             // MotionPackage loadedData =
             //     JsonConvert.DeserializeObject<MotionPackage>(
@@ -82,9 +85,9 @@ namespace InsightXR.VR
         }
 
         
-        [DllImport("__Internal")]
-        public static extern void GetCamData(string path, string ObjectName, string callback, string fallback,
-            string url);
+        // [DllImport("__Internal")]
+        // public static extern void GetCamData(string path, string ObjectName, string callback, string fallback,
+        //     string url);
         
         public void callback(string camdata)
         {

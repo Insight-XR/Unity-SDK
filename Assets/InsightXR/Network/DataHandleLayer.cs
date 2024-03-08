@@ -131,8 +131,9 @@ namespace InsightXR.Network
             //     }
             // }
 
-            if (ControllerInput.GetLeftPrimary() && Application.platform != RuntimePlatform.WebGLPlayer)
+            if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
             {
+                Debug.Log("X Button Pressed");
                 GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(UserInstanceData));
             }
         }

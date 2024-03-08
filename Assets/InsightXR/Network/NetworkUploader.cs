@@ -37,7 +37,7 @@ namespace InsightXR.Network
      {
          string fileName     = "Replay Data"; // Set a meaningful filename
          string uploadThis   = data;
-         var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+         //var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
     
          byte[] cata         = Encoding.UTF8.GetBytes(uploadThis);
          var uploadStream    = new MemoryStream(cata);

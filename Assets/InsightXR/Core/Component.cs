@@ -33,7 +33,7 @@ namespace InsightXR.Core
 
         private void MoveObject(string name, ObjectData setToPoint){
             if(gameObject.name.Equals(name))
-                transform.SetPositionAndRotation(setToPoint.ObjectPosition, setToPoint.ObjectRotation);
+                transform.SetPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetRotation());
         }
     }
 }

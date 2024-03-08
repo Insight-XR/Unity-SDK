@@ -35,6 +35,8 @@ namespace InsightXR.Network
     //This funtion takes up the file from a location and put it on configured s3 bucket.
      public void UploadFileToServerAsync(string data)
      {
+         Debug.Log("Creating stream");
+         Debug.Log(data);
          string fileName     = "Replay Data"; // Set a meaningful filename
          string uploadThis   = data;
          //var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -49,17 +51,33 @@ namespace InsightXR.Network
          };
     
          Debug.Log("Creating request object");
+         
+         Debug.Log("--------------");
+         Debug.Log(request.BucketName);
+         Debug.Log(request.Key);
+         Debug.Log(request.InputStream);
+         Debug.Log(request.InputStream.ToString());
+         Debug.Log(request.CannedACL);
+         Debug.Log(request.CannedACL.ToString());
+         Debug.Log("--------------");
+         
+         Debug.Log("Firing the PutObjectAsync");
     
          s3Client.PutObjectAsync(request, (responseObj) =>
          {
+             Debug.Log("Upload Complete");
              if (responseObj.Exception == null)
              {
                  Debug.Log($"Object {responseObj.Request.Key} posted to bucket ");
-#if UNITY_EDITOR
-                 UnityEditor.EditorApplication.isPlaying = false;
-#else
-                Application.Quit();
-#endif
+                 // if (Application.platform != RuntimePlatform.WindowsEditor)
+                 // {
+                 //     Application.Quit();
+                 // }
+                 // else
+                 // {
+                 //     EditorApplication.isPlaying = false;
+                 // }
+                 Application.Quit();
              }
              else
              {

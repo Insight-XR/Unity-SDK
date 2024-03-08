@@ -69,7 +69,7 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
+                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
             }
 
@@ -79,7 +79,7 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
+                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
             }
         }
@@ -103,7 +103,7 @@ namespace InsightXR.VR
             frame = 0;
 
             MotionRecord = DownloadedData[VRCamName];
-            transform.SetPositionAndRotation(MotionRecord[frame].ObjectPosition,MotionRecord[frame].ObjectRotation);
+            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
             
             Debug.Log("Loaded Data");

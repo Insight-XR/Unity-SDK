@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,10 @@ namespace InsightXR.VR
         // private string path;
         public DataHandleLayer ObjectDataLoader;
 
+        private void OnEnable()
+        {
+            ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
+        }
 
         // Start is called before the first frame update
         void Start()

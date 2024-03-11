@@ -38,30 +38,19 @@ namespace InsightXR.VR
         // Start is called before the first frame update
         void Start()
         {
-            // if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
-            // { GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback","https://shivam1807.s3.ap-south-1.amazonaws.com/Replay+Data");
-            // }
-            // else
-            // {
-            //     callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
-            // }
-            
-            
-            
-            // Debug.Log("Check");
-            // MotionPackage loadedData =
-            //     JsonConvert.DeserializeObject<MotionPackage>(
-            //         File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
-            //
-            // Debug.Log(loadedData.Playerdata);
-            //
-            // MotionRecord = loadedData.GetPlayerData();
-            // loaded = true;
-            // totalframes = MotionRecord.Count;
-            // frame = 0;
-            // Debug.Log("Loaded Data");
-            //
-            // loaded = true;
+            if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
+            {
+                //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", "https://shyreyanshaws.s3.ap-south-1.amazonaws.com/Replay+Data.json");
+                Debug.Log("Cam data function if available was executed");
+            }
+            else
+            {
+                callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
+            }
+
+
+
+           
         }
 
         // Update is called once per frame
@@ -90,9 +79,8 @@ namespace InsightXR.VR
         }
 
         
-        // [DllImport("__Internal")]
-        // public static extern void GetCamData(string path, string ObjectName, string callback, string fallback,
-        //     string url);
+        //[DllImport("__Internal")]
+        //public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
         
         public void callback(string camdata)
         {

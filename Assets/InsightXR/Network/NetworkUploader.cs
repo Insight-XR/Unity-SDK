@@ -17,9 +17,9 @@ namespace InsightXR.Network
     public class NetworkUploader : MonoBehaviour
     {
         public IAmazonS3 s3Client;
-        private string awsAccessKeyId = "AKIAXQOF2EHXCW6YVEPP";
-        private string awsSecretAccessKey = "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";
-        private string bucketName = "shyreyanshaws";
+        public string awsAccessKeyId;
+        public string awsSecretAccessKey;
+        public string bucketName;
 
         private void Start()
         {

@@ -8,10 +8,8 @@ Library: C:\Unity Projects\Unity-SDK\Temp\BurstOutput\tempburstlibs\arm64-v8a\li
 --float-precision=Standard
 --target-framework=NetFramework
 --assembly-defines=Assembly-CSharp;
---assembly-defines=AWSSDK.CognitoIdentity;
 --assembly-defines=AWSSDK.Core;
 --assembly-defines=AWSSDK.S3;
---assembly-defines=AWSSDK.SecurityToken;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=Newtonsoft.Json;
@@ -19,6 +17,7 @@ Library: C:\Unity Projects\Unity-SDK\Temp\BurstOutput\tempburstlibs\arm64-v8a\li
 --assembly-defines=System.Core;
 --assembly-defines=System.Data;
 --assembly-defines=System;
+--assembly-defines=System.Net.Http;
 --assembly-defines=System.Numerics;
 --assembly-defines=System.Runtime.Serialization;
 --assembly-defines=System.Xml;
@@ -120,10 +119,8 @@ Library: C:\Unity Projects\Unity-SDK\Temp\BurstOutput\tempburstlibs\arm64-v8a\li
 --target-framework=NetFramework
 --float-mode=Fast
 --assembly-defines=Assembly-CSharp;
---assembly-defines=AWSSDK.CognitoIdentity;
 --assembly-defines=AWSSDK.Core;
 --assembly-defines=AWSSDK.S3;
---assembly-defines=AWSSDK.SecurityToken;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=Newtonsoft.Json;
@@ -131,6 +128,7 @@ Library: C:\Unity Projects\Unity-SDK\Temp\BurstOutput\tempburstlibs\arm64-v8a\li
 --assembly-defines=System.Core;
 --assembly-defines=System.Data;
 --assembly-defines=System;
+--assembly-defines=System.Net.Http;
 --assembly-defines=System.Numerics;
 --assembly-defines=System.Runtime.Serialization;
 --assembly-defines=System.Xml;

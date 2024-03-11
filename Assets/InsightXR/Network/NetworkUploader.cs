@@ -62,6 +62,7 @@ namespace InsightXR.Network
 
             bool uploaded = await UploadFileAsync(s3Client, bucketName, uploadFileName, uploadStream);
             print($"Uploaded: {uploaded}");
+            Application.Quit();
 
            
         }

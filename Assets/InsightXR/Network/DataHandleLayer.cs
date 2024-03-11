@@ -134,7 +134,8 @@ namespace InsightXR.Network
             if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Debug.Log("X Button Pressed");
-                //GetComponent<NetworkUploader>().UploadFileToServerAsync(JsonConvert.SerializeObject(UserInstanceData));
+                GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+
             }
         }
 

@@ -43,6 +43,10 @@ namespace InsightXR.Network
 
         private void OnEnable()
         {
+            if (!Directory.Exists(Application.persistentDataPath + "/Saves"))
+            {
+                Directory.CreateDirectory(Application.persistentDataPath + "/Saves");
+            }
             if (Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Debug.Log("Not running on WebGL");
@@ -74,10 +78,7 @@ namespace InsightXR.Network
                 {
                     //Create a Save File incase the Application wants to close
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
-                    if (Directory.Exists(Application.persistentDataPath + "/Saves"))
-                    {
-                        Directory.CreateDirectory(Application.persistentDataPath + "/Saves");
-                    }
+                    
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
                     File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do

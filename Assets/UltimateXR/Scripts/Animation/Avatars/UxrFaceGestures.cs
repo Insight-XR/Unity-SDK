@@ -8,7 +8,9 @@ using UltimateXR.Core.Components;
 using UnityEngine;
 
 namespace UltimateXR.Animation.Avatars
-{
+{  
+    /*
+    
     /// <summary>
     ///     Allows to simulate facial gestures like eyes movement/blinking and mouth using
     ///     the microphone input.
@@ -65,10 +67,10 @@ namespace UltimateXR.Animation.Avatars
             StartCoroutine(BlinkCoroutine());
             StartCoroutine(SwitchLookCoroutine());
 
-            if (_moveMouthUsingMic && Microphone.devices.Length > 0)
-            {
-                _microphoneClipRecord = Microphone.Start(null, true, 10, 44100);
-            }
+            // if (_moveMouthUsingMic && Microphone.devices.Length > 0)
+            // {
+            //     _microphoneClipRecord = Microphone.Start(null, true, 10, 44100);
+            // }
         }
 
         /// <summary>
@@ -78,10 +80,10 @@ namespace UltimateXR.Animation.Avatars
         {
             base.OnDisable();
 
-            if (Microphone.IsRecording(null) && _moveMouthUsingMic)
-            {
-                Microphone.End(null);
-            }
+            // if (Microphone.IsRecording(null) && _moveMouthUsingMic)
+            // {
+            //     Microphone.End(null);
+            // }
         }
 
         /// <summary>
@@ -123,21 +125,21 @@ namespace UltimateXR.Animation.Avatars
             }
         }
 
-        /// <summary>
-        ///     Updates the mouth if the microphone is being used.
-        /// </summary>
-        private void Update()
-        {
-            if (Microphone.IsRecording(null) && _mouthOpenTransform && _moveMouthUsingMic)
-            {
-                _mouthAngle                       = Mathf.SmoothDampAngle(_mouthAngle, Mathf.LerpAngle(_mouthClosedAngle, _mouthMaxOpenAngle, GetMicrophoneMaxLevel()), ref _mouthAngleDampSpeed, _mouthRotationDamp);
-                _mouthOpenTransform.localRotation = _localRotMouth * Quaternion.AngleAxis(_mouthAngle, _mouthOpenLocalAxis);
-            }
-            else if (_mouthOpenTransform)
-            {
-                _mouthOpenTransform.localRotation = _localRotMouth;
-            }
-        }
+        // /// <summary>
+        // ///     Updates the mouth if the microphone is being used.
+        // /// </summary>
+        // private void Update()
+        // {
+        //     if (Microphone.IsRecording(null) && _mouthOpenTransform && _moveMouthUsingMic)
+        //     {
+        //         _mouthAngle                       = Mathf.SmoothDampAngle(_mouthAngle, Mathf.LerpAngle(_mouthClosedAngle, _mouthMaxOpenAngle, GetMicrophoneMaxLevel()), ref _mouthAngleDampSpeed, _mouthRotationDamp);
+        //         _mouthOpenTransform.localRotation = _localRotMouth * Quaternion.AngleAxis(_mouthAngle, _mouthOpenLocalAxis);
+        //     }
+        //     else if (_mouthOpenTransform)
+        //     {
+        //         _mouthOpenTransform.localRotation = _localRotMouth;
+        //     }
+        // }
 
         #endregion
 
@@ -387,5 +389,7 @@ namespace UltimateXR.Animation.Avatars
         private AudioClip  _microphoneClipRecord;
 
         #endregion
-    }
+        
+    } 
+    */
 }

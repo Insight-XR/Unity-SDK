@@ -27,12 +27,15 @@ namespace InsightXR.VR
 
 
         public bool loaded;
+
+        private string LoadBucket;
         // private string path;
         public DataHandleLayer ObjectDataLoader;
 
         private void OnEnable()
         {
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
+            LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }
 
         // Start is called before the first frame update
@@ -40,7 +43,7 @@ namespace InsightXR.VR
         {
             if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
             {
-                //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", "https://shyreyanshaws.s3.ap-south-1.amazonaws.com/Replay+Data.json");
+                GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
                 Debug.Log("Cam data function if available was executed");
             }
             else
@@ -79,8 +82,8 @@ namespace InsightXR.VR
         }
 
         
-        //[DllImport("__Internal")]
-        //public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
+        [DllImport("__Internal")]
+        public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
         
         public void callback(string camdata)
         {

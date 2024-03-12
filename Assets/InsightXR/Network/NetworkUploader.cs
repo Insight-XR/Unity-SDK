@@ -16,6 +16,7 @@ namespace InsightXR.Network
 {
     public class NetworkUploader : MonoBehaviour
     {
+        
         public IAmazonS3 s3Client;
         public string awsAccessKeyId;
         public string awsSecretAccessKey;
@@ -69,6 +70,6 @@ namespace InsightXR.Network
         {
 
         }
-
+        
     }
 }

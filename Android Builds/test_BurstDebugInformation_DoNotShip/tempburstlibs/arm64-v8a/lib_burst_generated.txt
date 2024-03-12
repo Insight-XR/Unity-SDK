@@ -7,12 +7,11 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --meta-data-generation=False
 --dump=Function
 --float-precision=Standard
+--target-framework=NetFramework
 --float-mode=Fast
 --assembly-defines=Assembly-CSharp;
---assembly-defines=AWSSDK.CognitoIdentity;
 --assembly-defines=AWSSDK.Core;
 --assembly-defines=AWSSDK.S3;
---assembly-defines=AWSSDK.SecurityToken;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=Newtonsoft.Json;
@@ -20,6 +19,7 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --assembly-defines=System.Core;
 --assembly-defines=System.Data;
 --assembly-defines=System;
+--assembly-defines=System.Net.Http;
 --assembly-defines=System.Numerics;
 --assembly-defines=System.Runtime.Serialization;
 --assembly-defines=System.Xml;
@@ -46,7 +46,8 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/shivambhati/Documents/InsightXRSourceTree/Temp/Burst
---key-folder=/Applications/Unity/Hub/Editor/2022.3.6f1/PlaybackEngines/AndroidPlayer
+--debug=Full
+--key-folder=/Applications/Unity/Hub/Editor/2022.3.16f1-arm64/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/shivambhati/Documents/InsightXRSourceTree/Library/Burst
 --output=/Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -61,11 +62,10 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --meta-data-generation=False
 --dump=Function
 --float-precision=Standard
+--target-framework=NetFramework
 --assembly-defines=Assembly-CSharp;
---assembly-defines=AWSSDK.CognitoIdentity;
 --assembly-defines=AWSSDK.Core;
 --assembly-defines=AWSSDK.S3;
---assembly-defines=AWSSDK.SecurityToken;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=Newtonsoft.Json;
@@ -73,6 +73,7 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --assembly-defines=System.Core;
 --assembly-defines=System.Data;
 --assembly-defines=System;
+--assembly-defines=System.Net.Http;
 --assembly-defines=System.Numerics;
 --assembly-defines=System.Runtime.Serialization;
 --assembly-defines=System.Xml;
@@ -99,7 +100,8 @@ Library: /Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempb
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/shivambhati/Documents/InsightXRSourceTree/Temp/Burst
---key-folder=/Applications/Unity/Hub/Editor/2022.3.6f1/PlaybackEngines/AndroidPlayer
+--debug=Full
+--key-folder=/Applications/Unity/Hub/Editor/2022.3.16f1-arm64/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/shivambhati/Documents/InsightXRSourceTree/Library/Burst
 --output=/Users/shivambhati/Documents/InsightXRSourceTree/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/

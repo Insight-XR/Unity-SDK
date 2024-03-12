@@ -32,6 +32,7 @@ namespace InsightXR.Network
         public TriggerInputDetector ControllerInput;
         public GameObject Player;
         public GameObject ReplayCam;
+        public string ReplayBucketURL;
 
         public bool replay;
         //This class will be listening to the same object 
@@ -54,11 +55,13 @@ namespace InsightXR.Network
                 {
                     Debug.Log("Replay is on, Loading the Data");
                     ReplayCam.SetActive(true);
+                    Player.SetActive(false);
                 }
                 else
                 {
                     Debug.Log("Replay is Off, Recording the Session");
                     Player.SetActive(true);
+                    ReplayCam.SetActive(false);
                     DataCollector.CollectionRequestEvent += SortAndStoreData;
                 }
             }
@@ -135,6 +138,8 @@ namespace InsightXR.Network
             if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Debug.Log("X Button Pressed");
+                //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
+                
                 GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
 
             }

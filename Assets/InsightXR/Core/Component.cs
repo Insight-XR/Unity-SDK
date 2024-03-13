@@ -28,7 +28,7 @@ namespace InsightXR.Core
         // }
         private void FixedUpdate() {
             
-            DistributionChannel.RaiseEvent(name, new(transform.position, transform.rotation));
+            DistributionChannel.RaiseEvent(name, new(transform.localToWorldMatrix.GetPosition(), transform.localToWorldMatrix.rotation));
         } 
 
         private void MoveObject(string name, ObjectData setToPoint){

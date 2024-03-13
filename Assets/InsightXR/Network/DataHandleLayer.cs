@@ -138,26 +138,17 @@ namespace InsightXR.Network
             //     }
             // }
             
-            //This is for OpenXR
-            // if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
-            // {
-            //     Debug.Log("X Button Pressed");
-            //     //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
-            //     
-            //     GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
-            //
-            // }
+             if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
+             {
+                 Debug.Log("X Button Pressed");
+                 //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
+                 
+                 GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
             
-            //This is for UltimateXR
-
-            if (UxrAvatar.LocalAvatarInput.GetButtonsEvent(UxrHandSide.Left, UxrInputButtons.Button1,
-                    UxrButtonEventType.PressDown))
-            {
-                Debug.Log("X Button Pressed");
-                //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
-                
-                // GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
-            }
+             }
+            
+            
+            
         }
 
         // private void FixedUpdate(){

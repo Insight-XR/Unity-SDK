@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4576086202926517625}
   m_Layer: 0
   m_Name: DataHandleLayer
-  m_TagString: Untagged
+  m_TagString: DataHandeLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   ControllerInput: {fileID: 0}
   Player: {fileID: 0}
   ReplayCam: {fileID: 0}
+  ReplayBucketURL: 
   replay: 0
 --- !u!114 &4576086202926517625
 MonoBehaviour:
@@ -64,3 +65,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d97c832a0bc8469f821bc02a10930bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  awsAccessKeyId: 
+  awsSecretAccessKey: 
+  bucketName: 

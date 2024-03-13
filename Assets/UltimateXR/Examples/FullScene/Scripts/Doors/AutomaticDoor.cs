@@ -3,13 +3,17 @@
 //   Copyright (c) VRMADA, All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
+using Codice.Client.BaseCommands;
 using UltimateXR.Animation.Interpolation;
 using UltimateXR.Audio;
 using UltimateXR.Avatar;
 using UltimateXR.Core.Components;
+using UnityEditor.Experimental;
 using UnityEngine;
 
-namespace UltimateXR.Examples.FullScene.Doors
+
+namespace UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors
 {
     /// <summary>
     ///     Component to model de behavior of a door that opens automatically when the user gets near and closes
@@ -32,6 +36,8 @@ namespace UltimateXR.Examples.FullScene.Doors
         [SerializeField] private UxrEasing      _closeEasing         = UxrEasing.EaseInCubic;
         [SerializeField] private UxrAudioSample _audioOpen;
         [SerializeField] private UxrAudioSample _audioClose;
+        private Camera XRPlayer;
+        
 
         #endregion
 
@@ -73,6 +79,20 @@ namespace UltimateXR.Examples.FullScene.Doors
 
             _leftStartLocalPosition  = _leftDoor.localPosition;
             _rightStartLocalPosition = _rightDoor.localPosition;
+
+            XRPlayer = Camera.main;
+
+            if (XRPlayer == null)
+            {
+                Debug.Log("Disable Doors");
+                this.enabled = false;
+            }
+            else
+            {
+                Debug.Log("Enable Doors");
+            }
+
+
         }
 
         /// <summary>
@@ -80,14 +100,15 @@ namespace UltimateXR.Examples.FullScene.Doors
         /// </summary>
         private void Update()
         {
-            if (UxrAvatar.LocalAvatar == null)
-            {
-                return;
-            }
+            // if (UxrAvatar.LocalAvatar == null)
+            // {
+            //     return;
+            // }
 
             // Check distance to door
 
-            float distance = Vector3.Distance(UxrAvatar.LocalAvatar.CameraFloorPosition, FloorCenter.position);
+            
+            float distance = Vector3.Distance(XRPlayer.transform.position, FloorCenter.position);
 
             if (distance < _openDistance && Mathf.Approximately(OpenValue, 0.0f))
             {

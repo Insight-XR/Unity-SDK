@@ -5,6 +5,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 using UltimateXR.Avatar;
 using UltimateXR.CameraUtils;
+using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
 using UnityEngine;
 
 namespace UltimateXR.Examples.FullScene.Doors

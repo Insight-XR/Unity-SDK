@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using InsightXR.VR;
 using Newtonsoft.Json;
+using UltimateXR.Avatar;
+using UltimateXR.Core;
+using UltimateXR.Devices;
 using Unity.XR.CoreUtils;
 
 namespace InsightXR.Network
@@ -134,14 +137,26 @@ namespace InsightXR.Network
             //         Debug.Log(i.Key + " <= key || value => " + i.Value);
             //     }
             // }
+            
+            //This is for OpenXR
+            // if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
+            // {
+            //     Debug.Log("X Button Pressed");
+            //     //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
+            //     
+            //     GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+            //
+            // }
+            
+            //This is for UltimateXR
 
-            if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
+            if (UxrAvatar.LocalAvatarInput.GetButtonsEvent(UxrHandSide.Left, UxrInputButtons.Button1,
+                    UxrButtonEventType.PressDown))
             {
                 Debug.Log("X Button Pressed");
                 //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
                 
-                GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
-
+                // GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
             }
         }
 

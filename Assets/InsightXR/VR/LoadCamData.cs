@@ -101,6 +101,12 @@ namespace InsightXR.VR
             MotionRecord = DownloadedData[VRCamName];
             transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
+            // Debug.Log(DownloadedData[VRCamName].Count);
+            // Debug.Log(DownloadedData["BatteryGeo1"].Count);
+            foreach (var data in DownloadedData)
+            {
+                Debug.Log(data.Key + " "+data.Value.Count);
+            }
             
             Debug.Log("Loaded Data");
         

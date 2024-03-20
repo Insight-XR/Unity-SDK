@@ -144,35 +144,39 @@ namespace UltimateXR.Examples.FullScene
         /// </summary>
         private void UpdateVisibility()
         {
-            if (UxrAvatar.LocalAvatar == null || UxrCameraWallFade.IsAvatarPeekingThroughGeometry(UxrAvatar.LocalAvatar))
-            {
-                return;
-            }
-
-            _mirrorComponent.CheckSetEnabled(UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomMirror));
-            _rootRestrictedArea.CheckSetActive(UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange) || _armoredDoor.OpenValue > 0.0f);
-            _rootUnrestrictedArea.CheckSetActive(!UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange) || _armoredDoor.OpenValue > 0.0f);
-
-            if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomMirror))
-            {
-                _controllerRoomElements.CheckSetActive(false);
-                _rootLabElements.CheckSetActive(false);
-            }
-            else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomDoor))
-            {
-                _controllerRoomElements.CheckSetActive(false);
-                _rootLabElements.CheckSetActive(true);
-            }
-            else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxCentralRoom) || UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxLabRoom) || UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxControllerRoom))
-            {
-                _controllerRoomElements.CheckSetActive(true);
-                _rootLabElements.CheckSetActive(true);
-            }
-            else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange))
-            {
-                _controllerRoomElements.CheckSetActive(false);
-                _rootLabElements.CheckSetActive(false);
-            }
+            // if (UxrAvatar.LocalAvatar == null || UxrCameraWallFade.IsAvatarPeekingThroughGeometry(UxrAvatar.LocalAvatar))
+            // {
+            //     return;
+            // }
+            //
+            // _mirrorComponent.CheckSetEnabled(UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomMirror));
+            // _rootRestrictedArea.CheckSetActive(UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange) || _armoredDoor.OpenValue > 0.0f);
+            // _rootUnrestrictedArea.CheckSetActive(!UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange) || _armoredDoor.OpenValue > 0.0f);
+            //
+            // if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomMirror))
+            // {
+            //     _controllerRoomElements.CheckSetActive(false);
+            //     _rootLabElements.CheckSetActive(false);
+            // }
+            // else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxSpawnRoomDoor))
+            // {
+            //     _controllerRoomElements.CheckSetActive(false);
+            //     _rootLabElements.CheckSetActive(true);
+            // }
+            // else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxCentralRoom) || UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxLabRoom) || UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxControllerRoom))
+            // {
+            //     _controllerRoomElements.CheckSetActive(true);
+            //     _rootLabElements.CheckSetActive(true);
+            // }
+            // else if (UxrAvatar.LocalAvatar.CameraPosition.IsInsideBox(_boxShootingRange))
+            // {
+            //     _controllerRoomElements.CheckSetActive(false);
+            //     _rootLabElements.CheckSetActive(false);
+            // }
+            
+            _controllerRoomElements.CheckSetActive(true);
+            _rootLabElements.CheckSetActive(true);
+            
         }
 
         #endregion

@@ -21,6 +21,7 @@ namespace UltimateXR.Devices.Integrations
     /// </summary>
     public abstract partial class UxrUnityXRControllerInput : UxrControllerInput
     {
+        public bool recording;
         #region Public Types & Data
 
         /// <summary>

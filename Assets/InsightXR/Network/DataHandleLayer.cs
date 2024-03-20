@@ -11,8 +11,6 @@ using UltimateXR.Core;
 using UltimateXR.Devices;
 using Unity.XR.CoreUtils;
 using UnityEditor;
-using UltimateXR.Devices;
-using UltimateXR.Manipulation.HandPoses;
 
 namespace InsightXR.Network
 {
@@ -40,9 +38,8 @@ namespace InsightXR.Network
         public GameObject ReplayCam;
         public string ReplayBucketURL;
         private bool recording;
-        public GameObject DisabledObjects;
-
-        private UxrHandDescriptor des;
+        private PoseCollector PoseCollection;
+        
         public bool replay;
         //This class will be listening to the same object 
         //on which every other game object is making the 
@@ -71,8 +68,8 @@ namespace InsightXR.Network
                     Debug.Log("Replay is Off, Recording the Session");
                     Player.SetActive(true);
                     ReplayCam.SetActive(false);
+                    StartCoroutine(StartRecordingSession());
                     Debug.Log(Time.time);
-                    StartRecording();
                     recording = true;
                 }
             }
@@ -86,13 +83,14 @@ namespace InsightXR.Network
 
         private void Start()
         {
-            des = new UxrHandDescriptor();
+            
         }
 
         // public UxrControllerInput UXRcontrollerInput;
         public void StartRecording()
         {
             DataCollector.CollectionRequestEvent += SortAndStoreData;
+            recording = true;
             //UXRcontrollerInput = FindObjectOfType<UxrControllerInput>();
         }
 
@@ -109,7 +107,11 @@ namespace InsightXR.Network
                     File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
-                    
+
+                    foreach (var Posepair in PoseCollection.handPoses)
+                    {
+                        Debug.Log(Posepair.Item1 + "   " + Posepair.Item2);
+                    }
                 }
                 
             }
@@ -185,32 +187,37 @@ namespace InsightXR.Network
                  
             
             }
-            
-            //
-            // if (UxrHandTracking.TryGetHandDescriptor(UxrHandSide.Right, out UxrHandDescriptor trackedHand))
+
+            // if (UxrAvatar.LocalAvatar != null)
             // {
-            //     // Assign the tracked hand data to our handDescriptor
-            //     handDescriptor = trackedHand;
+            //     Debug.Log("Left :" + UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName);
+            //     Debug.Log("Right :" + UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Right).PoseName); 
             // }
-            //
-            // if(UxrAvatar.LocalAvatar.LeftGrabber.pose)
-            des.Compute(UxrAvatar.LocalAvatar, UxrHandSide.Left);
-            Debug.Log(JsonConvert.SerializeObject(des));
-            //Debug.Log(des);
+            
+
+            // if (UxrAvatar.LocalAvatar != null)
+            // {
+            //     // UxrAvatar.LocalAvatar.GetRuntimeHandPose();
+            //     Debug.Log(UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName);
+            // }
+
+            
+
         }
 
-        // private void FixedUpdate(){
-        //     
-        //     if (Input.GetKey(KeyCode.R))
-        //     {
-        //         Debug.Log("In Replay Mode");
-        //         SDK_MODE = InsightXRMODE.Replay;
-        //         DistributeData(0);
-        //         distributeDataIndex++;
-        //     }else{
-        //         distributeDataIndex = 0;
-        //     }
-        // }
+        private void FixedUpdate(){
+            
+            // if (Input.GetKey(KeyCode.R))
+            // {
+            //     Debug.Log("In Replay Mode");
+            //     SDK_MODE = InsightXRMODE.Replay;
+            //     DistributeData(0);
+            //     distributeDataIndex++;
+            // }else{
+            //     distributeDataIndex = 0;
+            // }
+            
+        }
         
 
         public void DistributeData(int index){
@@ -233,7 +240,30 @@ namespace InsightXR.Network
             }
         }
 
-        
+        IEnumerator StartRecordingSession()
+        {
+            while (UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left) == null)
+            {
+                Debug.Log("Not Exist");
+                yield return null;
+            }
+            
+            Debug.Log("Exists");
+            if (gameObject.TryGetComponent(out PoseCollector collector))
+            {
+                PoseCollection = collector;
+                PoseCollection.enabled = true;
+            }
+            else
+            { 
+                PoseCollection = gameObject.AddComponent<PoseCollector>();
+            }
+                
+            StartRecording();
+            
+        }
+
+
     }
     
 }

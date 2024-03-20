@@ -17,7 +17,7 @@ namespace InsightXR.Channels
             }
             else
             {
-                Debug.LogWarning("A internal event channel is broadcasted, no one picked up");
+                Debug.LogWarning("A internal event channel is broadcasted, no one picked up  "+objectName);
             }
         }
     }

@@ -10,6 +10,9 @@ using UltimateXR.Avatar;
 using UltimateXR.Core;
 using UltimateXR.Devices;
 using Unity.XR.CoreUtils;
+using UnityEditor;
+using UltimateXR.Devices;
+using UltimateXR.Manipulation.HandPoses;
 
 namespace InsightXR.Network
 {
@@ -36,7 +39,10 @@ namespace InsightXR.Network
         public GameObject Player;
         public GameObject ReplayCam;
         public string ReplayBucketURL;
+        private bool recording;
+        public GameObject DisabledObjects;
 
+        private UxrHandDescriptor des;
         public bool replay;
         //This class will be listening to the same object 
         //on which every other game object is making the 
@@ -65,7 +71,9 @@ namespace InsightXR.Network
                     Debug.Log("Replay is Off, Recording the Session");
                     Player.SetActive(true);
                     ReplayCam.SetActive(false);
-                    DataCollector.CollectionRequestEvent += SortAndStoreData;
+                    Debug.Log(Time.time);
+                    StartRecording();
+                    recording = true;
                 }
             }
             else
@@ -74,6 +82,18 @@ namespace InsightXR.Network
                 ReplayCam.SetActive(true);
             }
             
+        }
+
+        private void Start()
+        {
+            des = new UxrHandDescriptor();
+        }
+
+        // public UxrControllerInput UXRcontrollerInput;
+        public void StartRecording()
+        {
+            DataCollector.CollectionRequestEvent += SortAndStoreData;
+            //UXRcontrollerInput = FindObjectOfType<UxrControllerInput>();
         }
 
         private void OnDisable()
@@ -137,18 +157,46 @@ namespace InsightXR.Network
             //         Debug.Log(i.Key + " <= key || value => " + i.Value);
             //     }
             // }
+            if (ControllerInput.GetLeftPrimaryDown())
+            {
+                Debug.Log("LEFT WORKS");
             
-             if (ControllerInput.GetLeftPrimaryDown() && Application.platform != RuntimePlatform.WebGLPlayer)
-             {
+            // if(UXRcontrollerInput.GetButtonsPress(UxrHandSide.Left, UxrInputButtons.Button1)){Debug.Log("Button1");}
+            // if(UXRcontrollerInput.GetButtonsPress(UxrHandSide.Left, UxrInputButtons.Button2)){Debug.Log("Button2");}
+            // if (UXRcontrollerInput.GetButtonsPress(UxrHandSide.Left, UxrInputButtons.Button1) && Application.platform != RuntimePlatform.WebGLPlayer)
+            
+                 if (!recording)
+                 {
+                     StartRecording();
+                     Debug.Log("Recording Started");
+                     recording = true;
+
+                 }
+                 else
+                 {
+                     Debug.Log("Ending Application");
+                     
+                     EditorApplication.isPlaying = false;
+                     //GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+                 }
                  Debug.Log("X Button Pressed");
                  //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
                  
-                 GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+                 
             
-             }
+            }
             
-            
-            
+            //
+            // if (UxrHandTracking.TryGetHandDescriptor(UxrHandSide.Right, out UxrHandDescriptor trackedHand))
+            // {
+            //     // Assign the tracked hand data to our handDescriptor
+            //     handDescriptor = trackedHand;
+            // }
+            //
+            // if(UxrAvatar.LocalAvatar.LeftGrabber.pose)
+            des.Compute(UxrAvatar.LocalAvatar, UxrHandSide.Left);
+            Debug.Log(JsonConvert.SerializeObject(des));
+            //Debug.Log(des);
         }
 
         // private void FixedUpdate(){

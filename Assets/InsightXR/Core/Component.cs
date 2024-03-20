@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using InsightXR.Channels;
+using InsightXR.Network;
 using InsightXR.Utils;
 using UnityEngine;
 
@@ -26,6 +28,20 @@ namespace InsightXR.Core
         // private void OnEnable(){
         //     componentHistory = new();
         // }
+
+        private void Start()
+        {
+            if (Camera.main != null && gameObject == Camera.main.gameObject)
+            {
+                Debug.Log(gameObject.name + " " + Time.time);
+                // FindObjectOfType<DataHandleLayer>().StartRecording();
+            }
+            else
+            {
+                Debug.Log(gameObject.name+" "+ Time.time);
+            }
+        }
+
         private void FixedUpdate() {
             
             DistributionChannel.RaiseEvent(name, new(transform.localToWorldMatrix.GetPosition(), transform.localToWorldMatrix.rotation));

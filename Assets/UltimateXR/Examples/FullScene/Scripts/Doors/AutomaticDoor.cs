@@ -100,15 +100,15 @@ namespace UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors
         /// </summary>
         private void Update()
         {
-            // if (UxrAvatar.LocalAvatar == null)
-            // {
-            //     return;
-            // }
+            if (UxrAvatar.LocalAvatar == null)
+            {
+                return;
+            }
 
             // Check distance to door
 
             
-            float distance = Vector3.Distance(XRPlayer.transform.position, FloorCenter.position);
+            float distance = Vector3.Distance(UxrAvatar.LocalAvatar.transform.position, FloorCenter.position);
 
             if (distance < _openDistance && Mathf.Approximately(OpenValue, 0.0f))
             {

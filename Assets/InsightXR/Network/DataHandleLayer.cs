@@ -61,12 +61,12 @@ namespace InsightXR.Network
                 {
                     Debug.Log("Replay is on, Loading the Data");
                     ReplayCam.SetActive(true);
-                    Player.SetActive(false);
+                    // Player.SetActive(false);
                 }
                 else
                 {
                     Debug.Log("Replay is Off, Recording the Session");
-                    Player.SetActive(true);
+                    // Player.SetActive(true);
                     ReplayCam.SetActive(false);
                     StartCoroutine(StartRecordingSession());
                     Debug.Log(Time.time);
@@ -89,6 +89,7 @@ namespace InsightXR.Network
         // public UxrControllerInput UXRcontrollerInput;
         public void StartRecording()
         {
+            Debug.Log("Started Recording");
             DataCollector.CollectionRequestEvent += SortAndStoreData;
             recording = true;
             //UXRcontrollerInput = FindObjectOfType<UxrControllerInput>();
@@ -105,6 +106,7 @@ namespace InsightXR.Network
                     
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
                     File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    FindObjectOfType<PoseCollector>().savePosedata();
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
 
@@ -158,6 +160,16 @@ namespace InsightXR.Network
             //         }
             //         Debug.Log(i.Key + " <= key || value => " + i.Value);
             //     }
+            // }
+
+            // if (Input.GetKeyDown(KeyCode.M))
+            // {
+            //     Debug.Log("M Pressed");
+            //     foreach (var glove in FindObjectsOfType<gloveCheck>())
+            //     {
+            //         glove.sethands();
+            //     }
+            //     Debug.Log("Set Hands");
             // }
             if (ControllerInput.GetLeftPrimaryDown())
             {
@@ -258,7 +270,19 @@ namespace InsightXR.Network
             { 
                 PoseCollection = gameObject.AddComponent<PoseCollector>();
             }
-                
+
+            var hands = FindObjectsOfType<gloveCheck>();
+
+            while (hands[0].transform.localPosition.x != 0)
+            {
+                Debug.Log("Setting hands");
+                foreach (var glove in hands)
+                {
+                    glove.sethands();
+                }
+            }
+
+            Debug.Log("Hands Set");
             StartRecording();
             
         }

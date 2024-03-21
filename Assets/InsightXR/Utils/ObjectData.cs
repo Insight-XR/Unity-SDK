@@ -13,7 +13,9 @@ public class ObjectData
     public ObjectData(Vector3 pos, Quaternion rot)
     {
         (posx, posy, posz) = (pos.x,pos.y,pos.z);
-        (rotx, roty, rotz, rotw) = (rot.z, rot.y, rot.z, rot.w);
+        // (rotx, roty, rotz, rotw) = (rot.z, rot.y, rot.z, rot.w);
+        var rota = rot.eulerAngles;
+        (rotx, roty, rotz) = (rota.x, rota.y, rota.z);
     }
 
     public Vector3 GetPosition()
@@ -23,6 +25,7 @@ public class ObjectData
 
     public Quaternion GetRotation()
     {
-        return new Quaternion(rotx, roty, rotz, rotw);
+        //return new Quaternion(rotx, roty, rotz, rotw);
+        return Quaternion.Euler(rotx, roty, rotz);
     }
 }

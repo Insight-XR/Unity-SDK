@@ -9,6 +9,9 @@ using InsightXR.Network;
 using InsightXR.VR;
 using Newtonsoft.Json;
 using TMPro;
+using UltimateXR.Avatar;
+using UltimateXR.Core;
+using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -22,7 +25,8 @@ namespace InsightXR.VR
 
         public int frame = 0;
         public int totalframes;
-        public List<ObjectData> MotionRecord;
+        //public List<ObjectData> MotionRecord;
+        public List<(string,string)> handPoses;
         public string VRCamName;
 
 
@@ -36,6 +40,11 @@ namespace InsightXR.VR
         {
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
+
+            foreach (var door in FindObjectsOfType<AutomaticDoor>())
+            {
+                door.enabled = false;
+            }
         }
 
         // Start is called before the first frame update
@@ -49,6 +58,8 @@ namespace InsightXR.VR
             else
             {
                 callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
+                handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(Application.persistentDataPath +
+                    "/Saves/HandPoses.json");
             }
 
 
@@ -66,8 +77,12 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
+                
+                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
+                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
+                
             }
 
             if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < totalframes - 1)
@@ -76,8 +91,11 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
+                
+                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
+                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
             }
         }
 
@@ -98,8 +116,8 @@ namespace InsightXR.VR
             totalframes = DownloadedData.First().Value.Count;
             frame = 0;
 
-            MotionRecord = DownloadedData[VRCamName];
-            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+            //MotionRecord = DownloadedData[VRCamName];
+            //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
             // Debug.Log(DownloadedData[VRCamName].Count);
             // Debug.Log(DownloadedData["BatteryGeo1"].Count);

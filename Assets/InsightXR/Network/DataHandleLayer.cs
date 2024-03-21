@@ -61,6 +61,10 @@ namespace InsightXR.Network
                 {
                     Debug.Log("Replay is on, Loading the Data");
                     ReplayCam.SetActive(true);
+                    if (TryGetComponent(out PoseCollector col))
+                    {
+                        col.enabled = true;
+                    }
                     // Player.SetActive(false);
                 }
                 else
@@ -110,10 +114,10 @@ namespace InsightXR.Network
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
 
-                    foreach (var Posepair in PoseCollection.handPoses)
-                    {
-                        Debug.Log(Posepair.Item1 + "   " + Posepair.Item2);
-                    }
+                    // foreach (var Posepair in PoseCollection.handPoses)
+                    // {
+                    //     Debug.Log(Posepair.Item1 + "   " + Posepair.Item2);
+                    // }
                 }
                 
             }

@@ -15,6 +15,9 @@ namespace InsightXR.Core
         [Space]
         [Header ("Broadcasting to")]
         [SerializeField] private ComponentDataDistributionChannel DistributionChannel;
+
+        public bool hand;
+        
         // private List<SpatialPathDataModel> componentHistory;
         //TODO :- 
         //we are making a queue here and the data is collected it will be send to the server.
@@ -44,12 +47,20 @@ namespace InsightXR.Core
 
         private void FixedUpdate() {
             
-            DistributionChannel.RaiseEvent(name, new(transform.localToWorldMatrix.GetPosition(), transform.localToWorldMatrix.rotation));
+            DistributionChannel.RaiseEvent(name, new(transform.position, transform.rotation));
+            // if (hand)
+            // {
+            //     Debug.Log("recording : "+transform.localToWorldMatrix.rotation);
+            // }
         } 
 
         private void MoveObject(string name, ObjectData setToPoint){
-            if(gameObject.name.Equals(name))
-                transform.SetPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetRotation());
+            if(gameObject.name.Equals(name)) transform.SetPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetRotation());
+            
+            if (hand)
+            {
+                Debug.Log("viewing : "+transform.rotation.eulerAngles);
+            }
         }
     }
 }

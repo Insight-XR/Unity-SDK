@@ -1181,22 +1181,22 @@ namespace UltimateXR.Avatar
             {
                 CameraController = _camera.transform.parent;
             }
-
+            
             while (CameraController != null && CameraController.parent != transform)
             {
                 CameraController = CameraController.parent;
             }
 
-            if (CameraController.parent != transform)
-            {
-                Debug.LogWarning("Error finding Camera Controller. Camera Controller is a GameObject that needs to be child of the avatar and have the avatar camera as a child");
-            }
+            // if (CameraController.parent != transform)
+            // {
+            //     Debug.LogWarning("Error finding Camera Controller. Camera Controller is a GameObject that needs to be child of the avatar and have the avatar camera as a child");
+            // }
 
             if (_camera != null)
             {
                 _startCameraHeight = _camera.transform.position.y - transform.position.y;
             }
-
+            
             if (CameraController != null)
             {
                 _startCameraControllerHeight = CameraController.position.y - transform.position.y;

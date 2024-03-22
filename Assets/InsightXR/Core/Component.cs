@@ -57,10 +57,10 @@ namespace InsightXR.Core
         private void MoveObject(string name, ObjectData setToPoint){
             if(gameObject.name.Equals(name)) transform.SetPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetRotation());
             
-            if (hand)
-            {
-                Debug.Log("viewing : "+transform.rotation.eulerAngles);
-            }
+            // if (hand)
+            // {
+            //     Debug.Log("viewing : "+transform.rotation.eulerAngles);
+            // }
         }
     }
 }

@@ -17,6 +17,7 @@ using UltimateXR.Manipulation.HandPoses;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
+using Component = InsightXR.Core.Component;
 
 namespace InsightXR.VR
 {
@@ -56,9 +57,10 @@ namespace InsightXR.VR
             else
             {
                 callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
-                //File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
-                // handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
-                //     "/Saves/HandPoses.json"));
+                // File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
+                // File.WriteAllText(Application.dataPath+"/Saves/Save.json", File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
+                 // handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
+                 //     "/Saves/HandPoses.json"));
                 HandFrameData = JsonConvert.DeserializeObject<List<(UxrHandDescriptor,UxrHandDescriptor)>>(File.ReadAllText(Application.persistentDataPath +
                     "/Saves/HandPoses.json"));
 
@@ -67,6 +69,7 @@ namespace InsightXR.VR
                 // {
                 //     Debug.Log(handpose.Item1 + "  "+ handpose.Item2);
                 // }
+                Debug.Log(FindObjectsOfType<Component>().Length);
             }
 
 

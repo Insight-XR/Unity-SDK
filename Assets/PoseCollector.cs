@@ -4,28 +4,31 @@ using System.IO;
 using Newtonsoft.Json;
 using UltimateXR.Avatar;
 using UltimateXR.Core;
+using UltimateXR.Manipulation.HandPoses;
 using UnityEngine;
 
 public class PoseCollector : MonoBehaviour
 {
-    public List<(string,string)> handPoses;
+    // public List<(string,string)> handPoses;
+    public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
     //Start is called before the first frame update
     void Start()
     {
-        handPoses = new List<(string, string)>();
+        // handPoses = new List<(string, string)>();
+        HandFrameData = new List<(UxrHandDescriptor, UxrHandDescriptor)>();
     }
 
     public void savePosedata()
     {
-        Debug.Log("Pose Collection: "+ handPoses.Count);
-        File.WriteAllText(Application.persistentDataPath+"/Saves/HandPoses.json", JsonConvert.SerializeObject(handPoses));
+        Debug.Log("Pose Collection: "+ HandFrameData.Count);
+        File.WriteAllText(Application.persistentDataPath+"/Saves/HandPoses.json", JsonConvert.SerializeObject(HandFrameData));
     }
     
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        handPoses.Add((UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName, UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Right).PoseName));
-        
+        //handPoses.Add((UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName, UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Right).PoseName));
+        HandFrameData.Add((new UxrHandDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left),new UxrHandDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right)));
     }
 }

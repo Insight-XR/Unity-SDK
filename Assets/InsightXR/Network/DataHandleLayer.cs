@@ -10,6 +10,7 @@ using UltimateXR.Avatar;
 using UltimateXR.Avatar.Rig;
 using UltimateXR.Core;
 using UltimateXR.Devices;
+using UltimateXR.Manipulation.HandPoses;
 using Unity.XR.CoreUtils;
 using UnityEditor;
 
@@ -40,6 +41,7 @@ namespace InsightXR.Network
         public string ReplayBucketURL;
         private bool recording;
         private PoseCollector PoseCollection;
+        public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         
         public bool replay;
         //This class will be listening to the same object 
@@ -218,12 +220,12 @@ namespace InsightXR.Network
             //     Debug.Log(UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName);
             // }
 
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left,"GrabStandard");
-                
-                // UxrAvatarRig.UpdateHandUsingDescriptor();
-            }
+            // if (Input.GetKeyDown(KeyCode.M))
+            // {
+            //     // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left,"GrabStandard");
+            //     
+            //     // UxrAvatarRig.UpdateHandUsingDescriptor();
+            // }
 
             
 

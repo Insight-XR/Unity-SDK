@@ -12,6 +12,7 @@ using TMPro;
 using UltimateXR.Avatar;
 using UltimateXR.Core;
 using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
+using UltimateXR.Manipulation.HandPoses;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -40,11 +41,6 @@ namespace InsightXR.VR
         {
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
-
-            foreach (var door in FindObjectsOfType<AutomaticDoor>())
-            {
-                door.enabled = false;
-            }
         }
 
         // Start is called before the first frame update
@@ -58,8 +54,14 @@ namespace InsightXR.VR
             else
             {
                 callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
-                handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(Application.persistentDataPath +
-                    "/Saves/HandPoses.json");
+                File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
+                handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
+                    "/Saves/HandPoses.json"));
+
+                // foreach (var handpose in handPoses)
+                // {
+                //     Debug.Log(handpose.Item1 + "  "+ handpose.Item2);
+                // }
             }
 
 
@@ -83,6 +85,7 @@ namespace InsightXR.VR
                 UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
                 UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
                 
+
             }
 
             if (Input.GetKey(KeyCode.RightArrow) && loaded && frame < totalframes - 1)
@@ -99,12 +102,22 @@ namespace InsightXR.VR
             }
         }
 
+        private void ViewDisableGameobjects()
+        {
+            foreach (var door in FindObjectsOfType<AutomaticDoor>())
+            {
+                door.enabled = false;
+            }
+        }
         
         //[DllImport("__Internal")]
         //public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
         
         public void callback(string camdata)
         {
+            
+            ViewDisableGameobjects();
+            
             Debug.Log("JsLib works!");
             // Debug.Log(camdata);
             //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));

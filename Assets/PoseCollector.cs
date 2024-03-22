@@ -17,6 +17,7 @@ public class PoseCollector : MonoBehaviour
 
     public void savePosedata()
     {
+        Debug.Log("Pose Collection: "+ handPoses.Count);
         File.WriteAllText(Application.persistentDataPath+"/Saves/HandPoses.json", JsonConvert.SerializeObject(handPoses));
     }
     

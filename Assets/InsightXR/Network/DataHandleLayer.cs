@@ -7,6 +7,7 @@ using System.IO;
 using InsightXR.VR;
 using Newtonsoft.Json;
 using UltimateXR.Avatar;
+using UltimateXR.Avatar.Rig;
 using UltimateXR.Core;
 using UltimateXR.Devices;
 using Unity.XR.CoreUtils;
@@ -216,6 +217,13 @@ namespace InsightXR.Network
             //     // UxrAvatar.LocalAvatar.GetRuntimeHandPose();
             //     Debug.Log(UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left).PoseName);
             // }
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left,"GrabStandard");
+                
+                // UxrAvatarRig.UpdateHandUsingDescriptor();
+            }
 
             
 

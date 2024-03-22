@@ -10,6 +10,7 @@ using InsightXR.VR;
 using Newtonsoft.Json;
 using TMPro;
 using UltimateXR.Avatar;
+using UltimateXR.Avatar.Rig;
 using UltimateXR.Core;
 using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
 using UltimateXR.Manipulation.HandPoses;
@@ -27,7 +28,8 @@ namespace InsightXR.VR
         public int frame = 0;
         public int totalframes;
         //public List<ObjectData> MotionRecord;
-        public List<(string,string)> handPoses;
+        //public List<(string,string)> handPoses;
+        public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         public string VRCamName;
 
 
@@ -54,10 +56,13 @@ namespace InsightXR.VR
             else
             {
                 callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
-                File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
-                handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
+                //File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
+                // handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
+                //     "/Saves/HandPoses.json"));
+                HandFrameData = JsonConvert.DeserializeObject<List<(UxrHandDescriptor,UxrHandDescriptor)>>(File.ReadAllText(Application.persistentDataPath +
                     "/Saves/HandPoses.json"));
 
+                Debug.Log("Hand pose count "+ HandFrameData.Count);
                 // foreach (var handpose in handPoses)
                 // {
                 //     Debug.Log(handpose.Item1 + "  "+ handpose.Item2);
@@ -82,8 +87,11 @@ namespace InsightXR.VR
                 //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
-                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
-                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
+                // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
+                // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
+                
+                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
+                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
                 
 
             }
@@ -97,8 +105,8 @@ namespace InsightXR.VR
                 //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
-                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
-                UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
+                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
+                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
             }
         }
 

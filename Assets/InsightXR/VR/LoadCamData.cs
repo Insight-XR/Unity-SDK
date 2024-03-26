@@ -56,20 +56,21 @@ namespace InsightXR.VR
             }
             else
             {
-                callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
+                // callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/SavedReplayData.json"));
+                callback(File.ReadAllText(UnityEngine.Device.Application.streamingAssetsPath + "/Saves/SavedReplayData.json"));
                 // File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
                 // File.WriteAllText(Application.dataPath+"/Saves/Save.json", File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
                  // handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
                  //     "/Saves/HandPoses.json"));
-                HandFrameData = JsonConvert.DeserializeObject<List<(UxrHandDescriptor,UxrHandDescriptor)>>(File.ReadAllText(Application.persistentDataPath +
-                    "/Saves/HandPoses.json"));
+                // HandFrameData = JsonConvert.DeserializeObject<List<(UxrHandDescriptor,UxrHandDescriptor)>>(File.ReadAllText(Application.persistentDataPath +
+                //     "/Saves/HandPoses.json"));
 
-                Debug.Log("Hand pose count "+ HandFrameData.Count);
-                // foreach (var handpose in handPoses)
-                // {
-                //     Debug.Log(handpose.Item1 + "  "+ handpose.Item2);
-                // }
-                Debug.Log(FindObjectsOfType<Component>().Length);
+                // Debug.Log("Hand pose count "+ HandFrameData.Count);
+                // // foreach (var handpose in handPoses)
+                // // {
+                // //     Debug.Log(handpose.Item1 + "  "+ handpose.Item2);
+                // // }
+                // Debug.Log(FindObjectsOfType<Component>().Length);
             }
 
 
@@ -132,12 +133,13 @@ namespace InsightXR.VR
             Debug.Log("JsLib works!");
             // Debug.Log(camdata);
             //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));
-            var DownloadedData = JsonConvert.DeserializeObject<Dictionary<string, List<ObjectData>>>(camdata);
+            var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
             
-            ObjectDataLoader.LoadObjectData(DownloadedData);
+            ObjectDataLoader.LoadObjectData(DownloadedData.ObjectMotionData);
+            HandFrameData = DownloadedData.handPoseData;
             ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
-            totalframes = DownloadedData.First().Value.Count;
+            totalframes = DownloadedData.ObjectMotionData.First().Value.Count;
             frame = 0;
 
             //MotionRecord = DownloadedData[VRCamName];
@@ -145,10 +147,10 @@ namespace InsightXR.VR
             ObjectDataLoader.DistributeData(frame);
             // Debug.Log(DownloadedData[VRCamName].Count);
             // Debug.Log(DownloadedData["BatteryGeo1"].Count);
-            foreach (var data in DownloadedData)
-            {
-                Debug.Log(data.Key + " "+data.Value.Count);
-            }
+            // foreach (var data in DownloadedData)
+            // {
+            //     Debug.Log(data.Key + " "+data.Value.Count);
+            // }
             
             Debug.Log("Loaded Data");
         

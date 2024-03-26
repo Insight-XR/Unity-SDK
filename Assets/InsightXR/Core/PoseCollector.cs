@@ -17,14 +17,7 @@ public class PoseCollector : MonoBehaviour
         // handPoses = new List<(string, string)>();
         HandFrameData = new List<(UxrHandDescriptor, UxrHandDescriptor)>();
     }
-
-    public void savePosedata()
-    {
-        Debug.Log("Pose Collection: "+ HandFrameData.Count);
-        File.WriteAllText(Application.persistentDataPath+"/Saves/HandPoses.json", JsonConvert.SerializeObject(HandFrameData));
-    }
     
-
     // Update is called once per frame
     void FixedUpdate()
     {

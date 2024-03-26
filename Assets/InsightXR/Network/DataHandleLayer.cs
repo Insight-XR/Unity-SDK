@@ -112,8 +112,10 @@ namespace InsightXR.Network
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
                     
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
-                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
-                    PoseCollection.savePosedata();
+                    //File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    // PoseCollection.savePosedata();
+                    // File.WriteAllText(Application.persistentDataPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
+                    File.WriteAllText(Application.streamingAssetsPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
 

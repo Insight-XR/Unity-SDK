@@ -46,6 +46,29 @@ namespace InsightXR.VR
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }
 
+        IEnumerator LoaddatalocallyWebGL()
+        {
+            
+            // Replace "SavedReplayData.json" with the actual file name in your streaming assets folder
+            string filePath = Application.streamingAssetsPath + "/Saves/SavedReplayData.json";
+
+            // Create a UnityWebRequest to load the file
+            UnityWebRequest www = UnityWebRequest.Get(filePath);
+
+            Debug.Log("getting save data [WEBGL]");
+            yield return www.SendWebRequest(); // Wait for the request to complete
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                // Successfully loaded the data
+                callback(www.downloadHandler.text);
+                Debug.Log("Replay data loaded successfully.");
+            }
+            else
+            {
+                Debug.LogError("Error loading replay data: " + www.error);
+            }
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -53,6 +76,9 @@ namespace InsightXR.VR
             {
                 //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
                 Debug.Log("Cam data function if available was executed");
+
+
+                StartCoroutine(LoaddatalocallyWebGL());
             }
             else
             {

@@ -9,11 +9,11 @@ using InsightXR.Network;
 using InsightXR.VR;
 using Newtonsoft.Json;
 using TMPro;
-using UltimateXR.Avatar;
-using UltimateXR.Avatar.Rig;
-using UltimateXR.Core;
-using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
-using UltimateXR.Manipulation.HandPoses;
+// using UltimateXR.Avatar;
+// using UltimateXR.Avatar.Rig;
+// using UltimateXR.Core;
+// using UltimateXR.Examples.UltimateXR.Examples.FullScene.Scripts.Doors;
+// using UltimateXR.Manipulation.HandPoses;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -28,9 +28,9 @@ namespace InsightXR.VR
 
         public int frame = 0;
         public int totalframes;
-        //public List<ObjectData> MotionRecord;
+        public List<ObjectData> MotionRecord;
         //public List<(string,string)> handPoses;
-        public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
+        //public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         public string VRCamName;
 
 
@@ -120,8 +120,8 @@ namespace InsightXR.VR
                 // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
                 // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
                 
-                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
-                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
+                // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
+                // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
                 
 
             }
@@ -132,21 +132,21 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
-                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
-                UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
+                // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
+                // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
             }
         }
 
-        private void ViewDisableGameobjects()
-        {
-            foreach (var door in FindObjectsOfType<AutomaticDoor>())
-            {
-                door.enabled = false;
-            }
-        }
+        // private void ViewDisableGameobjects()
+        // {
+        //     foreach (var door in FindObjectsOfType<AutomaticDoor>())
+        //     {
+        //         door.enabled = false;
+        //     }
+        // }
         
         //[DllImport("__Internal")]
         //public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
@@ -154,7 +154,7 @@ namespace InsightXR.VR
         public void callback(string camdata)
         {
             
-            ViewDisableGameobjects();
+            //ViewDisableGameobjects();
             
             Debug.Log("JsLib works!");
             // Debug.Log(camdata);
@@ -162,14 +162,14 @@ namespace InsightXR.VR
             var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
             
             ObjectDataLoader.LoadObjectData(DownloadedData.ObjectMotionData);
-            HandFrameData = DownloadedData.handPoseData;
+            // HandFrameData = DownloadedData.handPoseData;
             ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
             totalframes = DownloadedData.ObjectMotionData.First().Value.Count;
             frame = 0;
 
-            //MotionRecord = DownloadedData[VRCamName];
-            //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+            MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
+            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
             // Debug.Log(DownloadedData[VRCamName].Count);
             // Debug.Log(DownloadedData["BatteryGeo1"].Count);

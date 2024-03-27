@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &108678313
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &187778160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,6 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &406919259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,6 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!210 &454185235
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1880,6 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &624342868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!4 &698105074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1679320830805109037, guid: d7813ad8e3501a94eaf62103c134290e, type: 3}
@@ -2204,6 +2210,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 752309075}
     - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
+      propertyPath: UserID
+      value: 007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: replay
       value: 0
       objectReference: {fileID: 0}
@@ -2216,6 +2226,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 225369346}
     - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
+      propertyPath: CustomerID
+      value: InsightXRTesting
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449973046891414808, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: ControllerInput
       value: 
       objectReference: {fileID: 1745587037}
@@ -2225,15 +2239,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3727278777202145767, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: bucketName
-      value: 
+      value: sessions-3d-data
       objectReference: {fileID: 0}
     - target: {fileID: 3727278777202145767, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: awsAccessKeyId
-      value: 
+      value: AKIAXQOF2EHXJZCDKVX5
       objectReference: {fileID: 0}
     - target: {fileID: 3727278777202145767, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: awsSecretAccessKey
-      value: 
+      value: dSgfykw+JLbidT2tkmbW5cuCr1FxNVLMO5r6pI+3
       objectReference: {fileID: 0}
     - target: {fileID: 5805486355617821152, guid: ef93b729bdec27e4587c6da9b1049959, type: 3}
       propertyPath: m_Name
@@ -2983,6 +2997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &752309075
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &824854067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3682,6 +3698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &1008317098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3981,6 +3998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &1240742393 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd952888fe6c5eb4ab7c0487d43b61f6, type: 3}
@@ -4160,6 +4178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &1356503987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4618,6 +4637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1001 &1703540328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4805,6 +4825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!210 &1777397510
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -5963,6 +5984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &2067096870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,6 +6656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &2086000615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6782,6 +6805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &2107331886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6930,6 +6954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &2115608660
 GameObject:
   m_ObjectHideFlags: 0
@@ -7469,6 +7494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!33 &3477942432839678283
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7767,6 +7793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!23 &5274396546963753198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7871,6 +7898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!23 &5489431636924789221
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8019,6 +8047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &6521732331137181996
 GameObject:
   m_ObjectHideFlags: 0
@@ -8102,6 +8131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!33 &6613947650126417891
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8187,6 +8217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1 &7063181440696848038
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,6 +8437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!4 &8800534560875211538
 Transform:
   m_ObjectHideFlags: 0
@@ -8483,6 +8515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!23 &8900028050448781622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8587,6 +8620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!23 &9115129306123326098
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8691,6 +8725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  hand: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

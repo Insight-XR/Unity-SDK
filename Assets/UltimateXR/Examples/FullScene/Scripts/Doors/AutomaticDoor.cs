@@ -4,7 +4,6 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Codice.Client.BaseCommands;
 using UltimateXR.Animation.Interpolation;
 using UltimateXR.Audio;
 using UltimateXR.Avatar;

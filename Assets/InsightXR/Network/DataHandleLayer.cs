@@ -199,7 +199,9 @@ namespace InsightXR.Network
                  {
                      Debug.Log("Ending Application");
                      
-                     EditorApplication.isPlaying = false;
+                     //EditorApplication.isPlaying = false;
+                     
+                     
                      //GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
                  }
                  Debug.Log("X Button Pressed");
@@ -270,7 +272,7 @@ namespace InsightXR.Network
 
         IEnumerator StartRecordingSession()
         {
-            while (UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left) == null)
+            while (UxrAvatar.LocalAvatar != null && UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left) == null)
             {
                 Debug.Log("Not Exist");
                 yield return null;

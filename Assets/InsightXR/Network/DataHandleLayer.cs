@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.IO;
 using InsightXR.VR;
 using Newtonsoft.Json;
-using UltimateXR.Avatar;
-using UltimateXR.Avatar.Rig;
-using UltimateXR.Core;
-using UltimateXR.Devices;
-using UltimateXR.Manipulation.HandPoses;
+// using UltimateXR.Avatar;
+// using UltimateXR.Avatar.Rig;
+// using UltimateXR.Core;
+// using UltimateXR.Devices;
+// using UltimateXR.Manipulation.HandPoses;
 using Unity.XR.CoreUtils;
 using UnityEditor;
 
@@ -40,8 +40,8 @@ namespace InsightXR.Network
         public GameObject ReplayCam;
         public string ReplayBucketURL;
         private bool recording;
-        private PoseCollector PoseCollection;
-        public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
+        //private PoseCollector PoseCollection;
+        //public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         
         public bool replay;
         //This class will be listening to the same object 
@@ -50,6 +50,9 @@ namespace InsightXR.Network
         private Dictionary<string, List<ObjectData>> UserInstanceData;
         // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
         // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
+
+        public string CustomerID;
+        public string UserID;
 
         private void OnEnable()
         {
@@ -64,18 +67,18 @@ namespace InsightXR.Network
                 {
                     Debug.Log("Replay is on, Loading the Data");
                     ReplayCam.SetActive(true);
-                    if (TryGetComponent(out PoseCollector col))
-                    {
-                        col.enabled = true;
-                    }
-                    // Player.SetActive(false);
+                    // if (TryGetComponent(out PoseCollector col))
+                    // {
+                    //     col.enabled = true;
+                    // }
+                    Player.SetActive(false);
                 }
                 else
                 {
                     Debug.Log("Replay is Off, Recording the Session");
-                    // Player.SetActive(true);
+                    Player.SetActive(true);
                     ReplayCam.SetActive(false);
-                    StartCoroutine(StartRecordingSession());
+                    //StartCoroutine(StartRecordingSession());
                     Debug.Log(Time.time);
                     recording = true;
                 }
@@ -112,10 +115,10 @@ namespace InsightXR.Network
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
                     
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
-                    //File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
                     // PoseCollection.savePosedata();
-                    // File.WriteAllText(Application.persistentDataPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
-                    File.WriteAllText(Application.streamingAssetsPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
+                    //File.WriteAllText(Application.persistentDataPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
+                    //File.WriteAllText(Application.streamingAssetsPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
                     // //We can instead call it directly with the file path and create a stream like that, but for now, this will do
                     // GetComponent<NetworkUploader>().UploadFileToServerAsync(File.ReadAllText(Application.dataPath + "/Saves/Save.json"));
 
@@ -180,7 +183,7 @@ namespace InsightXR.Network
             //     }
             //     Debug.Log("Set Hands");
             // }
-            if (ControllerInput.GetLeftPrimaryDown())
+            if (ControllerInput.GetLeftPrimaryDown() || Input.GetKeyDown(KeyCode.M))
             {
                 Debug.Log("LEFT WORKS");
             
@@ -199,10 +202,11 @@ namespace InsightXR.Network
                  {
                      Debug.Log("Ending Application");
                      
+                     
                      //EditorApplication.isPlaying = false;
                      
                      
-                     //GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+                     GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
                  }
                  Debug.Log("X Button Pressed");
                  //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
@@ -270,40 +274,40 @@ namespace InsightXR.Network
             }
         }
 
-        IEnumerator StartRecordingSession()
-        {
-            while (UxrAvatar.LocalAvatar != null && UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left) == null)
-            {
-                Debug.Log("Not Exist");
-                yield return null;
-            }
-            
-            Debug.Log("Exists");
-            if (gameObject.TryGetComponent(out PoseCollector collector))
-            {
-                PoseCollection = collector;
-                PoseCollection.enabled = true;
-            }
-            else
-            { 
-                PoseCollection = gameObject.AddComponent<PoseCollector>();
-            }
-
-            var hands = FindObjectsOfType<gloveCheck>();
-
-            while (hands[0].transform.localPosition.x != 0)
-            {
-                Debug.Log("Setting hands");
-                foreach (var glove in hands)
-                {
-                    glove.sethands();
-                }
-            }
-
-            Debug.Log("Hands Set");
-            StartRecording();
-            
-        }
+        // IEnumerator StartRecordingSession()
+        // {
+        //     while (UxrAvatar.LocalAvatar != null && UxrAvatar.LocalAvatar.GetCurrentRuntimeHandPose(UxrHandSide.Left) == null)
+        //     {
+        //         Debug.Log("Not Exist");
+        //         yield return null;
+        //     }
+        //     
+        //     Debug.Log("Exists");
+        //     if (gameObject.TryGetComponent(out PoseCollector collector))
+        //     {
+        //         PoseCollection = collector;
+        //         PoseCollection.enabled = true;
+        //     }
+        //     else
+        //     { 
+        //         PoseCollection = gameObject.AddComponent<PoseCollector>();
+        //     }
+        //
+        //     var hands = FindObjectsOfType<gloveCheck>();
+        //
+        //     while (hands[0].transform.localPosition.x != 0)
+        //     {
+        //         Debug.Log("Setting hands");
+        //         foreach (var glove in hands)
+        //         {
+        //             glove.sethands();
+        //         }
+        //     }
+        //
+        //     Debug.Log("Hands Set");
+        //     StartRecording();
+        //     
+        // }
 
 
     }

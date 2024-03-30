@@ -30,29 +30,45 @@ namespace InsightXR.Network
         [Header("Broadcasting to")]
         [SerializeField] private ComponentWeb3DataRecievingChannel DataDistributor;
 
-        //This needed to hide in future.
-        [SerializeField] private InsightXRMODE SDK_MODE;
-
-        private int distributeDataIndex;
-
+        [Header("References")]
         public TriggerInputDetector ControllerInput;
         public GameObject Player;
         public GameObject ReplayCam;
-        public string ReplayBucketURL;
+        public HandAnimator Lefthand;
+        public HandAnimator RightHand;
+        
+        private (float,float) readleft;
+        private (float, float) readright;
+        
+        //This needed to hide in future.
+        // [SerializeField] private InsightXRMODE SDK_MODE;
+
+        private int distributeDataIndex;
+        public int test;
+
+        
+        [Header("Play Mode")]
+        public bool replay;
         private bool recording;
         //private PoseCollector PoseCollection;
         //public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         
-        public bool replay;
+        
         //This class will be listening to the same object 
         //on which every other game object is making the 
         //the transaction of there data entry.
         private Dictionary<string, List<ObjectData>> UserInstanceData;
+
+        private List<(float, float, float, float)> HandData;
+
+        public List<(float, string)> EventLog;
         // private void OnEnable()     => DataCollector.CollectionRequestEvent += SortAndStoreData;
         // private void OnDisable()    => DataCollector.CollectionRequestEvent -= SortAndStoreData;
 
+        [Header("Given Data")]
         public string CustomerID;
         public string UserID;
+        public string ReplayBucketURL;
 
         private void OnEnable()
         {
@@ -80,7 +96,8 @@ namespace InsightXR.Network
                     ReplayCam.SetActive(false);
                     //StartCoroutine(StartRecordingSession());
                     Debug.Log(Time.time);
-                    recording = true;
+                    // recording = true;
+                    StartRecording();
                 }
             }
             else
@@ -93,7 +110,12 @@ namespace InsightXR.Network
 
         private void Start()
         {
+            HandData = new List<(float, float, float, float)>();
+            readleft = new();
+            readright = new();
+            EventLog = new List<(float, string)>();
             
+            Debug.Log("Location:  "+ Input.location.lastData);
         }
 
         // public UxrControllerInput UXRcontrollerInput;
@@ -115,7 +137,7 @@ namespace InsightXR.Network
                     DataCollector.CollectionRequestEvent -= SortAndStoreData;
                     
                     Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
-                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(UserInstanceData));
+                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(new SaveData(HandData,UserInstanceData,this)));
                     // PoseCollection.savePosedata();
                     //File.WriteAllText(Application.persistentDataPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
                     //File.WriteAllText(Application.streamingAssetsPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
@@ -206,7 +228,7 @@ namespace InsightXR.Network
                      //EditorApplication.isPlaying = false;
                      
                      
-                     GetComponent<NetworkUploader>().UploadFileToServerAsync(UserInstanceData);
+                     GetComponent<NetworkUploader>().UploadFileToServerAsync(new SaveData(HandData,UserInstanceData,this));
                  }
                  Debug.Log("X Button Pressed");
                  //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud
@@ -240,17 +262,13 @@ namespace InsightXR.Network
         }
 
         private void FixedUpdate(){
+            // HandData.Add((Lefthand.GetFloat("Trigger"),Lefthand.GetFloat("Grab"),RightHand.GetFloat("Trigger"),RightHand.GetFloat("Grab")));
+            // Debug.Log((Lefthand.GetFloat("Trigger"),Lefthand.GetFloat("Grab"),RightHand.GetFloat("Trigger"),RightHand.GetFloat("Grab")).ToString());
+            readleft = Lefthand.GetData();
+            readright = RightHand.GetData();
             
-            // if (Input.GetKey(KeyCode.R))
-            // {
-            //     Debug.Log("In Replay Mode");
-            //     SDK_MODE = InsightXRMODE.Replay;
-            //     DistributeData(0);
-            //     distributeDataIndex++;
-            // }else{
-            //     distributeDataIndex = 0;
-            // }
-            
+            HandData.Add((readleft.Item1,readleft.Item2,readright.Item1,readright.Item2));
+            Debug.Log((readleft.Item1,readleft.Item2,readright.Item1,readright.Item2).ToString());
         }
         
 
@@ -310,6 +328,6 @@ namespace InsightXR.Network
         // }
 
 
+        
     }
-    
 }

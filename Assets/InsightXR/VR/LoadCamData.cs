@@ -29,9 +29,16 @@ namespace InsightXR.VR
         public int frame = 0;
         public int totalframes;
         public List<ObjectData> MotionRecord;
+
+        public List<(float, float, float, float)> handposes;
+
+        public Animator Lefthand;
+
+        public Animator RightHand;
         //public List<(string,string)> handPoses;
         //public List<(UxrHandDescriptor, UxrHandDescriptor)> HandFrameData;
         public string VRCamName;
+        public GameObject Endscreen;
 
 
         public bool loaded;
@@ -74,16 +81,16 @@ namespace InsightXR.VR
         {
             if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
             {
-                //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
+                GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
                 Debug.Log("Cam data function if available was executed");
 
 
-                StartCoroutine(LoaddatalocallyWebGL());
+                //StartCoroutine(LoaddatalocallyWebGL());
             }
             else
             {
                 // callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/SavedReplayData.json"));
-                callback(File.ReadAllText(UnityEngine.Device.Application.streamingAssetsPath + "/Saves/SavedReplayData.json"));
+                callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
                 // File.WriteAllText(Application.dataPath+"/Saves/check.json",File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/HandPoses.json") );
                 // File.WriteAllText(Application.dataPath+"/Saves/Save.json", File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
                  // handPoses = JsonConvert.DeserializeObject<List<(string, string)>>(File.ReadAllText(Application.persistentDataPath +
@@ -114,9 +121,24 @@ namespace InsightXR.VR
 
                 // transform.position = MotionRecord[frame].position;
                 // transform.rotation = MotionRecord[frame].rotation;
-                //transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
+                Lefthand.SetFloat("Trigger", handposes[frame].Item1);
+                Lefthand.SetFloat("Grip", handposes[frame].Item2);
+                
+                
+                RightHand.SetFloat("Trigger", handposes[frame].Item3);
+                RightHand.SetFloat("Grip", handposes[frame].Item4);
+                
+                if (frame == totalframes - 1)
+                {
+                    Endscreen.SetActive(true);
+                }
+                else
+                {
+                    Endscreen.SetActive(false);
+                }
                 // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Left, handPoses[frame].Item1);
                 // UxrAvatar.LocalAvatar.SetCurrentHandPoseImmediately(UxrHandSide.Right, handPoses[frame].Item2);
                 
@@ -135,6 +157,21 @@ namespace InsightXR.VR
                 transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
+                Lefthand.SetFloat("Trigger", handposes[frame].Item1);
+                Lefthand.SetFloat("Grip", handposes[frame].Item2);
+                
+                
+                RightHand.SetFloat("Trigger", handposes[frame].Item3);
+                RightHand.SetFloat("Grip", handposes[frame].Item4);
+
+                if (frame == totalframes - 1)
+                {
+                    Endscreen.SetActive(true);
+                }
+                else
+                {
+                    Endscreen.SetActive(false);
+                }
                 // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Left, HandFrameData[frame].Item1);
                 // UxrAvatarRig.UpdateHandUsingDescriptor(UxrAvatar.LocalAvatar, UxrHandSide.Right, HandFrameData[frame].Item2);
             }
@@ -148,8 +185,8 @@ namespace InsightXR.VR
         //     }
         // }
         
-        //[DllImport("__Internal")]
-        //public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
+        [DllImport("__Internal")]
+        public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
         
         public void callback(string camdata)
         {
@@ -162,15 +199,17 @@ namespace InsightXR.VR
             var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
             
             ObjectDataLoader.LoadObjectData(DownloadedData.ObjectMotionData);
+            handposes = DownloadedData.handPoseData;
             // HandFrameData = DownloadedData.handPoseData;
             ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
             totalframes = DownloadedData.ObjectMotionData.First().Value.Count;
             frame = 0;
-
+            
             MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
             transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
+            
             // Debug.Log(DownloadedData[VRCamName].Count);
             // Debug.Log(DownloadedData["BatteryGeo1"].Count);
             // foreach (var data in DownloadedData)

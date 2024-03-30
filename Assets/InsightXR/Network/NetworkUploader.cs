@@ -50,13 +50,14 @@ namespace InsightXR.Network
             var response = await client.PutObjectAsync(request);
 
             return (response.HttpStatusCode == System.Net.HttpStatusCode.OK);
+            
         }
 
         //This funtion takes up the file from a location and put it on configured s3 bucket.
-        public async void UploadFileToServerAsync(Dictionary<string, List<ObjectData>> UserInstanceData)
+        public async void UploadFileToServerAsync(SaveData savedata)
         {
-            string data = JsonConvert.SerializeObject(UserInstanceData);
-            string uploadFileName = Handler.CustomerID + "_" + Handler.UserID + "_" +Random.Range(12345,99999) +"_"+ (Time.time *1000).ToString("F2")+"_["+ DateTime.UtcNow.ToString("dd/mm/yyyy")+"]";
+            string data = JsonConvert.SerializeObject(savedata);
+            string uploadFileName = savedata.sessionID+".json";
             string uploadThis = data;
             //var stream = new FileStream(Application.persistentDataPath + Path.DirectorySeparatorChar + fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
 
@@ -65,10 +66,11 @@ namespace InsightXR.Network
 
             
             Debug.Log(uploadFileName);
-            bool uploaded = await UploadFileAsync(s3Client, bucketName, uploadFileName, uploadStream, Handler.CustomerID);
+            bool uploaded = await UploadFileAsync(s3Client, bucketName, uploadFileName, uploadStream, savedata.CustomerID);
             print($"Uploaded: {uploaded}");
+            //EditorApplication.isPlaying = false;
 
-            EditorApplication.isPlaying = false;
+            
         }
         public void DownloadFileToServerAsync()
         {

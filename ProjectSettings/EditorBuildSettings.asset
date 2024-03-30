@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/InsightXR/Scenes/InsightSampleScene.unity
-    guid: bdf2fd37e9071fc4ab937c26c384d39f
-  - enabled: 1
     path: Assets/UltimateXR/Examples/FullScene/UltimateXR_URP.unity
     guid: 1ae2cdb688dd18d4998d85adef6e220d
+  - enabled: 1
+    path: Assets/InsightXR/Scenes/InsightSampleScene.unity
+    guid: bdf2fd37e9071fc4ab937c26c384d39f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0bf546104e2338543b6325aa1e3d0d32, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b47bd458124420040ae3b42e544f221b, type: 2}

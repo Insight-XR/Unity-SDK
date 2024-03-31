@@ -26,14 +26,11 @@ namespace InsightXR.VR
         private void Start()
         {
             _inputData = GetComponent<InputData>();
-            Debug.Log("Started inputData: " + _inputData);
 
         }
-
-        // Update is called once per frame
+        
         void Update()
         {
-            //To get the input from the controllers
             _inputData._leftController.TryGetFeatureValue(CommonUsages.primaryButton, out LeftPrimaryDown);
             _inputData._leftController.TryGetFeatureValue(CommonUsages.primaryButton, out LeftSecondaryDown);
 

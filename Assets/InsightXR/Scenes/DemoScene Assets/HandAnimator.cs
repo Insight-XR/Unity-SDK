@@ -17,6 +17,12 @@ public class HandAnimator : MonoBehaviour
     private void Start()
     {
         XRinput = FindObjectOfType<TriggerInputDetector>();
+
+        if (handAnimator == null)
+        {
+            Debug.Log("Hand Animator cannot be Found");
+            this.enabled = false;
+        }
     }
 
     void Update()

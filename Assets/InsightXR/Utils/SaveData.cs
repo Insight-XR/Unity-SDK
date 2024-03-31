@@ -17,6 +17,7 @@ public class SaveData
     public string UserID;
     public string CustomerID;
     public string EndDateTime;
+    public string ApiKey;
     public string StartDateTime;
     public string SessionDuration;
 
@@ -38,6 +39,7 @@ public class SaveData
         
         if (controller != null)
         {
+            ApiKey = controller.APIKEY;
             sessionID = Random.Range(12345, 99999).ToString();
             UserID = controller.UserID;
             CustomerID = controller.CustomerID;

@@ -44,7 +44,7 @@ namespace InsightXR.VR
         public bool loaded;
 
         private string LoadBucket;
-        // private string path;
+        
         public DataHandleLayer ObjectDataLoader;
 
         private void OnEnable()
@@ -79,12 +79,12 @@ namespace InsightXR.VR
         // Start is called before the first frame update
         void Start()
         {
+            Endscreen.SetActive(true);
             if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
             {
                 GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
-                Debug.Log("Cam data function if available was executed");
-
-
+                //Debug.Log("Cam data function if available was executed");
+                
                 //StartCoroutine(LoaddatalocallyWebGL());
             }
             else
@@ -134,6 +134,7 @@ namespace InsightXR.VR
                 if (frame == totalframes - 1)
                 {
                     Endscreen.SetActive(true);
+                    Debug.Log("Last Frame");
                 }
                 else
                 {
@@ -167,6 +168,7 @@ namespace InsightXR.VR
                 if (frame == totalframes - 1)
                 {
                     Endscreen.SetActive(true);
+                    Debug.Log("Last Frame");
                 }
                 else
                 {
@@ -193,7 +195,6 @@ namespace InsightXR.VR
             
             //ViewDisableGameobjects();
             
-            Debug.Log("JsLib works!");
             // Debug.Log(camdata);
             //Debug.Log(File.ReadAllText(Application.persistentDataPath + "/Saves/save.json"));
             var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
@@ -217,14 +218,16 @@ namespace InsightXR.VR
             //     Debug.Log(data.Key + " "+data.Value.Count);
             // }
             
-            Debug.Log("Loaded Data");
+            Debug.Log("Save Data Loaded Successfully");
+            Endscreen.SetActive(false);
         
             loaded = true;
         }
         
         public void fallback()
         {
-            Debug.Log("JsLib not working correctly");
+            Debug.Log("External File unable to be loaded");
+            Application.Quit();
         }
 
     }

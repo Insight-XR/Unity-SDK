@@ -44,9 +44,8 @@ namespace InsightXR.Network
         // [SerializeField] private InsightXRMODE SDK_MODE;
 
         private int distributeDataIndex;
-        public int test;
 
-        
+
         [Header("Play Mode")]
         public bool replay;
         private bool recording;
@@ -69,6 +68,7 @@ namespace InsightXR.Network
         public string CustomerID;
         public string UserID;
         public string ReplayBucketURL;
+        public string APIKEY;
 
         private void OnEnable()
         {
@@ -91,13 +91,12 @@ namespace InsightXR.Network
                 }
                 else
                 {
-                    Debug.Log("Replay is Off, Recording the Session");
-                    Player.SetActive(true);
-                    ReplayCam.SetActive(false);
-                    //StartCoroutine(StartRecordingSession());
-                    Debug.Log(Time.time);
-                    // recording = true;
-                    StartRecording();
+                    // Debug.Log("Replay is Off, Recording the Session");
+                    // Player.SetActive(true);
+                    // ReplayCam.SetActive(false);
+                    // //StartCoroutine(StartRecordingSession());
+                    // // recording = true;
+                    // StartRecording();
                 }
             }
             else
@@ -124,7 +123,40 @@ namespace InsightXR.Network
             Debug.Log("Started Recording");
             DataCollector.CollectionRequestEvent += SortAndStoreData;
             recording = true;
+            
+            Player.SetActive(true);
+            ReplayCam.SetActive(false);
             //UXRcontrollerInput = FindObjectOfType<UxrControllerInput>();
+        }
+
+        public void StopRecording(bool save, bool close)
+        {
+            Debug.Log("Frame Count: "+ UserInstanceData.First().Value.Count);
+            DataCollector.CollectionRequestEvent -= SortAndStoreData;
+            File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(new SaveData(HandData,UserInstanceData,this)));
+            
+
+            if (save)
+            {
+                GetComponent<NetworkUploader>().UploadFileToServerAsync(new SaveData(HandData,UserInstanceData,this), close);
+            }
+            else
+            {
+                if (close)
+                {
+                    if (Application.platform == RuntimePlatform.LinuxEditor ||
+                        Application.platform == RuntimePlatform.WindowsEditor ||
+                        Application.platform == RuntimePlatform.OSXEditor)
+                    {
+                        Debug.Log("Save File only stored Locally");
+                        Debug.Log("Application Quit");
+                    }
+                    else
+                    {
+                        Application.Quit();
+                    }
+                }
+            }
         }
 
         private void OnDisable()
@@ -134,10 +166,10 @@ namespace InsightXR.Network
                 if (!replay)
                 {
                     //Create a Save File incase the Application wants to close
-                    DataCollector.CollectionRequestEvent -= SortAndStoreData;
                     
-                    Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
-                    File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(new SaveData(HandData,UserInstanceData,this)));
+                    
+                    // Debug.Log("Record Count: "+ UserInstanceData.First().Value.Count);
+                    
                     // PoseCollection.savePosedata();
                     //File.WriteAllText(Application.persistentDataPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
                     //File.WriteAllText(Application.streamingAssetsPath + "/Saves/SavedReplayData.json", JsonConvert.SerializeObject(new SaveData(PoseCollection.HandFrameData, UserInstanceData)));
@@ -180,7 +212,7 @@ namespace InsightXR.Network
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
         {
             UserInstanceData = loadedData;
-            Debug.Log("Data Loaded");
+            Debug.Log("Save Data Loaded");
         }
         /*
         * This is for debbuging this part of the code will not ship.
@@ -228,7 +260,7 @@ namespace InsightXR.Network
                      //EditorApplication.isPlaying = false;
                      
                      
-                     GetComponent<NetworkUploader>().UploadFileToServerAsync(new SaveData(HandData,UserInstanceData,this));
+                     
                  }
                  Debug.Log("X Button Pressed");
                  //The below Script is uploading an object with all the data. It gets serialized and sent to the Cloud

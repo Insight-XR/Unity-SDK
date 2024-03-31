@@ -21,8 +21,10 @@ public class SaveData
     public string StartDateTime;
     public string SessionDuration;
 
+    //The List of Registered Events
     public List<(float, string)> EventLog;
 
+    //The Hand Pose Data
     public List<(float, float, float, float)> handPoseData;
 
     //The Object Motion data
@@ -49,6 +51,5 @@ public class SaveData
             EventLog = controller.EventLog; 
         }
         
-        // RecordingSaveTimeStamp = System.DateTime.Now.ToString();
     }
 }

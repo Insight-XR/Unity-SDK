@@ -86,7 +86,17 @@ namespace InsightXR.Network
             EventLog = new List<(float, string)>();
             
         }
-        
+
+        public bool IsRecording()
+        {
+            return recording;
+        }
+
+        public bool IsReplayMode()
+        {
+            return replay;
+        }
+
         public void StartRecording()
         {
             Debug.Log("Started Recording");

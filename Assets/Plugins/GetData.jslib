@@ -22,9 +22,11 @@ mergeInto(LibraryManager.library, {
                     // Call the function with the JSON content
                     window.unityInstance.SendMessage(Pobjectname, Pcallback, jsonString);
 
-                    console.log('File content sent to ' + Pobjectname);
+                    //console.log('File content sent to ' + Pobjectname);
                 } else {
-                    console.error('Failed to retrieve file content from ' + Purl);
+                    //console.error('Failed to retrieve file content from ' + Purl);
+                    window.unityInstance.SendMessage(Pobjectname, Pfallback);
+
                 }
             };
 

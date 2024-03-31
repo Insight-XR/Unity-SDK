@@ -29,7 +29,18 @@ public class InsightXRAPI : MonoBehaviour
     {
         Collector.StopRecording(uploadSaveFile, CloseApplicationAfterSave);
     }
-    
+
+    //Checks if the session is recording
+    public bool IsRecording()
+    {
+        return Collector.IsRecording();
+    }
+
+    //Checks is the Session is in Replay Mode or not
+    public bool InReplayMode()
+    {
+        return Collector.IsReplayMode();
+    }
 
     //Log an Event
     public void InsightLogEvent(string Event)

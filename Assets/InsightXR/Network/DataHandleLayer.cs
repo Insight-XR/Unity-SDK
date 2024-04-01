@@ -148,7 +148,6 @@ namespace InsightXR.Network
         public void LoadObjectData(Dictionary<string, List<ObjectData>> loadedData)
         {
             UserInstanceData = loadedData;
-            Debug.Log("Save Data Loaded");
         }
         
 

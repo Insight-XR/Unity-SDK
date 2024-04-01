@@ -4,24 +4,40 @@ using UnityEngine;
 
 public class InsightXRAPI : MonoBehaviour
 {
-    private DataHandleLayer Collector;
+    public DataHandleLayer Collector;
 
     //Creates a reference to the Main Data Handler
-    void Start()
-    {
-        Collector = GetComponent<DataHandleLayer>();
-    }
+    // void Start()
+    // {
+    //     Collector = GetComponent<DataHandleLayer>();
+    // }
 
     //Lets you start Recording the Session.
     public void RecordSession()
     {
-        Collector.StartRecording();
+        if (!InReplayMode())
+        {
+            Collector.StartRecording();
+        }
+        else
+        {
+            Debug.LogError("Replay Mode is set to active, aborting recording");
+        }
+        
     }
 
     //Lets you stop the session with the choice to upload the save
     public void StopSession(bool uploadSaveFile)
     {
-        Collector.StopRecording(uploadSaveFile, false);
+        if (IsRecording())
+        {
+            Collector.StopRecording(uploadSaveFile, false);
+        }
+        else
+        {
+            Debug.LogError("Session is not being recorded, cannot stop an event that does not exist");
+        }
+        
     }
 
     //Lets you stop the session with the choice to upload the save and toggle if the application closes afterwards

@@ -10,12 +10,17 @@ Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates
   - OpenXR
   - XR Interaction toolkit
   - Sample Starter Assets for XR Interaction toolkit
+    
+<img width="956" alt="XR show" src="https://github.com/Insight-XR/Unity-SDK-dev/assets/161463369/c53a878d-5006-4154-aeec-065d2f2c3b91">
+
 - Set up XR Plugin Management in Build Settings:
   - Select OpenXR Runtime for both PC and Android platforms
   - Tick "Initialize XR on Startup" for testing in the editor
   - Add desired VR headset's interaction profile under PC and Android tabs
   - We are adding `Oculus Touch Controller Profile`
 - Set Compiler to IL2CPP, build mode to arm(64) [Android], and compression to ASTC
+
+<img width="959" alt="Profiles" src="https://github.com/Insight-XR/Unity-SDK-dev/assets/161463369/9f4f5359-c3a2-4901-b8b1-ba392ed8803d">
 
 ### SDK Setup
 - This SDK requires the following packages:
@@ -52,6 +57,8 @@ Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates
   - The Replay Mode toggle is used to determine if the game is to be played as a session or to be viewed as a recording. Running the game with the toggle does the respective disabling.
   - Provide your Customer ID, User ID, Replay Bucket URL (For WebGL Replay), and your API Key in the given data.
   - The details in the Network Uploader are Amazon S3 Information and are not to be edited.
+
+https://github.com/Insight-XR/Unity-SDK-dev/assets/161463369/3c751a47-7ed2-4060-b5c9-df70730209b7
 
 ## Using the SDK
 - Utilize the `InsightXRAPI` script on the `DatahandleLayer`:

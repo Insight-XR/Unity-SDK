@@ -29,7 +29,9 @@ Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates
     - OpenXR: Provides OpenXR support for XR applications
     - XR Interaction toolkit: Facilitates interaction with VR controllers and objects
     - Newtonsoft.Json: Handles JSON Serialization and Deserialization
+        - Package Name: `com.unity.nuget.newtonsoft-json`
     - Editor Coroutines: Provides support for coroutines in editor scripts
+        - Package Name: `com.unity.editorcoroutines`
   - **Built - In**:
     - Amazon S3: Handles Uploading the Saved Recordings for Sessions
     - Oculus Hands: For Showing Hands and Animations in VR.

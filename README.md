@@ -1,7 +1,7 @@
 # InsightXR Analytics SDK for Unity
 
-Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates into Unity projects, providing users with a unique VR analytics experience. With just a designated API Key, developers can effortlessly incorporate our SDK into their projects. Gain valuable insights into user experiences within virtual reality with our powerful analytics dashboard.
-
+Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates into Unity projects, providing users with a unique VR analytics experience. With just a designated API Key, developers can effortlessly incorporate our SDK into their projects. Gain valuable insights into user experiences within virtual reality with our powerful analytics dashboard.  
+[Watch the video walkthrough here](https://www.youtube.com/watch?v=B8F9lAj4jpo)
 ## Setup the Project for VR
 
 ### Install Dependencies

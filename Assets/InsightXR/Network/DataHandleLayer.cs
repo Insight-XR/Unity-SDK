@@ -49,12 +49,8 @@ namespace InsightXR.Network
         public string ReplayBucketURL;
         public string APIKEY;
 
-        private void OnEnable()
-        {
-            if (!Directory.Exists(Application.persistentDataPath + "/Saves"))
-            {
-                Directory.CreateDirectory(Application.persistentDataPath + "/Saves");
-            }
+        private void OnEnable(){
+            
             if (Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Debug.Log("Not running on WebGL");
@@ -73,7 +69,14 @@ namespace InsightXR.Network
             else
             {
                 Debug.Log("Running on WebGL");
+                Player.SetActive(false);
                 ReplayCam.SetActive(true);
+                
+            }
+            
+            if (!Directory.Exists(Application.persistentDataPath + "/Saves"))
+            {
+                Directory.CreateDirectory(Application.persistentDataPath + "/Saves");
             }
             
         }
@@ -169,7 +172,7 @@ namespace InsightXR.Network
 
         public void SetRigidbidyoff()
         {
-            foreach (var obj in GameObject.FindObjectsOfType<InsightXR.Core.Component>())
+            foreach (var obj in GameObject.FindObjectsOfType<InsightXR.Core.InsightXRTrackedObject>())
             {
                 // obj.GetComponent<Rigidbody>().isKinematic = true;
                 if (obj.TryGetComponent<Rigidbody>(out Rigidbody Robj))

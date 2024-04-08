@@ -29,8 +29,8 @@ public class InsightTrackerEditor : EditorWindow
             if (go.name.Equals("DataHandleLayer")) continue;
 
             //Check if the component is not already present.
-            if(go.GetComponent<InsightXR.Core.Component>() == null)
-                go.AddComponent<InsightXR.Core.Component>();
+            if(go.GetComponent<InsightXR.Core.InsightXRTrackedObject>() == null)
+                go.AddComponent<InsightXR.Core.InsightXRTrackedObject>();
         }
         Debug.Log("InsightXR, Track success");
     }

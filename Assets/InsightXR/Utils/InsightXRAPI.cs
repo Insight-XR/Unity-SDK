@@ -5,14 +5,7 @@ using UnityEngine;
 public class InsightXRAPI : MonoBehaviour
 {
     public DataHandleLayer Collector;
-
-    //Creates a reference to the Main Data Handler
-    // void Start()
-    // {
-    //     Collector = GetComponent<DataHandleLayer>();
-    // }
-
-    //Lets you start Recording the Session.
+    
     public void RecordSession()
     {
         if (!InReplayMode())

@@ -1,5 +1,4 @@
 using UnityEngine;
-using InsightXR.Utils;
 using UnityEngine.Events;
 
 namespace InsightXR.Channels

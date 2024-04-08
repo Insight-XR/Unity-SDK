@@ -12,7 +12,7 @@ using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
-using Component = InsightXR.Core.Component;
+using Component = InsightXR.Core.InsightXRTrackedObject;
 
 namespace InsightXR.VR
 {
@@ -44,11 +44,11 @@ namespace InsightXR.VR
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }
 
-        IEnumerator LoaddatalocallyWebGL()
+        IEnumerator ExternalFileWebGL()
         {
             
             // Replace "SavedReplayData.json" with the actual file name in your streaming assets folder
-            string filePath = Application.streamingAssetsPath + "/Saves/SavedReplayData.json";
+            string filePath = "https://publicpoints.s3.ap-south-1.amazonaws.com/Replay.json";
 
             // Create a UnityWebRequest to load the file
             UnityWebRequest www = UnityWebRequest.Get(filePath);
@@ -73,7 +73,10 @@ namespace InsightXR.VR
             Endscreen.SetActive(true);
             if (UnityEngine.Device.Application.platform == RuntimePlatform.WebGLPlayer)
             {
-                GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
+                //GetCamData(Application.persistentDataPath + "/Saves", gameObject.name, "callback", "fallback", LoadBucket);
+                Endscreen.SetActive(true);
+                StartCoroutine(ExternalFileWebGL());
+
             }
             else
             {
@@ -103,6 +106,8 @@ namespace InsightXR.VR
                 RightHand.SetFloat("Trigger", handposes[frame].Item3);
                 RightHand.SetFloat("Grip", handposes[frame].Item4);
                 
+                
+                
                 if (frame == totalframes - 1)
                 {
                     Endscreen.SetActive(true);
@@ -123,12 +128,14 @@ namespace InsightXR.VR
                 transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
-                Lefthand.SetFloat("Trigger", handposes[frame].Item1);
-                Lefthand.SetFloat("Grip", handposes[frame].Item2);
+                // Lefthand.SetFloat("Trigger", handposes[frame].Item1);
+                // Lefthand.SetFloat("Grip", handposes[frame].Item2);
+                //
+                //
+                // RightHand.SetFloat("Trigger", handposes[frame].Item3);
+                // RightHand.SetFloat("Grip", handposes[frame].Item4);
                 
-                
-                RightHand.SetFloat("Trigger", handposes[frame].Item3);
-                RightHand.SetFloat("Grip", handposes[frame].Item4);
+                Debug.Log(handposes[frame]);
 
                 if (frame == totalframes - 1)
                 {
@@ -142,9 +149,6 @@ namespace InsightXR.VR
             }
         }
         
-        
-        [DllImport("__Internal")]
-        public static extern void GetCamData(string path, string ObjectName, string callback, string fallback, string url);
         
         public void callback(string camdata)
         {
@@ -167,12 +171,6 @@ namespace InsightXR.VR
             Endscreen.SetActive(false);
         
             loaded = true;
-        }
-        
-        public void fallback()
-        {
-            Debug.Log("External File unable to be loaded");
-            Application.Quit();
         }
 
     }

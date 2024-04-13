@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09186897, g: 0.10735975, b: 0.15473919, a: 1}
+  m_IndirectSpecularColor: {r: 0.09188264, g: 0.10736797, b: 0.15472987, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7070,6 +7070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Template Setup
       objectReference: {fileID: 0}
+    - target: {fileID: 3862708858071288763, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: bucketName
@@ -7133,6 +7138,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3914028404160977462, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
     - {fileID: 2279582401418538379, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
+    - {fileID: 6830220862480376848, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
+    - {fileID: 229123255363906857, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

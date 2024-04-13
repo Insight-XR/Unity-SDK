@@ -7078,12 +7078,12 @@ PrefabInstance:
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsAccessKeyId
-      value: AKIAXQOF2EHXGTEWCCFE
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsSecretAccessKey
-      value: rs4qzkKw+9M7B4+ZvTClRo4btiWeDdlBP3kB3AtF
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -7098,18 +7098,18 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: replay
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: Lefthand
       value: 
-      objectReference: {fileID: 3551513460942586660}
+      objectReference: {fileID: 3551513460942586663}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: RightHand
       value: 
-      objectReference: {fileID: 3551513460942586659}
+      objectReference: {fileID: 3551513460942586662}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: CustomerID
@@ -7155,7 +7155,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4498541209555109223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3551513460942586660}
+      addedObject: {fileID: 3551513460942586663}
     - targetCorrespondingSourceObject: {fileID: 4498541209555109217, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1
@@ -7271,7 +7271,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7826324823070394496, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3551513460942586659}
+      addedObject: {fileID: 3551513460942586662}
     - targetCorrespondingSourceObject: {fileID: 7826324823070394502, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1
@@ -7633,7 +7633,7 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 3551513460942586656}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3551513460942586659
+--- !u!114 &3551513460942586662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7651,7 +7651,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 179bd7f6-2b71-4c75-92cb-55d2b6f7dbc3
+      m_Id: c5d3feee-a0f1-4c60-a300-3e10037cdb73
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -7664,7 +7664,7 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 617aa050-4790-4a6d-ad70-5ec6bff0ffc6
+      m_Id: c50cbfb5-5ba1-46c5-afbb-e891cea52b29
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -7672,7 +7672,7 @@ MonoBehaviour:
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   handAnimator: {fileID: 3551513460942586657}
---- !u!114 &3551513460942586660
+--- !u!114 &3551513460942586663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7690,7 +7690,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d159cac6-22b9-476b-ba85-1dfd6c1d830d
+      m_Id: 6419df2e-3e04-43d3-8624-86f2850c1d5c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -7703,7 +7703,7 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 162d966f-9169-4fa0-84dc-2489f4121c57
+      m_Id: 18e0dea4-86fe-48a8-a4dd-ac9bf338993d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []

@@ -135,7 +135,6 @@ namespace InsightXR.VR
                 // RightHand.SetFloat("Trigger", handposes[frame].Item3);
                 // RightHand.SetFloat("Grip", handposes[frame].Item4);
                 
-                Debug.Log(handposes[frame]);
 
                 if (frame == totalframes - 1)
                 {

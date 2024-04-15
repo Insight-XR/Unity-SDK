@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ObjectData
@@ -9,9 +10,9 @@ public class ObjectData
     public ObjectData(Vector3 pos, Quaternion rot)
     {
         (posx, posy, posz) = (pos.x,pos.y,pos.z);
-        (rotx, roty, rotz, rotw) = (rot.z, rot.y, rot.z, rot.w);
+        (rotx, roty, rotz, rotw) = (rot.x, rot.y, rot.z, rot.w);
+        
     }
-
     public Vector3 GetPosition()
     {
         return new Vector3(posx, posy, posz);
@@ -21,4 +22,6 @@ public class ObjectData
     {
         return new Quaternion(rotx, roty, rotz, rotw);
     }
+    
+    
 }

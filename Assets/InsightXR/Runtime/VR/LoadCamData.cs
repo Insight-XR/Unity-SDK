@@ -127,14 +127,7 @@ namespace InsightXR.VR
                 
                 transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
-                
-                // Lefthand.SetFloat("Trigger", handposes[frame].Item1);
-                // Lefthand.SetFloat("Grip", handposes[frame].Item2);
-                //
-                //
-                // RightHand.SetFloat("Trigger", handposes[frame].Item3);
-                // RightHand.SetFloat("Grip", handposes[frame].Item4);
-                
+
 
                 if (frame == totalframes - 1)
                 {
@@ -147,28 +140,29 @@ namespace InsightXR.VR
                 }
             }
         }
-        
-        
+
+
         public void callback(string camdata)
         {
-            
+
             var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
-            
+
             ObjectDataLoader.LoadObjectData(DownloadedData.ObjectMotionData);
             handposes = DownloadedData.handPoseData;
-            
-            ObjectDataLoader.SetRigidbidyoff();
+
+
             loaded = true;
             totalframes = DownloadedData.ObjectMotionData.First().Value.Count;
             frame = 0;
-            
+
             MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
-            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(), MotionRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
-            
+
             Debug.Log("Save Data Loaded Successfully");
             Endscreen.SetActive(false);
-        
+
+            ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
         }
 

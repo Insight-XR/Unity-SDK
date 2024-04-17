@@ -22,14 +22,17 @@ namespace InsightXR.VR
         public int frame = 0;
         public int totalframes;
         public List<ObjectData> MotionRecord;
+        public List<ObjectData> OriginRecord;
 
         public List<(float, float, float, float)> handposes;
 
         public Animator Lefthand;
-
         public Animator RightHand;
+        public GameObject DummyOrigin;
         public string VRCamName;
+        public string OriginName;
         public GameObject Endscreen;
+        
 
 
         public bool loaded;
@@ -96,7 +99,8 @@ namespace InsightXR.VR
             {
                 frame--;
                 
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
                 Lefthand.SetFloat("Trigger", handposes[frame].Item1);
@@ -125,7 +129,8 @@ namespace InsightXR.VR
             {
                 frame++;
                 
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
 
 
@@ -156,7 +161,9 @@ namespace InsightXR.VR
             frame = 0;
 
             MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
-            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(), MotionRecord[frame].GetRotation());
+            OriginRecord = DownloadedData.ObjectMotionData[OriginName];
+            transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(), MotionRecord[frame].GetRotation());
+            DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
             ObjectDataLoader.DistributeData(frame);
 
             Debug.Log("Save Data Loaded Successfully");

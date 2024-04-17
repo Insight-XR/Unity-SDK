@@ -1617,6 +1617,28 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+--- !u!114 &341343392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341343385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5,
+    type: 2}
+  DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
+    type: 2}
+--- !u!1 &380414365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4938605150143553085, guid: 988358f111e06bb4aaeb3647e9d87833,
+    type: 3}
+  m_PrefabInstance: {fileID: 622590321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +1912,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 737049927518317813, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1176
+      objectReference: {fileID: 0}
     - target: {fileID: 1490681927854209202, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: m_LeftHandSnapTurnAction.m_UseReference
@@ -1973,7 +2000,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: UserID
-      value: UNewREc
+      value: UXRTrimmed
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -2005,6 +2032,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285234792504995386, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: OriginName
+      value: XR Origin (XR Rig)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285234792504995386, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: DummyOrigin
+      value: 
+      objectReference: {fileID: 380414365}
+    - target: {fileID: 8320459923086348738, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1176
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4742764771112731849, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
     - {fileID: 8068284875041115951, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
@@ -2024,6 +2066,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 341343386}
+    - targetCorrespondingSourceObject: {fileID: 5888337316130872273, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341343392}
     - targetCorrespondingSourceObject: {fileID: 7441388476064332737, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1

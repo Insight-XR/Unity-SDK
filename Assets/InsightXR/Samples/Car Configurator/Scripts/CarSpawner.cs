@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
-    [Header("Car prefabs")]
+    [Header("Car Models")]
     public CarComponent Buggy;
     public CarComponent HCoupe;
     public CarComponent LCoupe;
@@ -25,11 +25,11 @@ public class CarSpawner : MonoBehaviour
     {
         vehicles = new List<CarComponent>();
         
-        vehicles.Add(Instantiate(Buggy));
-        vehicles.Add(Instantiate(HCoupe));
-        vehicles.Add(Instantiate(LCoupe));
-        vehicles.Add(Instantiate(MiniBus));
-        vehicles.Add(Instantiate(Pickup));
+        vehicles.Add(Buggy);
+        vehicles.Add(HCoupe);
+        vehicles.Add(LCoupe);
+        vehicles.Add(MiniBus);
+        vehicles.Add(Pickup);
 
         foreach (var car in vehicles)
         {

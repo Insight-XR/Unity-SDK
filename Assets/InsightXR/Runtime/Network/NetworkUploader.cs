@@ -63,7 +63,7 @@ namespace InsightXR.Network
             var uploadStream = new MemoryStream(cata);
             
             bool uploaded = await UploadFileAsync(s3Client, bucketName, uploadFileName, uploadStream, savedata.CustomerID);
-            Debug.Log($"Upload Status: {uploaded}");
+            Debug.Log($"Upload Status: {uploaded} Session: {uploadFileName}");
 
             if (closeapp)
             {

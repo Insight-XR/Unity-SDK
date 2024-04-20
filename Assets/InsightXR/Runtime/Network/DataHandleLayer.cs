@@ -57,13 +57,13 @@ namespace InsightXR.Network
                 if (replay)
                 {
                     Debug.Log("Replay is on, Loading the Data");
-                    ReplayCam.SetActive(true);
-                    Player.SetActive(false);
+                    // ReplayCam.SetActive(true);
+                    // Player.SetActive(false);
                 }
                 else
                 {
-                    ReplayCam.SetActive(false);
-                    Player.SetActive(true);
+                    // ReplayCam.SetActive(false);
+                    // Player.SetActive(true);
                 }
             }
             else

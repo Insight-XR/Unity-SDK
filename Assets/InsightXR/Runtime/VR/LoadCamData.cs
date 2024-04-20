@@ -100,7 +100,6 @@ namespace InsightXR.VR
                 frame--;
                 
                 transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
-                DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
                 Lefthand.SetFloat("Trigger", handposes[frame].Item1);
@@ -130,7 +129,6 @@ namespace InsightXR.VR
                 frame++;
                 
                 transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
-                DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
 
 

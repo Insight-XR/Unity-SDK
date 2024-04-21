@@ -24,22 +24,18 @@ namespace InsightXR.Core
         private void OnDisable() => DataCollectorWebMode.DistributionRequestEvent -= MoveObject;
         
 
-        // private void FixedUpdate() {
-        //
-        //     if (log)
-        //     {
-        //         Debug.Log(transform.parent.name);
-        //     }
-        //     if (transform.parent != null)
-        //     {
-        //         DistributionChannel.RaiseEvent(name, new(transform.localPosition, transform.localRotation,transform.parent.name)); 
-        //     }
-        //     else
-        //     {
-        //         DistributionChannel.RaiseEvent(name, new(transform.localPosition, transform.localRotation,"World"));
-        //     }
-        //     
-        // } 
+        private void FixedUpdate() {
+            
+            if (transform.parent != null)
+            {
+                DistributionChannel.RaiseEvent(name, new(transform.localPosition, transform.localRotation,transform.parent.name)); 
+            }
+            else
+            {
+                DistributionChannel.RaiseEvent(name, new(transform.localPosition, transform.localRotation,"World"));
+            }
+            
+        } 
 
         private void MoveObject(string name, ObjectData setToPoint)
         {

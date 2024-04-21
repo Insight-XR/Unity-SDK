@@ -227,6 +227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorWindowsGeoL2
       objectReference: {fileID: 0}
+    - target: {fileID: -5494430080030041896, guid: 23329ab74ba53db41a94a77a259ffe95,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery2
+      objectReference: {fileID: 0}
     - target: {fileID: -4830575870166504684, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -316,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorWindowsGeoL3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317876728304064879, guid: 23329ab74ba53db41a94a77a259ffe95,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery1
       objectReference: {fileID: 0}
     - target: {fileID: 2711239493636570717, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
@@ -547,7 +557,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 782432343716459906, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 558332978}
+      addedObject: {fileID: 558332982}
     - targetCorrespondingSourceObject: {fileID: 4007075414063134852, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       insertIndex: -1
@@ -563,7 +573,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4007075414063134852, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 116837544}
+      addedObject: {fileID: 116837548}
     - targetCorrespondingSourceObject: {fileID: 57092696178357566, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       insertIndex: -1
@@ -837,7 +847,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &116837544
+--- !u!114 &116837548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -846,7 +856,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 116837524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f918fdcd9319f43a0b09798a9a952e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -941,7 +951,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -1687,7 +1697,7 @@ MonoBehaviour:
     type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
     type: 2}
---- !u!114 &558332978
+--- !u!114 &558332982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1696,7 +1706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 116837520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f918fdcd9319f43a0b09798a9a952e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1791,7 +1801,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -2054,7 +2064,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: replay
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}

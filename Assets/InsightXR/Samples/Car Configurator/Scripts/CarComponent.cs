@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class CarComponent : MonoBehaviour
 
     public void ShowCar(Vector3 position)
     {
+        GetComponent<Rigidbody>().isKinematic = false;
         SetFront(0);
         SetWeapon(0);
         SetWheel(0);
@@ -95,5 +97,19 @@ public class CarComponent : MonoBehaviour
                 break;
             
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.name == "default")
+        {
+            Invoke("OFF", 1f);
+        }
+        
+    }
+
+    void OFF()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 }

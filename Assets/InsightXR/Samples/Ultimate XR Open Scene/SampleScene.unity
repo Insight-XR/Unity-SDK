@@ -202,6 +202,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8631267903811192881, guid: 23329ab74ba53db41a94a77a259ffe95,
+        type: 3}
+      propertyPath: m_Name
+      value: LabGeneratorGeo2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8534389073396149767, guid: 23329ab74ba53db41a94a77a259ffe95,
+        type: 3}
+      propertyPath: m_Name
+      value: LabGeneratorGeo1
+      objectReference: {fileID: 0}
     - target: {fileID: -8199003907950297254, guid: 23329ab74ba53db41a94a77a259ffe95,
         type: 3}
       propertyPath: m_Name
@@ -2069,7 +2079,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: UserID
-      value: UXRLocal
+      value: UXRFINAL
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}

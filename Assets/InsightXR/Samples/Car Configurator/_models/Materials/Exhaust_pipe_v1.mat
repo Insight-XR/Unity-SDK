@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5575317195745159583
+--- !u!114 &-5304779435594701580
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - baseColorTexture:
-        m_Texture: {fileID: 2762230865554382973, guid: c4ee32d9235497b4c82783c46fcd4314,
-          type: 3}
+        m_Texture: {fileID: 2800000, guid: 8bca34a3de007054ca0026792aa5289a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - clearcoatRoughnessTexture:
@@ -65,8 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - metallicRoughnessTexture:
-        m_Texture: {fileID: -1417940593791878453, guid: c4ee32d9235497b4c82783c46fcd4314,
-          type: 3}
+        m_Texture: {fileID: 2800000, guid: 3005828ef5f543b4290adac02965846f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - normalTexture:
@@ -191,7 +189,7 @@ Material:
     - emissiveFactor: {r: 0, g: 0, b: 0, a: 0}
     - specularColorFactor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &8109331684440208284
+--- !u!114 &5757984738713833926
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -214,8 +214,9 @@ MonoBehaviour:
   RightHand: {fileID: 8236008166544527709}
   DummyOrigin: {fileID: 0}
   VRCamName: Main Camera
-  OriginName: 
+  OriginName: XR Origin (XR Rig)
   Endscreen: {fileID: 1711993651442163949}
+  ReplayCam: {fileID: 5104083018137138420}
   loaded: 0
   ObjectDataLoader: {fileID: 0}
 --- !u!114 &210548170539297313
@@ -311,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7910633965865721336
 Transform:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ namespace InsightXR.VR
         public string VRCamName;
         public string OriginName;
         public GameObject Endscreen;
+        public GameObject ReplayCam;
         
 
 
@@ -43,6 +44,7 @@ namespace InsightXR.VR
 
         private void OnEnable()
         {
+            ReplayCam.name = OriginName;
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }

@@ -13,11 +13,14 @@ public class AutoDoor : MonoBehaviour
     private Vector3 initialRightDoorPosition;
     private Vector3 targetLeftDoorPosition;
     private Vector3 targetRightDoorPosition;
-    private bool isOpening = false;
-    private bool isClosing = false;
+    private bool isOpen = false;
+    private InsightXRAPI API;
+    public string openmessage;
+    public string closemessage;
 
     void Start()
     {
+        API = FindObjectOfType<InsightXRAPI>();
         initialLeftDoorPosition = leftDoor.transform.localPosition;
         initialRightDoorPosition = rightDoor.transform.localPosition;
         UpdateTargetPositions();
@@ -25,26 +28,28 @@ public class AutoDoor : MonoBehaviour
 
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(new Vector3(transform.position.x, player.transform.position.y,transform.position.z), player.position);
+        float distanceToPlayer = Vector3.Distance(new Vector3(transform.position.x, player.transform.position.y, transform.position.z), player.position);
 
-        if (distanceToPlayer <= detectionRange && !isOpening)
+        if (distanceToPlayer <= detectionRange && !isOpen)
         {
-            isOpening = true;
-            isClosing = false;
+            isOpen = true;
             UpdateTargetPositions();
+            // Debug.Log("Door Opening");
+            API.InsightLogEvent(openmessage);
         }
-        else if (distanceToPlayer > detectionRange && !isClosing)
+        else if (distanceToPlayer > detectionRange && isOpen)
         {
-            isClosing = true;
-            isOpening = false;
+            isOpen = false;
             UpdateTargetPositions();
+            // Debug.Log("Door Closing");
+            API.InsightLogEvent(closemessage);
         }
 
-        if (isOpening)
+        if (isOpen)
         {
             OpenDoor();
         }
-        else if (isClosing)
+        else
         {
             CloseDoor();
         }
@@ -53,8 +58,8 @@ public class AutoDoor : MonoBehaviour
     void UpdateTargetPositions()
     {
         float doorOffset = 2f; // You can adjust this offset as needed
-        targetLeftDoorPosition = isOpening ? initialLeftDoorPosition + Vector3.right * doorOffset : initialLeftDoorPosition;
-        targetRightDoorPosition = isOpening ? initialRightDoorPosition - Vector3.right * doorOffset : initialRightDoorPosition;
+        targetLeftDoorPosition = isOpen ? initialLeftDoorPosition + Vector3.right * doorOffset : initialLeftDoorPosition;
+        targetRightDoorPosition = isOpen ? initialRightDoorPosition - Vector3.right * doorOffset : initialRightDoorPosition;
     }
 
     void OpenDoor()
@@ -62,12 +67,6 @@ public class AutoDoor : MonoBehaviour
         float step = smoothSpeed * Time.deltaTime;
         leftDoor.transform.localPosition = Vector3.MoveTowards(leftDoor.transform.localPosition, targetLeftDoorPosition, step);
         rightDoor.transform.localPosition = Vector3.MoveTowards(rightDoor.transform.localPosition, targetRightDoorPosition, step);
-
-        if (Vector3.Distance(leftDoor.transform.localPosition, targetLeftDoorPosition) < 0.01f &&
-            Vector3.Distance(rightDoor.transform.localPosition, targetRightDoorPosition) < 0.01f)
-        {
-            isOpening = false;
-        }
     }
 
     void CloseDoor()
@@ -75,11 +74,5 @@ public class AutoDoor : MonoBehaviour
         float step = smoothSpeed * Time.deltaTime;
         leftDoor.transform.localPosition = Vector3.MoveTowards(leftDoor.transform.localPosition, initialLeftDoorPosition, step);
         rightDoor.transform.localPosition = Vector3.MoveTowards(rightDoor.transform.localPosition, initialRightDoorPosition, step);
-
-        if (Vector3.Distance(leftDoor.transform.localPosition, initialLeftDoorPosition) < 0.01f &&
-            Vector3.Distance(rightDoor.transform.localPosition, initialRightDoorPosition) < 0.01f)
-        {
-            isClosing = false;
-        }
     }
 }

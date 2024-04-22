@@ -146,6 +146,8 @@ MonoBehaviour:
   player: {fileID: 1319339048}
   detectionRange: 1
   smoothSpeed: 2
+  openmessage: Spawn Door Open
+  closemessage: Spawn Door Close
 --- !u!114 &36193387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +164,18 @@ MonoBehaviour:
     type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
     type: 2}
+--- !u!114 &39282882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 313909489552158074, guid: 988358f111e06bb4aaeb3647e9d87833,
+    type: 3}
+  m_PrefabInstance: {fileID: 622590321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec89b318d8bc3d348a36581a39086253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &91766113
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,10 +921,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39282882}
+        m_TargetAssemblyTypeName: InsightXRAPI, InsightXR.Runtime
+        m_MethodName: InsightLogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cylinder 2 Picked up
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39282882}
+        m_TargetAssemblyTypeName: InsightXRAPI, InsightXR.Runtime
+        m_MethodName: InsightLogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cylinder 2 Dropped
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1373,6 +1411,8 @@ MonoBehaviour:
   player: {fileID: 1319339048}
   detectionRange: 1
   smoothSpeed: 2
+  openmessage: 
+  closemessage: 
 --- !u!114 &227849270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,10 +1797,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39282882}
+        m_TargetAssemblyTypeName: InsightXRAPI, InsightXR.Runtime
+        m_MethodName: InsightLogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cylinder 1 Picked up
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39282882}
+        m_TargetAssemblyTypeName: InsightXRAPI, InsightXR.Runtime
+        m_MethodName: InsightLogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cylinder 1 Dropped
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2084,7 +2148,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: replay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -2480,6 +2544,8 @@ MonoBehaviour:
   player: {fileID: 1319339048}
   detectionRange: 1
   smoothSpeed: 2
+  openmessage: Lab Door Open
+  closemessage: Lab Door Close
 --- !u!114 &716475970
 MonoBehaviour:
   m_ObjectHideFlags: 0

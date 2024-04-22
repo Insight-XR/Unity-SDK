@@ -6872,17 +6872,17 @@ PrefabInstance:
     - target: {fileID: 576303236716870177, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.926016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 576303236716870177, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.472018
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 576303236716870177, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.85202706
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 576303236716870177, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -6924,6 +6924,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Template Setup
       objectReference: {fileID: 0}
+    - target: {fileID: 2378407347673747073, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera Offset
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427073245733437415, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427073245733437415, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427073245733437415, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.066
+      objectReference: {fileID: 0}
     - target: {fileID: 3862708858071288763, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: field of view
@@ -6932,32 +6952,32 @@ PrefabInstance:
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: bucketName
-      value: REDACTED
+      value: sessions-3d-data
       objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsAccessKeyId
-      value: REDACTED
+      value: AKIAXQOF2EHXGTEWCCFE
       objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsSecretAccessKey
-      value: REDACTED
+      value: rs4qzkKw+9M7B4+ZvTClRo4btiWeDdlBP3kB3AtF
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: APIKEY
-      value: REDACTED
+      value: 58ad17a83aaf18d192dde25e74636f0ebf4914948dad246eb0480ee0dc6527bd
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: UserID
-      value: REDACTED
+      value: BasketBallSimulator
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: replay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -6972,7 +6992,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: CustomerID
-      value: REDACTED
+      value: f30a0a6a-e8fe-43be-a7e2-23593abdf0f4
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -6989,6 +7009,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285234792504995386, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: DummyOrigin
+      value: 
+      objectReference: {fileID: 118574149}
     m_RemovedComponents:
     - {fileID: 3914028404160977462, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
     - {fileID: 2279582401418538379, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}

@@ -36,11 +36,34 @@ For VR sample usage, we are using the XR Interaction Toolkit Package. Once the S
         > Click on Samples Tab
         > Import Sample Starter Assets
 ```
+For running project without headset. Install `XR Device Simulator` and use it. Head over to the package manager and import the XR Device Simulator assets
+```bash
+  Search Package : XR Interaction Toolkit
+        > Select the Package
+        > Click on Samples Tab
+        > Import XR Device Simulator
+        > Exit the window
+        > Go to File > Build Settings > Player settings
+        > Cick on XR Plug-in Management > XR Interaction Toolkit
+        > Checkbox Use XR Device Simulator in scenes
+```
+
 
 ## Project Setup
 
+### Demo Setup:
+- Navigate to "Assets > Samples > InsightXR > <version> > Demo Ultimate XR Scene > SampleScene" for an in-depth look at how the SDK is used. Make sure that sample is imported by going to Window > Package manager > Insight XR > Samples > Demo Ultimate XR Scene
+- On the Hierarchy, Go to Template Setup > DataHandleLayer. You will find fields such as `[Customer ID, User ID, APIKEY, AWS Access Key, Aws Secret Access Key, Bucket Name]`
+- You can get Customer ID and APIKEY from [Dashboard](www.console.getinsightxr.com). You can set your User ID yourself. For getting AWS Keys and Bucket Name, ping akshat@getinsightxr.com. We shall start populating these on Dashboard shortly!
+- Lets upload the scene to Dashboard. Go to Assets > UnityGltf> Export Active Scene as gltf. After scene is exported. You can zip the folder and upload on Projects page on Dashboard.
+- We are all set for starting the usage! Make sure that Replay checkmark on DataHandleLayer prefab is unchecked. Press play button and do some stuff with headset or simulator. Press X on controller or M on keyboard to upload the session. Kindly wait for sometime to let it upload. You would see the Uploaded Status True on logs.
+- For seeing replay locally checkmark Replay on DataHandleLayer. You can press play and keep pressing right key on keyboard to see the replay. You can go back to previous times by pressing left key.
+- See the Dashboard. You can press on User you uploaded and press on play button and play around. If AI credits are there in your account, you can chat with our InsightXR AI to know about your session.
+
+For setting up SDK on your own VR project. Kindly use the setup below.
+
 ### Prefabs:
-- Navigate to "Assets > InsightXR > Scenes > InsightSampleScene" for an in-depth look at how the SDK is used.
+- Navigate to "Assets > Samples > InsightXR > <version> > Demo Ultimate XR Scene > SampleScene" for an in-depth look at how the SDK is used. Make sure that sample is imported by going to Window > Package manager > Insight XR > Samples > Demo Ultimate XR Scene
 - Required prefabs: "Datahandlelayer" and "Replay Camera".
 - The third prefab in the Prefabs section is a template setup you can use instead or check as a reference.
 

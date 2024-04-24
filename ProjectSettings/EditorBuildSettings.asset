@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/InsightXR/Samples/InsightSampleScene.unity
+    path: Assets/InsightXR/Samples/UltimateXROpenScene/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/InsightXR/Samples/BasketBallScene/InsightSampleScene.unity
     guid: bdf2fd37e9071fc4ab937c26c384d39f
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8a241e9fff744324fa543b2ca69aee47,

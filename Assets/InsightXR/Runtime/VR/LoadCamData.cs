@@ -22,14 +22,18 @@ namespace InsightXR.VR
         public int frame = 0;
         public int totalframes;
         public List<ObjectData> MotionRecord;
+        // public List<ObjectData> OriginRecord;
 
         public List<(float, float, float, float)> handposes;
 
         public Animator Lefthand;
-
         public Animator RightHand;
+        //public GameObject DummyOrigin;
         public string VRCamName;
+        public string OriginName;
         public GameObject Endscreen;
+        public GameObject ReplayCam;
+        
 
 
         public bool loaded;
@@ -40,6 +44,7 @@ namespace InsightXR.VR
 
         private void OnEnable()
         {
+            ReplayCam.name = OriginName;
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }
@@ -96,7 +101,7 @@ namespace InsightXR.VR
             {
                 frame--;
                 
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
                 
                 Lefthand.SetFloat("Trigger", handposes[frame].Item1);
@@ -125,17 +130,9 @@ namespace InsightXR.VR
             {
                 frame++;
                 
-                transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+                transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
                 ObjectDataLoader.DistributeData(frame);
-                
-                // Lefthand.SetFloat("Trigger", handposes[frame].Item1);
-                // Lefthand.SetFloat("Grip", handposes[frame].Item2);
-                //
-                //
-                // RightHand.SetFloat("Trigger", handposes[frame].Item3);
-                // RightHand.SetFloat("Grip", handposes[frame].Item4);
-                
-                Debug.Log(handposes[frame]);
+
 
                 if (frame == totalframes - 1)
                 {
@@ -148,28 +145,37 @@ namespace InsightXR.VR
                 }
             }
         }
-        
-        
+
+
         public void callback(string camdata)
         {
-            
+
             var DownloadedData = JsonConvert.DeserializeObject<SaveData>(camdata);
-            
+
             ObjectDataLoader.LoadObjectData(DownloadedData.ObjectMotionData);
             handposes = DownloadedData.handPoseData;
-            
-            ObjectDataLoader.SetRigidbidyoff();
+
+
             loaded = true;
             totalframes = DownloadedData.ObjectMotionData.First().Value.Count;
             frame = 0;
-            
+
             MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
-            transform.SetPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+            // OriginRecord = DownloadedData.ObjectMotionData[OriginName];
+            transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(), MotionRecord[frame].GetRotation());
+            // DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
+
+            foreach (var D in DownloadedData.ObjectMotionData)
+            {
+                Debug.Log(D.Key + " " + D.Value.Count);
+            }
+
             ObjectDataLoader.DistributeData(frame);
-            
+
             Debug.Log("Save Data Loaded Successfully");
             Endscreen.SetActive(false);
-        
+
+            ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
         }
 

@@ -112,12 +112,16 @@ namespace InsightXR.Network
         {
             Debug.Log("Frame Count: "+ UserInstanceData.First().Value.Count);
             DataCollector.CollectionRequestEvent -= SortAndStoreData;
-            File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",JsonConvert.SerializeObject(new SaveData(HandData,UserInstanceData,this)));
+            SaveData SData = new SaveData(HandData, UserInstanceData, this);
+            (string, string) SD = (SData.CustomerID, SData.sessionID);
+            string SaveJson = JsonConvert.SerializeObject(SData);
+            
+            File.WriteAllText(Application.persistentDataPath + "/Saves/Save.json",SaveJson);
             
 
             if (save)
             {
-                GetComponent<NetworkUploader>().UploadFileToServerAsync(new SaveData(HandData,UserInstanceData,this), close);
+                GetComponent<NetworkUploader>().UploadFileToServerAsync(SD.Item2,SD.Item1, SaveJson, close);
             }
             else
             {

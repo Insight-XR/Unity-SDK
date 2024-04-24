@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using InsightXR.Samples.CarConfigurator.Scripts;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
@@ -9,15 +11,40 @@ public class CameraControl : MonoBehaviour
     [SerializeField] float cameraLerpSpeed = 0.4f;
     [SerializeField] float cameraRotationSpeed = 0.2f;
     Vector3 velocity = Vector3.zero;
+    private bool orbit;
+    
 
     void OnEnable() => InputManager.OnPlayerCameraToggle += SetNextCamera;
 
     void OnDisable() => InputManager.OnPlayerCameraToggle -= SetNextCamera;
+    
 
     void LateUpdate()
     {
-        SetCameraPosition();
-        SetCameraRotation();
+
+        if (!orbit)
+        {
+            SetCameraPosition();
+            SetCameraRotation();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        { 
+            orbit = !orbit;
+            GetComponent<CameraOrbit>().enabled = orbit;
+            if (orbit)
+            { Debug.Log("Orbit Enabled"); }
+            else
+            { Debug.Log("Orbit Disabled"); }
+        }  
+            
+            
+        
+        
+        
+        
+        
+        
     }
 
     public void SetNextCamera()

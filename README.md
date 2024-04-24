@@ -25,7 +25,7 @@ Install Package via Git URL : https://github.com/KhronosGroup/UnityGLTF.git
 
 Next up is to install the InsightXR Analytics SDK
 ```bash
-Install Package via Git URL : https://github.com/Insight-XR/Unity-sdk-test.git?path=src/InsightXRForUnity
+Install Package via Git URL : https://github.com/Insight-XR/Unity-sdk.git?path=src/InsightXRForUnity
 ```
 ### Step 3: Import the Extra Assets
 

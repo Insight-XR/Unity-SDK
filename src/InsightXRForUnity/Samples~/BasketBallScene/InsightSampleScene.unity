@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09163335, g: 0.10679523, b: 0.1553409, a: 1}
+  m_IndirectSpecularColor: {r: 0.1858033, g: 0.20060728, b: 0.2374556, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,28 +136,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12334663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5,
-    type: 2}
-  DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
-    type: 2}
---- !u!1 &21335248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5398912187769972288, guid: 988358f111e06bb4aaeb3647e9d87833,
-    type: 3}
-  m_PrefabInstance: {fileID: 3551513460942586656}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &21335250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21335248}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
@@ -539,22 +517,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3551513460942586656}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &118574151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118574149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5,
-    type: 2}
-  DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
-    type: 2}
 --- !u!1 &118776964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4498541209555109151, guid: 988358f111e06bb4aaeb3647e9d87833,
@@ -4567,28 +4529,6 @@ MonoBehaviour:
     type: 2}
   DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
     type: 2}
---- !u!1 &1479365512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5888337316130872273, guid: 988358f111e06bb4aaeb3647e9d87833,
-    type: 3}
-  m_PrefabInstance: {fileID: 3551513460942586656}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1479365519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479365512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6374611a589426daf562cc706ebb18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataCollectorWebMode: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5,
-    type: 2}
-  DistributionChannel: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298,
-    type: 2}
 --- !u!1 &1494635632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8074961326794426456, guid: 988358f111e06bb4aaeb3647e9d87833,
@@ -6952,27 +6892,27 @@ PrefabInstance:
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: bucketName
-      value: sessions-3d-data
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsAccessKeyId
-      value: AKIAXQOF2EHXGTEWCCFE
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 4501701366002042223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: awsSecretAccessKey
-      value: rs4qzkKw+9M7B4+ZvTClRo4btiWeDdlBP3kB3AtF
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: APIKEY
-      value: 58ad17a83aaf18d192dde25e74636f0ebf4914948dad246eb0480ee0dc6527bd
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: UserID
-      value: BasketBallSimulator
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -6992,7 +6932,7 @@ PrefabInstance:
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       propertyPath: CustomerID
-      value: f30a0a6a-e8fe-43be-a7e2-23593abdf0f4
+      value: REDACTED
       objectReference: {fileID: 0}
     - target: {fileID: 5614644653849769592, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
@@ -7014,6 +6954,11 @@ PrefabInstance:
       propertyPath: DummyOrigin
       value: 
       objectReference: {fileID: 118574149}
+    - target: {fileID: 8884436035917323606, guid: 988358f111e06bb4aaeb3647e9d87833,
+        type: 3}
+      propertyPath: log
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3914028404160977462, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
     - {fileID: 2279582401418538379, guid: 988358f111e06bb4aaeb3647e9d87833, type: 3}
@@ -7026,14 +6971,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1347229382}
-    - targetCorrespondingSourceObject: {fileID: 5888337316130872273, guid: 988358f111e06bb4aaeb3647e9d87833,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1479365519}
-    - targetCorrespondingSourceObject: {fileID: 5398912187769972288, guid: 988358f111e06bb4aaeb3647e9d87833,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 21335250}
     - targetCorrespondingSourceObject: {fileID: 4498541209555109223, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1
@@ -7270,10 +7207,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 567251102}
-    - targetCorrespondingSourceObject: {fileID: 4938605150143553085, guid: 988358f111e06bb4aaeb3647e9d87833,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 118574151}
     - targetCorrespondingSourceObject: {fileID: 8074961326794426402, guid: 988358f111e06bb4aaeb3647e9d87833,
         type: 3}
       insertIndex: -1

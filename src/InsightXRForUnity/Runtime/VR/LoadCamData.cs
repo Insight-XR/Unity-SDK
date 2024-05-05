@@ -45,6 +45,7 @@ namespace InsightXR.VR
         private void OnEnable()
         {
             ReplayCam.name = OriginName;
+            gameObject.name = VRCamName;
             ObjectDataLoader = FindObjectOfType<DataHandleLayer>();
             LoadBucket = ObjectDataLoader.ReplayBucketURL;
         }

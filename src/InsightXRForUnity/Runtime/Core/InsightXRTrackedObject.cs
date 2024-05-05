@@ -43,6 +43,7 @@ namespace InsightXR.Core
             {
                 transform.parent = setToPoint.ParentObject == "World" ? null : GameObject.Find(setToPoint.ParentObject).transform;
                 transform.SetLocalPositionAndRotation(setToPoint.GetPosition(), setToPoint.GetRotation());
+                
             }
 
         }

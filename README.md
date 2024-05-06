@@ -33,6 +33,7 @@ Next up is to install the InsightXR Analytics SDK
 ```bash
 https://github.com/Insight-XR/Unity-sdk.git?path=src/InsightXRForUnity
 ```
+If you have forked it and wish to use the same. Replace Insight-XR with `your-github-id` in above url.
 ### Step 3: Import the Extra Assets
 
 As a Versatile XR framework, we shall be installing and using assets from the XR Interaction Toolkit Package. We shall be using their starter assets and VR device Simulator

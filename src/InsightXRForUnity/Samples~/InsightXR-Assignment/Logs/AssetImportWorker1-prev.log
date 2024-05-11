@@ -1,0 +1,2092 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.3f1 (7cdc2969a641) revision 8182825'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 65156 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+G:/Unity Projects/InsightXR
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+53780
+Successfully changed project path to: G:/Unity Projects/InsightXR
+G:/Unity Projects/InsightXR
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [32236] Host "[IP] 10.164.100.114 [Port] 0 [Flags] 2 [Guid] 1073995484 [EditorId] 1073995484 [Version] 1048832 [Id] WindowsEditor(7,PratyushPC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [32236] Host "[IP] 10.164.100.114 [Port] 0 [Flags] 2 [Guid] 1073995484 [EditorId] 1073995484 [Version] 1048832 [Id] WindowsEditor(7,PratyushPC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 9.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.3f1 (7cdc2969a641)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Unity Projects/InsightXR/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     5996 MB
+    Driver:   31.0.15.5186
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56692
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012749 seconds.
+- Loaded All Assemblies, in  0.421 seconds
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 307 ms
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.640 seconds
+Domain Reload Profiling: 1059ms
+	BeginReloadAssembly (66ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (78ms)
+	LoadAllAssembliesAndSetupDomain (224ms)
+		LoadAssemblies (66ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (216ms)
+			TypeCache.Refresh (215ms)
+				TypeCache.ScanAssembly (198ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (640ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (569ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (442ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (81ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.017 seconds
+Refreshing native plugins compatible for Editor in 3.58 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.610 seconds
+Domain Reload Profiling: 1626ms
+	BeginReloadAssembly (116ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (832ms)
+		LoadAssemblies (408ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (465ms)
+			TypeCache.Refresh (416ms)
+				TypeCache.ScanAssembly (401ms)
+			ScanForSourceGeneratedMonoScriptInfo (35ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (611ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (468ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (285ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6122 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 94 unused Assets / (0.8 MB). Loaded Objects now: 6572.
+Memory consumption went from 231.8 MB to 231.1 MB.
+Total: 3.744300 ms (FindLiveObjects: 0.340900 ms CreateObjectMapping: 0.328100 ms MarkObjects: 2.799700 ms  DeleteObjects: 0.275100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 20cdaaa988618e7c32f4baf96f88c255 -> 7fbbccb0b6f6e9be9326b57c7efbfd9e
+  custom:scripting/monoscript/fileName/BallBehavior.cs:  -> 69a174f803638283341ff5cc62bf8a51
+  custom:scripting/monoscript/fileName/ReplayController.cs:  -> 2df99f7ee3147da8393de8b8e1af6ff6
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.568 seconds
+Refreshing native plugins compatible for Editor in 2.72 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.807 seconds
+Domain Reload Profiling: 1373ms
+	BeginReloadAssembly (104ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (407ms)
+		LoadAssemblies (208ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (242ms)
+			TypeCache.Refresh (226ms)
+				TypeCache.ScanAssembly (214ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (807ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (347ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (209ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5977 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (0.7 MB). Loaded Objects now: 6581.
+Memory consumption went from 206.0 MB to 205.3 MB.
+Total: 3.028400 ms (FindLiveObjects: 0.265200 ms CreateObjectMapping: 0.169200 ms MarkObjects: 2.358000 ms  DeleteObjects: 0.235200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 194034.033905 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '787760ae057575ed56259b18d6a01542') in 0.221060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Settings/URP-Performant-Renderer.asset
+  artifactKey: Guid(707360a9c581a4bd7aa53bfeb1429f71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Performant-Renderer.asset using Guid(707360a9c581a4bd7aa53bfeb1429f71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'af2fa3c88ba5b959365982f6bfd45205') in 0.037253 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.011.mat
+  artifactKey: Guid(087f19e8112fc52439ef7a50ecd33ec7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.011.mat using Guid(087f19e8112fc52439ef7a50ecd33ec7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '112071ea46f251f019ac74fc58a454f7') in 0.261133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/Catalogue.cs
+  artifactKey: Guid(3bccb856ca9bc7240a5d5478bd1ea7f8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/Catalogue.cs using Guid(3bccb856ca9bc7240a5d5478bd1ea7f8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'db8f6b38653f914486f4d1f4f14e3d34') in 0.013775 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Settings/URP-Balanced.asset
+  artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b1ab36e3ea9d4e39b6ab56034e35794b') in 0.048560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/QuitApplication.cs
+  artifactKey: Guid(d3d1c74358347a049b6cbb90ad105f8a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/QuitApplication.cs using Guid(d3d1c74358347a049b6cbb90ad105f8a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1899847f6015dcbdffedab74f02bda75') in 0.024798 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownWeaponSelect.cs
+  artifactKey: Guid(4ab81f0004d547c4c9b9fbb7fd62dfda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownWeaponSelect.cs using Guid(4ab81f0004d547c4c9b9fbb7fd62dfda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'cb1ad46c35fac407571a65e8c4994f82') in 0.012757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/basketball_FBX.fbx
+  artifactKey: Guid(3464d4be91edab746ab937bf19fd779a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/basketball_FBX.fbx using Guid(3464d4be91edab746ab937bf19fd779a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e49b128fad0d194e22de4f1f12a833cc') in 0.043806 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v2.mat
+  artifactKey: Guid(28b207bbfbade214d85cb090d5d3ee6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v2.mat using Guid(28b207bbfbade214d85cb090d5d3ee6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '13246bf74dd2accb3264982fac9ef316') in 0.343980 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ca1cfaf9cd18350fdc918979cec736ad') in 0.014874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/3.png
+  artifactKey: Guid(2acfeb6cf66491144817faf7673231f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/3.png using Guid(2acfeb6cf66491144817faf7673231f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f10f3469fa7a1755552e0749a3d2fb00') in 0.040721 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownFrontSelect.cs
+  artifactKey: Guid(22add27fd8af76f47aaf24f6f1d3bb86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownFrontSelect.cs using Guid(22add27fd8af76f47aaf24f6f1d3bb86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '47f745dbf58071ba94fc604dadfddd8f') in 0.025247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Settings/SampleSceneProfile.asset
+  artifactKey: Guid(a6560a915ef98420e9faacc1c7438823) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/SampleSceneProfile.asset using Guid(a6560a915ef98420e9faacc1c7438823) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a4937f35bb728bc2521602347dd619df') in 0.023749 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Ground.mat
+  artifactKey: Guid(66527dd35977f344896771d02070ce63) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Ground.mat using Guid(66527dd35977f344896771d02070ce63) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '46267b2fbc36ed7b413757eefce34c2e') in 0.019154 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Lowpoly.png
+  artifactKey: Guid(119939c22cb43df49abeae5ad4eae322) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Lowpoly.png using Guid(119939c22cb43df49abeae5ad4eae322) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '568d58625789f163bb2eeb98482457d6') in 0.028979 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.013.mat
+  artifactKey: Guid(09f65574e16953643b658b3bfe2bfade) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.013.mat using Guid(09f65574e16953643b658b3bfe2bfade) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6cf3977ff8cc7b81339a4d87e9ef73b3') in 0.019067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Exhaust_pipe_v1.mat
+  artifactKey: Guid(b8364cc5f5c56a34a8024160ba82cb38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Exhaust_pipe_v1.mat using Guid(b8364cc5f5c56a34a8024160ba82cb38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '00861bebd1cd81fb3756ce3d2c17c813') in 0.027336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/sky.mat
+  artifactKey: Guid(aa6f07af20a0d67408f7bcb31720f14b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/sky.mat using Guid(aa6f07af20a0d67408f7bcb31720f14b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6d64e9d618660bd05185ca8a3a089958') in 0.046461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/CardBoardBoxes.fbx
+  artifactKey: Guid(407644a74d696af4b9df967a9522e4e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/CardBoardBoxes.fbx using Guid(407644a74d696af4b9df967a9522e4e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '29b3823d63695a12474e5d0a554f254d') in 0.033095 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 49
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset
+  artifactKey: Guid(176ade12afbf33247a8d314006547043) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset using Guid(176ade12afbf33247a8d314006547043) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4163428612109ec85509b4d8da5cc092') in 0.016963 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_Scenes/10_Garage.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_Scenes/10_Garage.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bd14d407b9196fe4466aa45d0a195a34') in 0.014356 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.001.mat
+  artifactKey: Guid(0a55d5a737588784ba97116adf75e113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.001.mat using Guid(0a55d5a737588784ba97116adf75e113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f42287bb4d6ec1ba9846a2990c1c248c') in 0.019354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/InsightSampleScene.unity
+  artifactKey: Guid(bdf2fd37e9071fc4ab937c26c384d39f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/InsightSampleScene.unity using Guid(bdf2fd37e9071fc4ab937c26c384d39f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9f3746cca7f69ebb5a6ad7c05c429f28') in 0.016313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/GameManager.cs
+  artifactKey: Guid(b07aa71dcdf325b40a37fe2c0de0217a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/GameManager.cs using Guid(b07aa71dcdf325b40a37fe2c0de0217a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ebdc4420949eb2e8fa2f97d82aa6994a') in 0.014035 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Settings/URP-HighFidelity.asset
+  artifactKey: Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-HighFidelity.asset using Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '20170a5185db6d747cab7bea6615831f') in 0.023858 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.012.mat
+  artifactKey: Guid(0da70de7ef976da43be9d49690994397) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.012.mat using Guid(0da70de7ef976da43be9d49690994397) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '58602948efc4529740af72844606fa23') in 0.024059 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Bullbar_v3-1.png
+  artifactKey: Guid(faf47f25bd7a26b45b3610c63be79fd3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Bullbar_v3-1.png using Guid(faf47f25bd7a26b45b3610c63be79fd3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2f4e2e2e5a461f575abbffcaa659425d') in 0.027295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/XRI/Settings/Resources/InteractionLayerSettings.asset
+  artifactKey: Guid(90af34973a4083d4d81bc3d24eb5a67b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/XRI/Settings/Resources/InteractionLayerSettings.asset using Guid(90af34973a4083d4d81bc3d24eb5a67b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c4ff60fd96b2a2d4289038966b9b251e') in 0.016545 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Terrain.jpg
+  artifactKey: Guid(0e35e024df0c4244d838579a8fea494e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Terrain.jpg using Guid(0e35e024df0c4244d838579a8fea494e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5e6b190ed820ef4ab25945f7e83d7ace') in 0.020621 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v6.jpg
+  artifactKey: Guid(8e3ad090aafc33d49b52f8f0b0abf6f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v6.jpg using Guid(8e3ad090aafc33d49b52f8f0b0abf6f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6e7743758c09fe1e626cb9b978b52876') in 0.025689 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v4.jpg
+  artifactKey: Guid(0f2cf52b04ab288499b78100af0bb174) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v4.jpg using Guid(0f2cf52b04ab288499b78100af0bb174) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6a06b8b47182bb2a68c22b82ea3bf8e4') in 0.027919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Exhaust_pipe_v1.jpg
+  artifactKey: Guid(8bca34a3de007054ca0026792aa5289a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Exhaust_pipe_v1.jpg using Guid(8bca34a3de007054ca0026792aa5289a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '80fe97447c365bf3e60f5d4f453e68a0') in 0.020083 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/LCoupe_v1.jpg
+  artifactKey: Guid(da36207160246f447a93c1de5eb67177) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/LCoupe_v1.jpg using Guid(da36207160246f447a93c1de5eb67177) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bb83e622c8c79412de077d9a87db3741') in 0.023787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Minibus_v1-1.png
+  artifactKey: Guid(50b25b4385337144794c311964067a70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Minibus_v1-1.png using Guid(50b25b4385337144794c311964067a70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '47152e5a955b30e7efd9f1ab51f3c975') in 0.026273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Weapon_v1.jpg
+  artifactKey: Guid(75fdec35e2a97134abe4c33f6b18714e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Weapon_v1.jpg using Guid(75fdec35e2a97134abe4c33f6b18714e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9c4607e7ddcc44516abf1362664fcb97') in 0.032914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/AmmoTex.png
+  artifactKey: Guid(8b3e5781cc3d5084b953fc4b4356401e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/AmmoTex.png using Guid(8b3e5781cc3d5084b953fc4b4356401e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'de364802eb9382b16a83e8f80a2623f8') in 0.020015 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v5.jpg
+  artifactKey: Guid(c4306cbdb3f7dc744a3ca16494d078d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v5.jpg using Guid(c4306cbdb3f7dc744a3ca16494d078d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '96f6b2810fda2be3e8c4c8323dd046e8') in 0.025163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Headlight_v1.jpg
+  artifactKey: Guid(ddb30f14e9735584983a8994be18fcb9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Headlight_v1.jpg using Guid(ddb30f14e9735584983a8994be18fcb9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5fc3c76954b0e6ad5f822dd2d18d7a66') in 0.034056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Pickup_v1.jpg
+  artifactKey: Guid(d422f7e63cc1f8d4e99da3c3d026a6ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Pickup_v1.jpg using Guid(d422f7e63cc1f8d4e99da3c3d026a6ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '93ca54292af0ed31f58fe69574fe74de') in 0.021699 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v4-1.png
+  artifactKey: Guid(b877a84aac6837b499c585c596b7253e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v4-1.png using Guid(b877a84aac6837b499c585c596b7253e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ade97896aede62fee89033b1fc80144b') in 0.027394 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_AO.jpg
+  artifactKey: Guid(fdb6e09a794c7854795122aa8af143f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_AO.jpg using Guid(fdb6e09a794c7854795122aa8af143f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1cecb2db6896c79b41a82a4e50c4dfb9') in 0.023046 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v6-1.png
+  artifactKey: Guid(1ab17dfcaa639ba4ba7d0fab2d2259c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v6-1.png using Guid(1ab17dfcaa639ba4ba7d0fab2d2259c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e6d36ca275cc6c66f56bfb400fb39b26') in 0.031322 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Weapon_v1-1.png
+  artifactKey: Guid(2bb13c376adcf1a4ea528cd4ddca3daa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Weapon_v1-1.png using Guid(2bb13c376adcf1a4ea528cd4ddca3daa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '795edec0b23d245b2ef5785f474f20e9') in 0.022648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/grass.png
+  artifactKey: Guid(42bf0aea34a25e2488586f9728316ba7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/grass.png using Guid(42bf0aea34a25e2488586f9728316ba7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '052db09cd75e32efa9d012e12ff13961') in 0.027474 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/CarSpawner.cs
+  artifactKey: Guid(64f82988379dada4e9dd2d244995daaa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/CarSpawner.cs using Guid(64f82988379dada4e9dd2d244995daaa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5b21cd349c7799b274a1403e4b1c6021') in 0.016581 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.021562 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v2.jpg
+  artifactKey: Guid(9db4ad525f23ee44dac0434b6343a812) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v2.jpg using Guid(9db4ad525f23ee44dac0434b6343a812) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ee9cbdb9d892fd8b0e4321cf6e25b718') in 0.026476 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownTiresetSelect.cs
+  artifactKey: Guid(19aec120985150943a024bb79a2be39e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/DropdownTiresetSelect.cs using Guid(19aec120985150943a024bb79a2be39e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9694888f1c6112144edce78c2cbd8b59') in 0.018075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/UIManager.cs
+  artifactKey: Guid(bfc1e64171e2a2c498df9448cc536a15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/UIManager.cs using Guid(bfc1e64171e2a2c498df9448cc536a15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8aa14fa95c3397f1c2306e8b83449665') in 0.015337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v5.mat
+  artifactKey: Guid(45765300f82baba43b38c3e51ec80f20) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v5.mat using Guid(45765300f82baba43b38c3e51ec80f20) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '30a0720f7ce34bbf87e824c1542def81') in 0.028659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 89 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (0.8 MB). Loaded Objects now: 6657.
+Memory consumption went from 128.2 MB to 127.4 MB.
+Total: 4.820500 ms (FindLiveObjects: 0.410200 ms CreateObjectMapping: 0.367200 ms MarkObjects: 3.583200 ms  DeleteObjects: 0.459000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 8.192366 seconds.
+  path: Assets/TutorialInfo/Scripts/Readme.cs
+  artifactKey: Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TutorialInfo/Scripts/Readme.cs using Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '33da710652640dc4dd91bf796d184ef3') in 0.024598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Resources/UnityGLTFSettings.asset
+  artifactKey: Guid(4ab723a10003e83468758168b383fae1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Resources/UnityGLTFSettings.asset using Guid(4ab723a10003e83468758168b383fae1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b49217ab95045f27ef2ab99691f24a1f') in 0.019190 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.004.mat
+  artifactKey: Guid(79fd17f6f1d72b3458cbe2dc3e9a4c26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.004.mat using Guid(79fd17f6f1d72b3458cbe2dc3e9a4c26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e4a9cf101a8ab4d009cd4459f4e6ec78') in 0.017188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Scene_-_Root 1.mat
+  artifactKey: Guid(73795a446707f314b822699990587d23) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/Scene_-_Root 1.mat using Guid(73795a446707f314b822699990587d23) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6376ae9a0a38af41a0a7f6a2589bdda6') in 0.013820 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.014.mat
+  artifactKey: Guid(64c2d3b50bcf3504491ddcc6bca5ef22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Hidden_UnityGLTF_UnlitGraph-Transparent.014.mat using Guid(64c2d3b50bcf3504491ddcc6bca5ef22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3ada9598d8a011f21c7fefd473fc06ba') in 0.014344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Headlight_v1.mat
+  artifactKey: Guid(2f0f6413bc5e94b4da5fd40cc7cdff78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Headlight_v1.mat using Guid(2f0f6413bc5e94b4da5fd40cc7cdff78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bac612be531fc94bcc29a33355b5185d') in 0.015816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v1.mat
+  artifactKey: Guid(5988cc736b51d304ca5dd50c1fbb85db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v1.mat using Guid(5988cc736b51d304ca5dd50c1fbb85db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e2539d172cc7a10bec16353393400fd4') in 0.013956 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v4.mat
+  artifactKey: Guid(b2b7308f9adb32b4fa6f17a5a42750ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Tire_v4.mat using Guid(b2b7308f9adb32b4fa6f17a5a42750ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd1cbca36023690528a68433011408704') in 0.020670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/CourtMat.mat
+  artifactKey: Guid(c356a4157dbb51640b103adb06035ca2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/CourtMat.mat using Guid(c356a4157dbb51640b103adb06035ca2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c734a5cfb3492dd5980a490b489e0132') in 0.015490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/BallBehavior.cs
+  artifactKey: Guid(f09dac1e6b74e4543be5700957233e41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo BasketBall Scene/DemoScene Assets/BallBehavior.cs using Guid(f09dac1e6b74e4543be5700957233e41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3c719c24099dfefdcc05d6d47850c33f') in 0.021988 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/CarConfig.gltf
+  artifactKey: Guid(c4ee32d9235497b4c82783c46fcd4314) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/CarConfig.gltf using Guid(c4ee32d9235497b4c82783c46fcd4314) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '68fb1c909d1c52e6180de4867ab3e922') in 0.091354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 666
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+  artifactKey: Guid(476cc7d7cd9874016adc216baab94a0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs using Guid(476cc7d7cd9874016adc216baab94a0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8fc88ddd88bb8e264236920e73ed536e') in 0.010583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/Rotate.cs
+  artifactKey: Guid(8e39f02d2b240a942badaab8727108c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/Scripts/Rotate.cs using Guid(8e39f02d2b240a942badaab8727108c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bb382f6c3ad834e3d2cb5af81e3bf5ff') in 0.013608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/LiberationSans SDF Material.mat
+  artifactKey: Guid(9624cca4844ef874fa1eae282d68f875) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/LiberationSans SDF Material.mat using Guid(9624cca4844ef874fa1eae282d68f875) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'acd082b3924e86df1d601af42bce44fc') in 0.018866 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Terrain.mat
+  artifactKey: Guid(4b6a6ce878325914caadb2863aae3eb0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Materials/Terrain.mat using Guid(4b6a6ce878325914caadb2863aae3eb0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f2e3bcc5071acc0c2f87cec07f57ede9') in 0.014955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.272182 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DoorTex_N.jpg
+  artifactKey: Guid(2d22c6df1800e054898faf999ac86b27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DoorTex_N.jpg using Guid(2d22c6df1800e054898faf999ac86b27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4bff3f7be59bb4faad22a6cd2b1a60d6') in 0.024424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScanTex_A.png
+  artifactKey: Guid(276776d1b8c9d434196875281380f04c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScanTex_A.png using Guid(276776d1b8c9d434196875281380f04c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0e87925fa880954814b58bf74b972be9') in 0.026198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/GrenadeTex_MS.jpg
+  artifactKey: Guid(277822ba22c237040bde300e7c4808ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/GrenadeTex_MS.jpg using Guid(277822ba22c237040bde300e7c4808ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ed7d9aa56c6291de43a08e38a5b99896') in 0.035071 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HexaBasicTex_N.jpg
+  artifactKey: Guid(47918dedd8c7e9f4fbf7969cb5b5d027) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HexaBasicTex_N.jpg using Guid(47918dedd8c7e9f4fbf7969cb5b5d027) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7c8aeea8dc533e0ff63f3a81469dbac4') in 0.024155 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScanTex_N.jpg
+  artifactKey: Guid(6bf8681272d7e9346bfe0a7df7d4a76f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScanTex_N.jpg using Guid(6bf8681272d7e9346bfe0a7df7d4a76f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dec614c4a22fb42aab84373e73a22a00') in 0.027949 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabCablesPiecesTex_N.jpg
+  artifactKey: Guid(f5508c13bcaee6545947b27fb68020cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabCablesPiecesTex_N.jpg using Guid(f5508c13bcaee6545947b27fb68020cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '40a76060ac6dbff60e060270db5a7689') in 0.026372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/GrenadeTex_AO.jpg
+  artifactKey: Guid(1872bee179799094881f718cfc71fb7f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/GrenadeTex_AO.jpg using Guid(1872bee179799094881f718cfc71fb7f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '95ff2f0e163fa8e69b88f5a54a1c7968') in 0.030082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScandDecalHandTex.png
+  artifactKey: Guid(8679674e36bc40049a7691d531eb6c34) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/HandScandDecalHandTex.png using Guid(8679674e36bc40049a7691d531eb6c34) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '75612d434629d0a70bbed8383ff73141') in 0.020014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.403348 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Headlight_v1-1.png
+  artifactKey: Guid(2a4c2688baf234f46bb2d0b7530e9fe0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Headlight_v1-1.png using Guid(2a4c2688baf234f46bb2d0b7530e9fe0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4bd6a1c2e5e102e9926e6461a432a17c') in 0.032048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorTex_MS.jpg
+  artifactKey: Guid(d3bb928f54af3f149b5a44685ffd6b8c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorTex_MS.jpg using Guid(d3bb928f54af3f149b5a44685ffd6b8c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'eb82100bbd6406c61c496af09244056b') in 0.032580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLampTex_A.png
+  artifactKey: Guid(e81423bf84f2f9c4aa5b04cb0fbfaac3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLampTex_A.png using Guid(e81423bf84f2f9c4aa5b04cb0fbfaac3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e58a3a54a7cce3f456a64869f7c58e1f') in 0.026595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLightTex_E.jpg
+  artifactKey: Guid(bc61cd6b7f022eb4a9824f9a6b3cf78e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLightTex_E.jpg using Guid(bc61cd6b7f022eb4a9824f9a6b3cf78e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e337f3d6bc5c78a1eec963610be0cffe') in 0.025308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabChargerTex_N.jpg
+  artifactKey: Guid(9f95df27fc4e4394ea9f079199da5e4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabChargerTex_N.jpg using Guid(9f95df27fc4e4394ea9f079199da5e4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5a8b39c95f82af6a343c41bffb231ffa') in 0.026353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorDisplayTex_N.jpg
+  artifactKey: Guid(2ac738452c9dfc94c9f95253c2446b58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorDisplayTex_N.jpg using Guid(2ac738452c9dfc94c9f95253c2446b58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6768dff3ebc7946136231d7eb20a691d') in 0.034954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_N.jpg
+  artifactKey: Guid(ae0b8f6a1086cd14eaea1b1ce9c8b46b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_N.jpg using Guid(ae0b8f6a1086cd14eaea1b1ce9c8b46b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6aa1a60a591e6a141992293bf1bf96d2') in 0.025753 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorTex_A.png
+  artifactKey: Guid(1accc51b466aa96429d3b91bbf07b745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorTex_A.png using Guid(1accc51b466aa96429d3b91bbf07b745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '389b81fe128ead0c03be9dfdc4571b1f') in 0.024842 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorDoorTex_AO.jpg
+  artifactKey: Guid(b7d587932c7d5374a9054bbd44ee9127) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabGeneratorDoorTex_AO.jpg using Guid(b7d587932c7d5374a9054bbd44ee9127) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '53df337242dcdbfc9c5d3c7fb664c148') in 0.021299 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_AO.png
+  artifactKey: Guid(dd185f7d4c29f224ebb655250ac63c03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ArmorPadsTex_AO.png using Guid(dd185f7d4c29f224ebb655250ac63c03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ba27186da380df1fb1dff5ebffec1d51') in 0.025961 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLaserBaseTex_AO.jpg
+  artifactKey: Guid(ac208188a2d5f20458f35f3357796184) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabLaserBaseTex_AO.jpg using Guid(ac208188a2d5f20458f35f3357796184) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3c4b47232882dc40e1c002003ad2e54c') in 0.023419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v3-1.png
+  artifactKey: Guid(41f0efcd53975d545a101486b6718e23) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Car Configuration/_models/Textures/Tire_v3-1.png using Guid(41f0efcd53975d545a101486b6718e23) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '45ed3d2a60be19b38afdae93c3aac5b4') in 0.022860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.363774 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleCablesTex_N.jpg
+  artifactKey: Guid(7fdbe99f56fe4e94da7a0724c2177219) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleCablesTex_N.jpg using Guid(7fdbe99f56fe4e94da7a0724c2177219) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4617b11db419f3e132d92405d3001758') in 0.029572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgHelmetInteriorTex_MS.jpg
+  artifactKey: Guid(886ced5b27ffa9e45990f24301c4c69e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgHelmetInteriorTex_MS.jpg using Guid(886ced5b27ffa9e45990f24301c4c69e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '033d76e1a2d4bf5abac0ab38011bf3c3') in 0.035490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/PanelTilingTex_A.png
+  artifactKey: Guid(88c8062785c9ef740908ac38546e6ddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/PanelTilingTex_A.png using Guid(88c8062785c9ef740908ac38546e6ddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '980fa958b41534ad9edd0e7372ecefe2') in 0.028165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabTableTex_M.jpg
+  artifactKey: Guid(6e321fbcb2ab11741896a2b4d9b057dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabTableTex_M.jpg using Guid(6e321fbcb2ab11741896a2b4d9b057dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8bec3ba8f93f175ee1f1ea1a220bfd1b') in 0.027877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/SignagePositionalControllerRoomTex.png
+  artifactKey: Guid(0412817645cf6684fbcc632ad0589e22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/SignagePositionalControllerRoomTex.png using Guid(0412817645cf6684fbcc632ad0589e22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6e79367f1b8af0d33f084b32906d56c1') in 0.031245 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalBleachTex_MS.jpg
+  artifactKey: Guid(3b1e1cde89d1e4344af1524619bc7560) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalBleachTex_MS.jpg using Guid(3b1e1cde89d1e4344af1524619bc7560) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7d022899d7518dea9f72be4cb245dc9b') in 0.018407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_N.jpg
+  artifactKey: Guid(19a385ef155901249a3e94cc75896375) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_N.jpg using Guid(19a385ef155901249a3e94cc75896375) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f00744176de7a9cc71703fd8ac2472f6') in 0.028402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabTableSurfaceTex_M.jpg
+  artifactKey: Guid(da88408a50a0af74c83a4eab12527b41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/LabTableSurfaceTex_M.jpg using Guid(da88408a50a0af74c83a4eab12527b41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'fc885beddcfd16c7c86229cea6c74ce4') in 0.021284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_MS.jpg
+  artifactKey: Guid(86d41ed247c9a19448fa5f7902ff13d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_MS.jpg using Guid(86d41ed247c9a19448fa5f7902ff13d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '51a74d45abe9b7112cad75a52421c3a5') in 0.029380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleDisplayTex_N.jpg
+  artifactKey: Guid(c497af0715905624f9ba966399cf6630) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleDisplayTex_N.jpg using Guid(c497af0715905624f9ba966399cf6630) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c21ad8da05041654e5de96630b634a57') in 0.023272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DoorTex_A.png
+  artifactKey: Guid(16b2dd58736a4ba468ea6bfd73dbd3e8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DoorTex_A.png using Guid(16b2dd58736a4ba468ea6bfd73dbd3e8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6aa57b79a56e1e6384aa08e8062101bd') in 0.023356 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgBodyTex_AO.jpg
+  artifactKey: Guid(2a7f71ed0c46f7342abad4068ddf1adf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgBodyTex_AO.jpg using Guid(2a7f71ed0c46f7342abad4068ddf1adf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '69587b0b9d8f39523932503493f7978d') in 0.023650 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleKeyboardTex_MS.jpg
+  artifactKey: Guid(db973935ef85cda4aab6b0de266e478f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleKeyboardTex_MS.jpg using Guid(db973935ef85cda4aab6b0de266e478f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '55974253f6a4255273e2a6a809a4dd6a') in 0.025430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DisplayTex_AO.jpg
+  artifactKey: Guid(7f56fc088295afa48b5a1e0267bf06fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/DisplayTex_AO.jpg using Guid(7f56fc088295afa48b5a1e0267bf06fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e7ca5ae818c93883a59c1b32faa93863') in 0.023302 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalBleachTex_A.png
+  artifactKey: Guid(0a55d11988099294fba56fec2cf7651c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalBleachTex_A.png using Guid(0a55d11988099294fba56fec2cf7651c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ce80af4f808a87744ee8a7115b97ffdb') in 0.024496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleTex_MS.jpg
+  artifactKey: Guid(7c4d92455f9375d42affa5ba305e58a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/ConsoleTex_MS.jpg using Guid(7c4d92455f9375d42affa5ba305e58a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '85f87a7d550e769e9d1e634bece66022') in 0.025622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/RubberBasicTex_M.jpg
+  artifactKey: Guid(f4b2e35cff79c9c42a959dcd69a6d1dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/RubberBasicTex_M.jpg using Guid(f4b2e35cff79c9c42a959dcd69a6d1dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '93eb9b77af4ffae55e22f34e816b4b4e') in 0.033848 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/PanelTilingTex_N.jpg
+  artifactKey: Guid(4c2fca8df462005489249f8670a5c42c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/PanelTilingTex_N.jpg using Guid(4c2fca8df462005489249f8670a5c42c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8026a5c1d22d87cccaf8818a4b872140') in 0.025313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeSurfaceTex_AO.jpg
+  artifactKey: Guid(2b1da5a5204f65745a5298acec37615e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeSurfaceTex_AO.jpg using Guid(2b1da5a5204f65745a5298acec37615e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c870cb37e58659c1ab8a99500c3a29da') in 0.025315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/WallRangePipeTex_AO.jpg
+  artifactKey: Guid(d8f2d1ef1225b1543b4b4b57381156f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/WallRangePipeTex_AO.jpg using Guid(d8f2d1ef1225b1543b4b4b57381156f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5bd3fdf25e2d8016117c9a34af2f57a0') in 0.025429 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-12_comp_light.exr
+  artifactKey: Guid(87b4245c385dd824f9dde092a631ec5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-12_comp_light.exr using Guid(87b4245c385dd824f9dde092a631ec5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dc779eba227742e03a44343ab5276d33') in 0.031871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeSurfaceTex_MS.jpg
+  artifactKey: Guid(60e1e968462de8d4c999602b6363ddad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeSurfaceTex_MS.jpg using Guid(60e1e968462de8d4c999602b6363ddad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f8757ecbee00882bb17101a5ed6b6590') in 0.025294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/Prefabs/CylinderColider.prefab
+  artifactKey: Guid(b794ad2db16299f448911217a1bffe17) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/Prefabs/CylinderColider.prefab using Guid(b794ad2db16299f448911217a1bffe17) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '74ba3bdf6066bc7e294d26a68aba7cc0') in 0.022128 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-22_comp_dir.png
+  artifactKey: Guid(1183975889b472a46b1fe3ce4f62a1ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-22_comp_dir.png using Guid(1183975889b472a46b1fe3ce4f62a1ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '56a820616532336198772b3d6f62a663') in 0.022361 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/scripts/UltimateManager.cs
+  artifactKey: Guid(d01f47a202496d3479111d51020518a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/scripts/UltimateManager.cs using Guid(d01f47a202496d3479111d51020518a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '60fe167dafe68407251d3e07d18bdadb') in 0.011744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-15_comp_dir.png
+  artifactKey: Guid(e1f77f050a9b93749810b391bc9b063c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-15_comp_dir.png using Guid(e1f77f050a9b93749810b391bc9b063c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '87f0b1156a64da4e96a0f4214db4b502') in 0.032968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-11_comp_dir.png
+  artifactKey: Guid(d445903635916df468aa9d64e4d8e004) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-11_comp_dir.png using Guid(d445903635916df468aa9d64e4d8e004) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3cce696d3b1bf44b1fc302e7442d759b') in 0.023006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/ReflectionProbe-2.exr
+  artifactKey: Guid(2ce457579af121f4c8bd2a9a23a5aae5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/ReflectionProbe-2.exr using Guid(2ce457579af121f4c8bd2a9a23a5aae5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '93fbc415eef7d09d4562a9ed188db37a') in 0.023523 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeGlassTex_A.png
+  artifactKey: Guid(7d28e2139a6edff4e8b2834e2db12b1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeGlassTex_A.png using Guid(7d28e2139a6edff4e8b2834e2db12b1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '48e5ef560d7c5ca3d6e03d2c2f4b6d8f') in 0.028133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeGlassTex_N.jpg
+  artifactKey: Guid(f37263cefa4db91428f9f259d29def7b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/TableRangeGlassTex_N.jpg using Guid(f37263cefa4db91428f9f259d29def7b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e29aa7c93300a722f2cb1e1022701eb1') in 0.027948 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-24_comp_dir.png
+  artifactKey: Guid(a73844cc9302e724b9a6e551d222c55c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-24_comp_dir.png using Guid(a73844cc9302e724b9a6e551d222c55c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8211abe03b9f40529263895d7f599aa4') in 0.026833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-5_comp_dir.png
+  artifactKey: Guid(58501881abecd1a45875f72070e35b41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-5_comp_dir.png using Guid(58501881abecd1a45875f72070e35b41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0d55803f150d6f992d3b27cb2bb25d6d') in 0.027132 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-21_comp_light.exr
+  artifactKey: Guid(c001e317627500848bb467f635cbf61e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-21_comp_light.exr using Guid(c001e317627500848bb467f635cbf61e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2f0ef45a161e987d1d31cbc6df8b73f5') in 0.032070 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-18_comp_light.exr
+  artifactKey: Guid(4a54e4ce9d24b1544b5745eaa1184ca8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-18_comp_light.exr using Guid(4a54e4ce9d24b1544b5745eaa1184ca8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '360709f54bc8a9a21c2d325144edf7fa') in 0.019784 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-23_comp_dir.png
+  artifactKey: Guid(1df8c07879013c6439f0c70ea96e6695) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-23_comp_dir.png using Guid(1df8c07879013c6439f0c70ea96e6695) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9a3960a06d5f1585fe0a058cbb25d171') in 0.022958 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-20_comp_dir.png
+  artifactKey: Guid(1d24c7056f025374cb87f80d87aebe6b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-20_comp_dir.png using Guid(1d24c7056f025374cb87f80d87aebe6b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7a1f68f8f59157a05c9597175af316f3') in 0.018329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-12_comp_dir.png
+  artifactKey: Guid(9c6d753f9a2c55843b4eb326fdd99acc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/XRI_Examples_Main/Lightmap-12_comp_dir.png using Guid(9c6d753f9a2c55843b4eb326fdd99acc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1ded2e8eaceed01911dac4e3d5737384') in 0.026487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgHelmetTex_N.jpg
+  artifactKey: Guid(7b09b1a9fe57c0446b655300792d1b9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/CyborgHelmetTex_N.jpg using Guid(7b09b1a9fe57c0446b655300792d1b9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1f32a3170b103a31bf7d3bff03f4386f') in 0.026400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalPaintedTex_N.jpg
+  artifactKey: Guid(a11d69d4a85dd064cab83dad1f17ac08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MetalPaintedTex_N.jpg using Guid(a11d69d4a85dd064cab83dad1f17ac08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c8c9b36341dea328220be7b778b72e3b') in 0.019690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_A.png
+  artifactKey: Guid(8fa3048a5d1af45418d15f34fb26fb48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo Ultimate XR Scene/DemoScene Assets/3D models/MagsTex_A.png using Guid(8fa3048a5d1af45418d15f34fb26fb48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e155bf4853e98cfb94981e4df0711a0b') in 0.017751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 6.208649 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Animation/LauncherTrigger2H.playable
+  artifactKey: Guid(d000b7d87ec8d734e83bdb6735bbca2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Animation/LauncherTrigger2H.playable using Guid(d000b7d87ec8d734e83bdb6735bbca2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f533559b529fbf052bed609b2771814b') in 0.033656 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Materials/Progress Blue.mat
+  artifactKey: Guid(159eeda13faa2754ca872fef666750ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Materials/Progress Blue.mat using Guid(159eeda13faa2754ca872fef666750ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5c201d76d4a2c0a116e364eaba85ae21') in 0.013205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Materials/Environment_White.mat
+  artifactKey: Guid(b38d65a3c1c9b274584a7b0bb59bd3c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Materials/Environment_White.mat using Guid(b38d65a3c1c9b274584a7b0bb59bd3c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '020ef0dda4fb5b33e412df1308b509b1') in 0.014564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Models/Launcher_02.fbx
+  artifactKey: Guid(54db8f2156cbca84b91d14bbfaa76071) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Models/Launcher_02.fbx using Guid(54db8f2156cbca84b91d14bbfaa76071) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6ecd3c314609133f5b9d21308ae8fb03') in 0.034884 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 43
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Jug.fbx
+  artifactKey: Guid(7c66513f507dfe54c90e0de4b27cda44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Jug.fbx using Guid(7c66513f507dfe54c90e0de4b27cda44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'cdc23568a5d174ed0cb62e1384f5c418') in 0.029042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.338712 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Scripts/ProgressBarController.cs
+  artifactKey: Guid(2e0cf72e4c3e9ed4ba0a62bd1f0276a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Scripts/ProgressBarController.cs using Guid(2e0cf72e4c3e9ed4ba0a62bd1f0276a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c3b22e33875ba56e018873fcc847d33b') in 0.015373 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Prefabs/RibbonStick.prefab
+  artifactKey: Guid(3cf910a0f0ea5a1489eb8d7dd0721171) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Prefabs/RibbonStick.prefab using Guid(3cf910a0f0ea5a1489eb8d7dd0721171) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1d1b39dfc2f604f4a79b7d471badf794') in 0.038100 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 47
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Sprites/Circle_60x60 Outline 4.png
+  artifactKey: Guid(ac11a0f708f466246a121e038d4b6755) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Sprites/Circle_60x60 Outline 4.png using Guid(ac11a0f708f466246a121e038d4b6755) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ab493a21b4e7cca82522e3aab468f29c') in 0.028165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Sprites/Step_02.png
+  artifactKey: Guid(8ebf3a1a1c3d81941bf3c79d3e59e77a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Gaze/Sprites/Step_02.png using Guid(8ebf3a1a1c3d81941bf3c79d3e59e77a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '94dcda99ada62f60a6cabf61de6053dd') in 0.034001 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Themes/ColorAffordanceTheme.asset
+  artifactKey: Guid(4b1e63e72a9ae234093697f61c2c70b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Themes/ColorAffordanceTheme.asset using Guid(4b1e63e72a9ae234093697f61c2c70b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bd3e00f4d18261c775e4cd02f589a750') in 0.019194 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/AnimationEventActionBegin.cs
+  artifactKey: Guid(5d468d0443a045844aecfdcb26294078) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/AnimationEventActionBegin.cs using Guid(5d468d0443a045844aecfdcb26294078) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c814167e4480af561404295e3f477f6d') in 0.010690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Prefabs/KinematicCube.prefab
+  artifactKey: Guid(10297a1bb8a48324da4743a14b7528ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Prefabs/KinematicCube.prefab using Guid(10297a1bb8a48324da4743a14b7528ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '40162c636bae2e8d282f078800a261a6') in 0.023428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Models/Mallet.fbx
+  artifactKey: Guid(f8b1268f8208a9f4491a00a7a52834e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Models/Mallet.fbx using Guid(f8b1268f8208a9f4491a00a7a52834e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '54880ae2ac9f9db4532826b08ab49dcc') in 0.015244 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Prefabs/Right Controller.prefab
+  artifactKey: Guid(e8fb48b2097a4fe4c9bad4f438c1eae2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Prefabs/Right Controller.prefab using Guid(e8fb48b2097a4fe4c9bad4f438c1eae2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'fd7be6097798437fd67d293ac6099411') in 0.017686 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 53
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/ObjectReset.cs
+  artifactKey: Guid(44d90717e41f7864b9265cc48de52361) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/ObjectReset.cs using Guid(44d90717e41f7864b9265cc48de52361) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4e12fcb8878b11ea8951086fdaa74939') in 0.016598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Materials/Plastic_LightBlue.mat
+  artifactKey: Guid(78b038bdf7e50464e93011b8db135324) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/GrabInteractables/Materials/Plastic_LightBlue.mat using Guid(78b038bdf7e50464e93011b8db135324) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd566bbe74ff337bcaeeec172af745b8b') in 0.016822 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/InteractionAnimator.cs
+  artifactKey: Guid(b160c11b363003842a85c3f90316faca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Scripts/InteractionAnimator.cs using Guid(b160c11b363003842a85c3f90316faca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '14ef6651984b64eb3b1d4e70e9cca2fe') in 0.016086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Materials/UniversalMaterialGrey.mat
+  artifactKey: Guid(a1c1d11b32e0a6e4084e16fea6027537) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Materials/UniversalMaterialGrey.mat using Guid(a1c1d11b32e0a6e4084e16fea6027537) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'db0ffd5008a7af5749511a846f2842e2') in 0.026340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Prefabs/TeleportAnchor.prefab
+  artifactKey: Guid(69bcbe8a3c723a8459bad61946074109) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Prefabs/TeleportAnchor.prefab using Guid(69bcbe8a3c723a8459bad61946074109) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '78f81fb0950959b5923fe2890f258e3d') in 0.032625 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Materials/Controller.mat
+  artifactKey: Guid(3d2e36aacd7dc084b96e0755f1af4137) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Global/Materials/Controller.mat using Guid(3d2e36aacd7dc084b96e0755f1af4137) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'caa98e59047e5ee20a756688dd670808') in 0.017665 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.080355 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Materials/DoorSteel.mat
+  artifactKey: Guid(8028ee57ccf14604e8b7896a20aea803) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Materials/DoorSteel.mat using Guid(8028ee57ccf14604e8b7896a20aea803) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'fdf0d1654ad4c024e361c4be2bba5edb') in 0.018699 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/SocketKeys/Door.asset
+  artifactKey: Guid(3e433f91841e5d14ba4db9710832675a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/SocketKeys/Door.asset using Guid(3e433f91841e5d14ba4db9710832675a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1ca19bf5eacf09c267300daaf9553890') in 0.015377 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/Door_Flip.prefab
+  artifactKey: Guid(ef8968d3811b4f9448c64ac756317715) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/Door_Flip.prefab using Guid(ef8968d3811b4f9448c64ac756317715) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bf82d5c8a50a212d09b3f8993a24869b') in 0.017120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/DoorKey.prefab
+  artifactKey: Guid(52b0efbba0ab54548af1006d60566fe1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/DoorKey.prefab using Guid(52b0efbba0ab54548af1006d60566fe1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '463359ab35b2e5107ab53d26b95c65a7') in 0.024390 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Models/TargetRing.fbx
+  artifactKey: Guid(9be78d4b4d369b94d9076a46fa4d0304) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Models/TargetRing.fbx using Guid(9be78d4b4d369b94d9076a46fa4d0304) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ab276710f0abfd1708d63d1150e22026') in 0.033133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 22
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/TargetRing_OuterLight.mat
+  artifactKey: Guid(bd9c13adf3bf63c4fb1633b24b80fddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/TargetRing_OuterLight.mat using Guid(bd9c13adf3bf63c4fb1633b24b80fddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '50a1ce5d49ab6f396801c613598b525e') in 0.020001 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/Door_Locked.prefab
+  artifactKey: Guid(8b799fb37a52aaa49a29e4cd5358345e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Physics/Prefabs/Door_Locked.prefab using Guid(8b799fb37a52aaa49a29e4cd5358345e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e0c0c30cb57b1745c1cf68a656216507') in 0.022340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 92
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/CandleFlame.mat
+  artifactKey: Guid(0c74f5273cc3e2046b5a910aac12b59f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/CandleFlame.mat using Guid(0c74f5273cc3e2046b5a910aac12b59f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'fc50d3527d617c2de253ecbeeac82495') in 0.021718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/Plant_Green_01.mat
+  artifactKey: Guid(6d3d8c2f1a0f27d4fa9ee303292ef682) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Materials/Plant_Green_01.mat using Guid(6d3d8c2f1a0f27d4fa9ee303292ef682) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dd423f8abc552a970c85e54729c326d0') in 0.019162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/CandleFlame_PointLight.anim
+  artifactKey: Guid(20b141fc632ee8a4e84f25d077aa67e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/CandleFlame_PointLight.anim using Guid(20b141fc632ee8a4e84f25d077aa67e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '69b88931212dcc21ca5106d454474078') in 0.026338 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/Plant_Grows.controller
+  artifactKey: Guid(32e951e46ada97d4e812d8c3d6ec0e68) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/Plant_Grows.controller using Guid(32e951e46ada97d4e812d8c3d6ec0e68) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '82f441c50c36c92a8c7c82d38d8b67a1') in 0.016853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/CandleFlame_Controller.controller
+  artifactKey: Guid(ff1a19bea427fb24caf0dfe3246c06b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Animation/CandleFlame_Controller.controller using Guid(ff1a19bea427fb24caf0dfe3246c06b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a4037beba3ae570cb8991f90c632ec8c') in 0.012933 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Models/Candle_Small_Round.fbx
+  artifactKey: Guid(44bf690a21e07544387a76c04371e784) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Models/Candle_Small_Round.fbx using Guid(44bf690a21e07544387a76c04371e784) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0f219197f300befde1115039f1275df7') in 0.026489 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Prefabs/SphereProjectile.prefab
+  artifactKey: Guid(3976a13353f30c74891ad6e9052aaa18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Prefabs/SphereProjectile.prefab using Guid(3976a13353f30c74891ad6e9052aaa18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f1de29e8a9a1d7c0e517c7c67aa2660a') in 0.027643 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.102157 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Textures/PiggyBank_A.png
+  artifactKey: Guid(a86bdd893c7432c4db4085d09d135519) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Textures/PiggyBank_A.png using Guid(a86bdd893c7432c4db4085d09d135519) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '17d1899dc809e0c93567521812086825') in 0.026641 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/XRLockGridSocketInteractor.cs
+  artifactKey: Guid(8349f6fd95eb89e40bbdfc16e4f63146) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/XRLockGridSocketInteractor.cs using Guid(8349f6fd95eb89e40bbdfc16e4f63146) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f12fed06e201be5d5ff3ddb94ae847fd') in 0.017063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Setup/Models/LocomotionTable.fbx
+  artifactKey: Guid(e036dba5a6004e84c933fea5c510aa33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Setup/Models/LocomotionTable.fbx using Guid(e036dba5a6004e84c933fea5c510aa33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '60733a1c6d26a7ef6e95375ee68f6e7d') in 0.024520 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/MediumGrey.mat
+  artifactKey: Guid(dc1d2c50d7463b847ba30ff50e1959b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/MediumGrey.mat using Guid(dc1d2c50d7463b847ba30ff50e1959b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1ae7d0948ffc252bf2176e9eaea3f3b7') in 0.019169 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Materials/Peg_Yellow.mat
+  artifactKey: Guid(3729cbbc6c56a154aba7a743857af238) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Materials/Peg_Yellow.mat using Guid(3729cbbc6c56a154aba7a743857af238) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c2983a7059ac06f2b865415a5a71c275') in 0.022096 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Textures/WaterSprinkles_C.png
+  artifactKey: Guid(9966df729647e92429cdb8dabe7ad2c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Props/Textures/WaterSprinkles_C.png using Guid(9966df729647e92429cdb8dabe7ad2c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dd4038bdfa413de77a71855fa752a543') in 0.038767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Shaders/WorldUI.shader
+  artifactKey: Guid(9b83b58c1a14548419f56ef6631192cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Shaders/WorldUI.shader using Guid(9b83b58c1a14548419f56ef6631192cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e374f67a30144bceedeb15c045f0857c') in 0.019384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/Controls_Black.mat
+  artifactKey: Guid(c3ca319dc8c9a404ebb7c4f883217b44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/Controls_Black.mat using Guid(c3ca319dc8c9a404ebb7c4f883217b44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c3d947d64b52dca7434df568014a25af') in 0.012634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/SimpleSocketShape.prefab
+  artifactKey: Guid(d81193b4b57486b46b4762e8b26d2de8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/SimpleSocketShape.prefab using Guid(d81193b4b57486b46b4762e8b26d2de8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '47319dbc897fab397d48b6cc233f193b') in 0.023880 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/PerlerMachineSetup.prefab
+  artifactKey: Guid(c3014b24b7f247b478b4058c9339acb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/PerlerMachineSetup.prefab using Guid(c3014b24b7f247b478b4058c9339acb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0e89ce2fd77b9b652a2e7ca517b5bda5') in 0.026482 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 116
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/PegViolet.prefab
+  artifactKey: Guid(fd5fe21d39e4f0f40aca394a474bb56d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Prefabs/PegViolet.prefab using Guid(fd5fe21d39e4f0f40aca394a474bb56d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f4a745342384ede8fefec7a8b4a296ed') in 0.022870 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 52
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/Hole.mat
+  artifactKey: Guid(9e8d496d63ad50744a0057e76919b9c4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Materials/Hole.mat using Guid(9e8d496d63ad50744a0057e76919b9c4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7706c935ff8f50d03ae38fb487115461') in 0.018450 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Materials/Peg_LightBlue.mat
+  artifactKey: Guid(2f1724210e847914d8ebf13897e7ac1f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Materials/Peg_LightBlue.mat using Guid(2f1724210e847914d8ebf13897e7ac1f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '62b062d75ef32fb8b9af04573b5b8ca6') in 0.018330 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/Joystick.fbx
+  artifactKey: Guid(8b10f174a94704843ab5aca0b9dd5c7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/Joystick.fbx using Guid(8b10f174a94704843ab5aca0b9dd5c7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7e4faeaed6517def7eece1f7da43685e') in 0.030508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.086296 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Prefabs/Wheel.prefab
+  artifactKey: Guid(04052c76cd8138f47bfc66ae8d456707) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Prefabs/Wheel.prefab using Guid(04052c76cd8138f47bfc66ae8d456707) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3c1b89840eb1f6814ff324cb05eb4fe1') in 0.021714 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 34
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Textures/RoundRadius_02.png
+  artifactKey: Guid(4aa94edd0cd8fd5489012d286f10897c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Textures/RoundRadius_02.png using Guid(4aa94edd0cd8fd5489012d286f10897c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '26c505a396de0cf0b59d0dc68872d50c') in 0.023553 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/ClawMachine/SheepPrize.fbx
+  artifactKey: Guid(d6b7ca764414d004f9dc66709111e878) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/ClawMachine/SheepPrize.fbx using Guid(d6b7ca764414d004f9dc66709111e878) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b1e48d33956bf136f66993b5a7957e40') in 0.024351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Scripts/XRSlider.cs
+  artifactKey: Guid(0d494b658b37958449db82c0ee015fbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Scripts/XRSlider.cs using Guid(0d494b658b37958449db82c0ee015fbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '39382f95e66db8f4c4498b70dba2c033') in 0.015276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Textures/SheepPrize_MS.png
+  artifactKey: Guid(379f62ffbf906f1479a9499b0a3c3dcb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Textures/SheepPrize_MS.png using Guid(379f62ffbf906f1479a9499b0a3c3dcb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '40b1d2ecae90ff5d3c1ddc3d4ad265d2') in 0.024317 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/KeyLockSystem/Lock.cs
+  artifactKey: Guid(1d479cceb8cf26842888dcaf56f46717) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/KeyLockSystem/Lock.cs using Guid(1d479cceb8cf26842888dcaf56f46717) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '85d7ecbe7a9d6d7f6ce8bb0d4aeabed2') in 0.021018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/WaypointCurve.cs
+  artifactKey: Guid(ae36f98bfe7bbde4ba8f0bd443e41943) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/WaypointCurve.cs using Guid(ae36f98bfe7bbde4ba8f0bd443e41943) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '16624908eafe1a4f26e21192805a16ce') in 0.018546 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Textures/SheepPrize_A_Black.png
+  artifactKey: Guid(421d01cb01b9e0f4ab74d438b7d93af4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Textures/SheepPrize_A_Black.png using Guid(421d01cb01b9e0f4ab74d438b7d93af4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '57124372077540b799f05bb012deeef5') in 0.027089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Prefabs/ClawMachine/UFOParticleBeam.prefab
+  artifactKey: Guid(84b1b47186d3291499324ed4ce851c6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Prefabs/ClawMachine/UFOParticleBeam.prefab using Guid(84b1b47186d3291499324ed4ce851c6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '192cfa6b17872a6787afc5c510ef97f8') in 0.012979 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/LoadingIndicator/LoadingIndicator.png
+  artifactKey: Guid(6009f158dc1344e4983b8fbdd26bcd92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/LoadingIndicator/LoadingIndicator.png using Guid(6009f158dc1344e4983b8fbdd26bcd92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b0fac549c9a700901522967bc5d77525') in 0.023283 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/ClawMachine/CowPrize.fbx
+  artifactKey: Guid(ae37dabc7fac3b7499cbd9ed085d1d90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Models/ClawMachine/CowPrize.fbx using Guid(ae37dabc7fac3b7499cbd9ed085d1d90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0f289ae67e87bfef2b6756db15086a92') in 0.022426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/WalkthroughStep.cs
+  artifactKey: Guid(c2b422177dd3c8a4eb44616d56d8e45b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/WalkthroughStep.cs using Guid(c2b422177dd3c8a4eb44616d56d8e45b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'eb33e506b8740c13574013e6d2e04568') in 0.014415 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Scripts/XRJoystick.cs
+  artifactKey: Guid(754d27665ba38d44b9c1633441bdd691) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_3D/Scripts/XRJoystick.cs using Guid(754d27665ba38d44b9c1633441bdd691) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'cd8214cea8a3636e32bf49c8ba671d8b') in 0.012058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/Shared/Circle.png
+  artifactKey: Guid(c4fdd0d0c172917448b20e4b4e1a4fe8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/Shared/Circle.png using Guid(c4fdd0d0c172917448b20e4b4e1a4fe8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9f8c54b56289879bc2eb742d06755bc5') in 0.030963 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/KeyLockSystem/Keychain.cs
+  artifactKey: Guid(505599121cd7c2d4d87a596056b0142b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/SocketInteractors/Scripts/KeyLockSystem/Keychain.cs using Guid(505599121cd7c2d4d87a596056b0142b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f36f6eab29f06afdd31d24caabf5c6ec') in 0.016004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/Tooltips/IconPlaceholder.png
+  artifactKey: Guid(3056e9ef6d5df6642bfc15060a7b5e62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/UI_2D/Sprites/Tooltips/IconPlaceholder.png using Guid(3056e9ef6d5df6642bfc15060a7b5e62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bd9e4f5ee511014c9a63990c82eae5ac') in 0.025382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.065697 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/UI/LazyFollow.cs
+  artifactKey: Guid(73fb1778a5310f041a99bc0eb94493cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Scripts/UI/LazyFollow.cs using Guid(73fb1778a5310f041a99bc0eb94493cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f19e8e7bfb642bea313c828d3af044f2') in 0.019437 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Textures/Icon/Waypoint_Filled.png
+  artifactKey: Guid(4e601d845e32ffd499206254877afe9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/VRWalkthrough/Textures/Icon/Waypoint_Filled.png using Guid(4e601d845e32ffd499206254877afe9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2a26585ebc0941641b0426c894c4d626') in 0.024259 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.458884 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Launcher_FlatBlack.mat
+  artifactKey: Guid(b4af429aa09426941a5bf35e1b3fb29c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Launcher_FlatBlack.mat using Guid(b4af429aa09426941a5bf35e1b3fb29c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a837477e88ea58c16f707a3a20dd6ffb') in 0.032566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Models/Launcher.fbx
+  artifactKey: Guid(a013995b2ae21e544bcc487400f8dbd2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Models/Launcher.fbx using Guid(a013995b2ae21e544bcc487400f8dbd2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8505796d3a58f421cea14f6175e81b73') in 0.034988 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Lighter_Red.mat
+  artifactKey: Guid(5300e09a87738c841a01088234c2c125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Lighter_Red.mat using Guid(5300e09a87738c841a01088234c2c125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '629b8ad5fee7d17285400e2a3a90a280') in 0.019366 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Prefabs/Hold_Foot.prefab
+  artifactKey: Guid(d4993cbacb4406f43afa71c94d4d0601) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Prefabs/Hold_Foot.prefab using Guid(d4993cbacb4406f43afa71c94d4d0601) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '75869c1ef0c2683dc78170dd987a165a') in 0.019046 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/Water.prefab
+  artifactKey: Guid(e535ee61bd413794291d54425876d9fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/Water.prefab using Guid(e535ee61bd413794291d54425876d9fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8045055cd8c14904e47adfba51b8b415') in 0.019452 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Materials/ClimbingWall.mat
+  artifactKey: Guid(f19458eb968d2b344ab51cc953435cd5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Materials/ClimbingWall.mat using Guid(f19458eb968d2b344ab51cc953435cd5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '594aa0fb6548f0e73143e3f3064c0123') in 0.026829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/WaterfallFoam.prefab
+  artifactKey: Guid(42ef19bf471185441acd913733c9c329) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/WaterfallFoam.prefab using Guid(42ef19bf471185441acd913733c9c329) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c8d9e643248b12cef42686d4c1d0b457') in 0.061000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Foot.fbx
+  artifactKey: Guid(e8435425a774ec540aa6411c6a8e0d92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Foot.fbx using Guid(e8435425a774ec540aa6411c6a8e0d92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f4db5ec05dcca4f79507f12f41bfa2b3') in 0.032871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Textures/Stucco_MS.png
+  artifactKey: Guid(1397c8a95c80ef248a8c52bf927b97d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Textures/Stucco_MS.png using Guid(1397c8a95c80ef248a8c52bf927b97d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '42c853d885eaeaa9f0dfc6b03f3345d7') in 0.025200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/CeilingLight.prefab
+  artifactKey: Guid(e32b4b710b5ec5b42ba84b234d6ae851) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Prefabs/CeilingLight.prefab using Guid(e32b4b710b5ec5b42ba84b234d6ae851) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a580ffb4279f5ca0dd6ad25c62eee352') in 0.017840 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Materials/DistantTerrain_01.mat
+  artifactKey: Guid(ee508fbf0b9437d4283fdae347b66d80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Materials/DistantTerrain_01.mat using Guid(ee508fbf0b9437d4283fdae347b66d80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c2d06bfd123b9bf4a0e397c1cdaabdfc') in 0.015924 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Pinch.fbx
+  artifactKey: Guid(72034e49bfdf41c4797d692e22a6770f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Climb/Models/Hold_Pinch.fbx using Guid(72034e49bfdf41c4797d692e22a6770f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c563fe3bc719199a19fe4dd1c0f0bab4') in 0.025163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Megaphone_Black.mat
+  artifactKey: Guid(2c44c9a7133826540943db286873dc9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/ActivateInteractables/Materials/Megaphone_Black.mat using Guid(2c44c9a7133826540943db286873dc9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '226ecf26abedc553754d618744ab97e0') in 0.019818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Textures/Stucco_N.png
+  artifactKey: Guid(7a26ef6b408f7aa49890ace2d2bc4fc2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/InsightXR Unity SDK/1.0.0/Demo XR interaction/Demo Scene Assets/Environment/Textures/Stucco_N.png using Guid(7a26ef6b408f7aa49890ace2d2bc4fc2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1aef3f537ecb61f07ef8f8f3b84d2624') in 0.030957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 85.069769 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Models/XRControllerRight.fbx
+  artifactKey: Guid(11cd62256b1d470f922b2c8e6446cc77) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Models/XRControllerRight.fbx using Guid(11cd62256b1d470f922b2c8e6446cc77) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e21a5cb8eb726a3f0e57420e89021be9') in 0.030630 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 52
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab
+  artifactKey: Guid(9f3369e30fbd31f4bb596b1a99babe83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Controllers/XR Controller Right.prefab using Guid(9f3369e30fbd31f4bb596b1a99babe83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e242a33ab8e80606da3b8c890a0a5b0a') in 0.017829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab
+  artifactKey: Guid(c1800acf6366418a9b5f610249000331) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab using Guid(c1800acf6366418a9b5f610249000331) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b853b494bbfd4dba168c9b28f7a82310') in 0.041718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 36
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab
+  artifactKey: Guid(1392f805216c47742996d4742c80721c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Prefabs/Controllers/XR Controller Left.prefab using Guid(1392f805216c47742996d4742c80721c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ca4b88e3c1b0562434517482b0f9d496') in 0.016120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Prefabs
+  artifactKey: Guid(91951de0742340f45a1e49a4735db517) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Prefabs using Guid(91951de0742340f45a1e49a4735db517) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '796be21921477eda71dc95f83ed84773') in 0.016615 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph
+  artifactKey: Guid(c109fab5d2bf5f64598ed69d2c16ceb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Tunneling Vignette/TunnelingVignetteSG.shadergraph using Guid(c109fab5d2bf5f64598ed69d2c16ceb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '32e926f05436aaeefa4f754651e8aa6a') in 0.024678 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png
+  artifactKey: Guid(b7bad1260586fa746a0b67e930892936) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Sprites/Round Radius 4 Outline.png using Guid(b7bad1260586fa746a0b67e930892936) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'df079d818d53cdc207174d8842f3ca7f') in 0.022735 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab
+  artifactKey: Guid(c24a7635b5761984d81cf6c4aac26e0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/DemoSceneAssets/Prefabs/UI/ModalSingleButton.prefab using Guid(c24a7635b5761984d81cf6c4aac26e0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3365b699aa959f5e2d8ecbb28a7c3c98') in 0.024378 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 40
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Presets/XRI Default Right Controller.preset
+  artifactKey: Guid(1421ad86ff3787b4dae70fe9e699a25f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Presets/XRI Default Right Controller.preset using Guid(1421ad86ff3787b4dae70fe9e699a25f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c16ecdf4bd88ffbfdbcbbbb82781b938') in 0.027514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Presets/XRI Default Left Grab Move.preset
+  artifactKey: Guid(e2e08fffc3edfbb47a429bae0c5a6343) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Samples/XR Interaction Toolkit/2.5.3/Starter Assets/Presets/XRI Default Left Grab Move.preset using Guid(e2e08fffc3edfbb47a429bae0c5a6343) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '63214d6723ced7527332d8d583aa13b6') in 0.025890 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.671 seconds
+Refreshing native plugins compatible for Editor in 7.78 ms, found 9 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.851 seconds
+Domain Reload Profiling: 1518ms
+	BeginReloadAssembly (126ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (483ms)
+		LoadAssemblies (238ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (287ms)
+			TypeCache.Refresh (270ms)
+				TypeCache.ScanAssembly (254ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (851ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (394ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (235ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 7.38 ms, found 9 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6202 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 90 unused Assets / (0.8 MB). Loaded Objects now: 6787.
+Memory consumption went from 222.5 MB to 221.7 MB.
+Total: 4.319700 ms (FindLiveObjects: 0.484300 ms CreateObjectMapping: 0.243300 ms MarkObjects: 3.117000 ms  DeleteObjects: 0.473900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

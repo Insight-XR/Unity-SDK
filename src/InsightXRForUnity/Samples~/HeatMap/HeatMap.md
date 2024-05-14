@@ -27,7 +27,7 @@ The Shader heat map view should show you a result like this
 
 ` PlayerFocusRayCaster ` casts a ray every **DistributionRequestEvent** and creates a **PlayerFocusChanged** event if the casted ray hits a collider passing down the ""hit" data
 
-The ` HeatMapController ` listens to player focus changed events and generates a ` HeatMap ` model by adding a heat value of "1.1f" to the hit point, there is also a cool down method that applies a cool down every replay frame, therefore each point on the heat map cool downs over time hence the newest focus points and points looked at for a long amount of time appear as hotter older focus points are cooler
+The ` HeatMapController ` listens to player focus changed events and generates a ` HeatMap ` model by adding a heat value of "1.1f" to the hit point, there is also a cool down method that applies a cool down every replay frame, therefore each point on the heat map cool downs over time hence the newest focus points and points looked at for a long amount of time appear as hotter while older focus points appear cooler
 
 The different views use different techniques to render this Heat Map data, we have two views at the moment on particle based and one shader based the detailed functioning of these views are better understood by looking at the `ParticleHeatMapView.cs` and `HeatMapTexturePainter.cs`
 scripts respectively

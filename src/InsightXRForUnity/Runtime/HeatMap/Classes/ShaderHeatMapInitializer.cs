@@ -15,7 +15,7 @@ public class ShaderHeatMapInitializer:  MonoBehaviour{
     }
 
     private void InitailizeHeatMapMaterialOnMesh(MeshRenderer mesh){
-        var heatMapPainter = mesh.AddComponent<HeatMapTexturePainter>();
+        var heatMapPainter = mesh.gameObject.AddComponent<HeatMapTexturePainter>();
         heatMapPainter.Initialize(heatMapGradient, heatMapMaterial, brushTexture);
     }
 }

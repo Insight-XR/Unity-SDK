@@ -23,7 +23,7 @@ We have tested the steps throughly with Unity versions 16f1 and 3D URP projects 
 A Package created that allows Users to import and export GLTF models into Unity. Check out [GLTF-Unity]([https://github.com/GlitchEnzo/NuGetForUnity](https://github.com/KhronosGroup/UnityGLTF)) for the git repository.
 <ins>Install Package via Git URL :</ins>
 ```bash
-https://github.com/KhronosGroup/UnityGLTF.git
+https://github.com/KhronosGroup/UnityGLTF.git/#release/2.11.0-rc
 ```
 
 ### Step 2: Adding the Analytics SDK
@@ -33,7 +33,8 @@ Next up is to install the InsightXR Analytics SDK
 ```bash
 https://github.com/Insight-XR/Unity-sdk.git?path=src/InsightXRForUnity
 ```
-If you have forked it and wish to use the same. Replace Insight-XR with `your-github-id` in above url.
+If you have forked it and wish to use the same. Replace Insight-XR with `your-github-id` in above url.  
+*If you happen to face ssl disconnect error while installing sdk. You can always download the repo as zip, extract it, then `add project from disk` and select package.json file in `src/InsightXRForUnity` folder*
 ### Step 3: Import the Extra Assets
 
 As a Versatile XR framework, we shall be installing and using assets from the XR Interaction Toolkit Package. We shall be using their starter assets and VR device Simulator
@@ -45,7 +46,7 @@ As a Versatile XR framework, we shall be installing and using assets from the XR
         > Import XR Device Simulator
 ```
 ### Step 4: Import Insight XR Samples
-
+*Please ensure to install all samples. Some samples inherit some files from other samples and would work only if all of them are imported*
 ```bash
   Search Package: InsightXR Unity SDK
         > Select the Package

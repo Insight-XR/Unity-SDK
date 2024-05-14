@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NEWSHADERMATERIAL
+  m_Shader: {fileID: 4800000, guid: cde32eea3f1ecfd4eb0552bfc201f5c4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTEX:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Border: 3.3
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _ExtraBorder: 42.1
+    - _FirstCircleBorder: 0.2
+    - _FirstCircleRadius: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _NumCircles: 3
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Radius: 20
+    - _SecondCircleBorder: 0.4
+    - _SecondCircleRadius: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _ThirdCircleBorder: 0.6
+    - _ThirdCircleRadius: 0
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _AreaColor: {r: 0.9433962, g: 0.45315576, b: 0.030259816, a: 1}
+    - _Center: {r: 1, g: 0, b: 0, a: 0}
+    - _CenterPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _CenterPosition1: {r: 0, g: 1, b: 0, a: 0}
+    - _CenterPosition2: {r: 0, g: 0, b: 0, a: 0}
+    - _CenterPosition3: {r: 0, g: 0, b: 0, a: 0}
+    - _CenterPosition4: {r: 0, g: 0, b: 0, a: 0}
+    - _CenterPositions: {r: 0, g: 0, b: 0, a: 0}
+    - _CircleBorders: {r: 12, g: 12, b: 12, a: 0}
+    - _CircleColors: {r: 1, g: 0, b: 0, a: 1}
+    - _CircleRadii: {r: 10, g: 150, b: 225, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ExtraAreaColor: {r: 0.19551468, g: 1, b: 0, a: 1}
+    - _FirstCircleColor: {r: 1, g: 0, b: 0, a: 1}
+    - _FirstCirclePosition: {r: -2, g: 1.75, b: -2.7499, a: 0}
+    - _SecondCircleColor: {r: 0, g: 1, b: 0, a: 1}
+    - _SecondCirclePosition: {r: 3, g: 1.75, b: -2.7499, a: 0}
+    - _ThirdCircleColor: {r: 0, g: 0, b: 1, a: 1}
+    - _ThirdCirclePosition: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

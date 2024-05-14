@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: bfda376b0f658a748870ea8f7c2c7c03
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: bolt
+  - first:
+      1: 100002
+    second: magazine
+  - first:
+      1: 100004
+    second: root
+  - first:
+      1: 100006
+    second: //RootNode
+  - first:
+      1: 100008
+    second: SKEL_AR_01
+  - first:
+      1: 100010
+    second: SM_AR_01
+  - first:
+      1: 100012
+    second: SOCKET_Default
+  - first:
+      1: 100014
+    second: SOCKET_Eject
+  - first:
+      1: 100016
+    second: SOCKET_Grip
+  - first:
+      1: 100018
+    second: SOCKET_Laser
+  - first:
+      1: 100020
+    second: SOCKET_Magazine
+  - first:
+      1: 100022
+    second: SOCKET_Muzzle
+  - first:
+      1: 100024
+    second: SOCKET_Scope
+  - first:
+      4: 400000
+    second: bolt
+  - first:
+      4: 400002
+    second: magazine
+  - first:
+      4: 400004
+    second: root
+  - first:
+      4: 400006
+    second: //RootNode
+  - first:
+      4: 400008
+    second: SKEL_AR_01
+  - first:
+      4: 400010
+    second: SM_AR_01
+  - first:
+      4: 400012
+    second: SOCKET_Default
+  - first:
+      4: 400014
+    second: SOCKET_Eject
+  - first:
+      4: 400016
+    second: SOCKET_Grip
+  - first:
+      4: 400018
+    second: SOCKET_Laser
+  - first:
+      4: 400020
+    second: SOCKET_Magazine
+  - first:
+      4: 400022
+    second: SOCKET_Muzzle
+  - first:
+      4: 400024
+    second: SOCKET_Scope
+  - first:
+      21: 2100000
+    second: WEP_Details
+  - first:
+      21: 2100002
+    second: WEP_Body
+  - first:
+      21: 2100004
+    second: WEP_Grip
+  - first:
+      21: 2100006
+    second: WEP_Stock
+  - first:
+      21: 2100008
+    second: WEP_Grip_Front
+  - first:
+      21: 2100010
+    second: WEP_Bolt
+  - first:
+      21: 2100012
+    second: Details
+  - first:
+      21: 2100014
+    second: Body
+  - first:
+      21: 2100016
+    second: Grip
+  - first:
+      21: 2100018
+    second: Stock
+  - first:
+      21: 2100020
+    second: Grip Front
+  - first:
+      21: 2100022
+    second: Bolt
+  - first:
+      43: 4300000
+    second: SM_AR_01
+  - first:
+      74: 7400000
+    second: _Ref_Pose
+  - first:
+      74: 7400002
+    second: A_FP_WEP_AR_01_Reload
+  - first:
+      74: 7400004
+    second: A_FP_WEP_AR_01_Reload_Empty
+  - first:
+      74: 7400006
+    second: A_TP_WEP_AR_01_Reload
+  - first:
+      74: 7400008
+    second: A_TP_WEP_AR_01_Reload_Empty
+  - first:
+      74: 7400010
+    second: A_WEP_AR_01_Fire
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: SM_AR_01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bolt
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Details
+    second: {fileID: 2100000, guid: 8bf3795760184334483710ee835cccdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grip
+    second: {fileID: 2100000, guid: 2d8b454c96dd40341a2b2ea298ad1576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grip Front
+    second: {fileID: 2100000, guid: 2d8b454c96dd40341a2b2ea298ad1576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stock
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Body
+    second: {fileID: 2100000, guid: 33b10df1cf0a695428111258a0c564b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Bolt
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Details
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Grip
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Grip_Front
+    second: {fileID: 2100000, guid: f163886c552e95540a538a1986131edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WEP_Stock
+    second: {fileID: 2100000, guid: 7d7550799c62b9942afda3d7511f504e, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: _Ref_Pose
+      takeName: SKEL_AR_01|_reference
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_FP_WEP_AR_01_Reload
+      takeName: SKEL_AR_01|A_FP_WEP_AR_01_Reload
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_FP_WEP_AR_01_Reload_Empty
+      takeName: SKEL_AR_01|A_FP_WEP_AR_01_Reload_Empty
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_TP_WEP_AR_01_Reload
+      takeName: SKEL_AR_01|A_TP_WEP_AR_01_Reload
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_TP_WEP_AR_01_Reload_Empty
+      takeName: SKEL_AR_01|A_TP_WEP_AR_01_Reload_Empty
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_WEP_AR_01_Fire
+      takeName: SKEL_AR_01|A_WEP_AR_01_Fire
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

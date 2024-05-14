@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OC_LPSP_WEP_Handgun_03
+  m_Controller: {fileID: 9100000, guid: 3f50821f7ef123c45bf544bf7626e7e0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400002, guid: bfda376b0f658a748870ea8f7c2c7c03, type: 3}
+    m_OverrideClip: {fileID: -4736269018783579773, guid: 40cb849895dd45645ac3fadcc88190af,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400004, guid: bfda376b0f658a748870ea8f7c2c7c03, type: 3}
+    m_OverrideClip: {fileID: -882397832086714528, guid: 40cb849895dd45645ac3fadcc88190af,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400010, guid: bfda376b0f658a748870ea8f7c2c7c03, type: 3}
+    m_OverrideClip: {fileID: 2844201171150616281, guid: 40cb849895dd45645ac3fadcc88190af,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7fba030ac3cb5884596826fcb4d24243, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 083575a2b14986343a1059d01aa7ac02, type: 2}

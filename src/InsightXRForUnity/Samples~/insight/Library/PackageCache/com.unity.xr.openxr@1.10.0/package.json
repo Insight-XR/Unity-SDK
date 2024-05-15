@@ -1,0 +1,48 @@
+{
+  "name": "com.unity.xr.openxr",
+  "displayName": "OpenXR Plugin",
+  "version": "1.10.0",
+  "unity": "2021.3",
+  "description": "OpenXR is an open, royalty-free standard developed by Khronos that aims to simplify AR/VR development by allowing developers to target a wide range of AR/VR devices. Use this plug-in to enable OpenXR in XR Plug-in Management.",
+  "keywords": [
+    "openxr",
+    "xr",
+    "reality",
+    "xreditorsubsystem"
+  ],
+  "dependencies": {
+    "com.unity.xr.management": "4.4.0",
+    "com.unity.xr.legacyinputhelpers": "2.1.2",
+    "com.unity.inputsystem": "1.6.3",
+    "com.unity.xr.core-utils": "2.1.1"
+  },
+  "samples": [
+    {
+      "displayName": "Controller",
+      "description": "Basic sample showing how to create and reference OpenXR action maps with the new input system.",
+      "path": "Samples~/Controller"
+    },
+    {
+      "displayName": "Meshing Subsystem Feature",
+      "description": "Shows a teapot mesh generated from native mesh subsystem with physics baked in background.",
+      "path": "Samples~/MeshingFeature"
+    },
+    {
+      "displayName": "Intercept Feature",
+      "description": "Demonstrates how to intercept an OpenXR method.",
+      "path": "Samples~/InterceptFeature"
+    }
+  ],
+  "_upm": {
+    "changelog": "### Added\n* Added `OpenXRSettings.VulkanAdditionalGraphicsQueue` property to request at startup an additional Vulkan graphics queue in devices that require it. The setting can be enabled through the Project settings UI and build code.\n* Added `Optimize Buffer Discards (Vulkan)` feature setting option within MetaQuestFeature.\n* Added a new optional validation rule to switch to use InputSystem.Controls.StickControl instead of Vector2Control for thumbsticks. StickControl allows more input options for thumbstick-based control, such as acting as both a combined 2D vector, two independent axes or a four-way Dpad with 4 independent buttons.\n\n### Changed\n* Updated project validation rule for Meta Quest Feature - \"Select Oculus Touch Interaction Profile or Meta Quest Pro Touch Interaction Profile to pair with.\" from error to warning to allow other interaction profiles to be enabled as well, like eye gaze or palm pose.\n\n### Fixed\n* Fixed Meta XR `Space Warp` feature crashing issue when trying to access the depth swapchain.\n* Fixed Meta XR `Space Warp` depth subimage imageArrayIndex setup wrong issue for multiview render mode.\n* Fixed a bug where Palm Pose won't work if the Eye Gaze Interaction Profile is added to the project.\n* Fixed \"The type 'AnalyticsResult' is defined in an assembly that is not referenced\" error thrown.\n* Fixed UnitySwapchain destructor to completely destroy swapchains to avoid memory leak.\n* Fixed OpenXR Settings UI to not render settings on platforms that aren't supported.\n* Fixed Android manifest entries were added when the feature was not enabled."
+  },
+  "upmCi": {
+    "footprint": "de1fd8cd7dfb71006b399a24c21ff598829354d6"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.10/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/xr.sdk.openxr.git",
+    "type": "git",
+    "revision": "4e5ca6cb7ac702c659e04def4c4dd2f9b5a8b969"
+  }
+}

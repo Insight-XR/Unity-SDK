@@ -1,4 +1,4 @@
-# Insight Analytics Heat Map By Dhruv Pant
+# Player focus Heat Map Views By Dhruv Pant
 
 ## Introduction
 

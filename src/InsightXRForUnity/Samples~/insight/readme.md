@@ -29,7 +29,8 @@ https://github.com/samarth0104/Unity-SDK/assets/144517774/a09b83e8-7ee9-44cc-950
 ## Raycast Visaulizer
 https://github.com/samarth0104/Unity-SDK/assets/144517774/069ef0f8-6a8f-4a3b-be61-3ae259bc23a7
 
-
-
-
+## Additional notes 
+1. The game by deafult will have the Raycast method.
+2. The objects which show the heatmap visaulization should have the HeatMapLayer tag, the mesh collider, a material with the HeatMapShader and attach the RaycastVisualizer/ProjectorVisualizer script.
+3. For projectile method attach the ProjectileScript.cs to Projectile GameObject same and make sure the 2nd point is checked and the Projector script should be attached to the Main Camera of the Player
 

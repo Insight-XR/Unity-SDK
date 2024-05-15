@@ -23,5 +23,12 @@ Two main approaches are used to visualize the heatmap:
 ## Shader
 1. `HeatMapShader`: A shader is used to apply visual effects to objects hit by either the raycast or projectile method. Gives a HeatMap Gradient.
 
+## Projector Visualizer
+https://github.com/samarth0104/Unity-SDK/assets/144517774/a09b83e8-7ee9-44cc-9503-647c1945804e
+
+## Raycast Visaulizer
+https://github.com/samarth0104/Unity-SDK/assets/144517774/3e2f9b30-041c-4c6c-a274-fa2fa5266fd6
+
+
 
 

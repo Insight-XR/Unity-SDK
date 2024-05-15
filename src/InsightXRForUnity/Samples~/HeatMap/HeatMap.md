@@ -2,12 +2,12 @@
 
 ## Introduction
 
-The heat map system I have created for this assignment uses ray casting, to determine focus points during the replay and keeps a record of the points on the level player is looking at.
-The current system does not look the most impressive or relisting visually because i tried to make something that renders realtime in the replay mode. We can extend this system to make much more realistic heat maps that generate at the end taking some time to process, after tracking the focus data from replay.
+The heat map system I have created for this assignment uses ray casting, to determine focus points during the replay and keeps a record of the points player is looking at in the game space.
+The current system does not look the most impressive or realistic visually because I made a system that renders realtime in the replay mode. This system can be extended to make much more realistic heat maps that generate at the end taking some time to process, after tracking the focus data from replay.
 
 ## How to use?
 
-Find the **HeatMapTest** scene in the **Samples/HeatMap** directory after installing the InsightXR SDK. Heat Map view is already set up in this scene. Disable or enable the game objects associated with the different heat map views to disable or enable the view itself.
+Find the **HeatMapTest** scene in the **Samples/HeatMap** directory after installing the InsightXR SDK. **Heat Map** view is already set up in this scene. Disable or enable the game objects associated with the different heat map views to disable or enable the view itself.
 
 ![alt text](image.png)
 

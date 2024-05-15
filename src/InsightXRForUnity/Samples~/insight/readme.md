@@ -27,7 +27,8 @@ Two main approaches are used to visualize the heatmap:
 https://github.com/samarth0104/Unity-SDK/assets/144517774/a09b83e8-7ee9-44cc-9503-647c1945804e
 
 ## Raycast Visaulizer
-https://github.com/samarth0104/Unity-SDK/assets/144517774/3e2f9b30-041c-4c6c-a274-fa2fa5266fd6
+https://github.com/samarth0104/Unity-SDK/assets/144517774/069ef0f8-6a8f-4a3b-be61-3ae259bc23a7
+
 
 
 

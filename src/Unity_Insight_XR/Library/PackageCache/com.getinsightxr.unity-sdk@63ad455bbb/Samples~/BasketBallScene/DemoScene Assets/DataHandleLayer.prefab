@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5805486355617821152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947113281576765556}
+  - component: {fileID: 3449973046891414808}
+  - component: {fileID: 3727278777202145767}
+  - component: {fileID: 1674839213316709731}
+  m_Layer: 0
+  m_Name: DataHandleLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &947113281576765556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805486355617821152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3995522612544592558}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3449973046891414808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805486355617821152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1078c803acf4782889879de0522cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataCollector: {fileID: 11400000, guid: 20c68f32a92594ae783b61a5e09f9298, type: 2}
+  DataDistributor: {fileID: 11400000, guid: 056b237a1e7984c7ab0019f1d23df0a5, type: 2}
+  ControllerInput: {fileID: 7088101091803598942}
+  Player: {fileID: 0}
+  ReplayCam: {fileID: 0}
+  Lefthand: {fileID: 0}
+  RightHand: {fileID: 0}
+  replay: 0
+  CustomerID: InsightXRTesting
+  UserID: 007
+  ReplayBucketURL: https://gist.githubusercontent.com/Kraaven/43345566a204d32bd374de693bce7c38/raw/93b5f5f908434afdd6ecfbb96ae215370607e480/85740.json
+  APIKEY: TestKey
+--- !u!114 &3727278777202145767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805486355617821152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97c832a0bc8469f821bc02a10930bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  awsAccessKeyId: AKIAXQOF2EHXJZCDKVX5
+  awsSecretAccessKey: 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
+  bucketName: sessions-3d-data
+--- !u!114 &1674839213316709731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805486355617821152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec89b318d8bc3d348a36581a39086253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &3295279196849771877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 947113281576765556}
+    m_Modifications:
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041691055175220272, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+      propertyPath: m_Name
+      value: XRInput
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+--- !u!4 &3995522612544592558 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1930316211442536395, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+  m_PrefabInstance: {fileID: 3295279196849771877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7088101091803598942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5757518538163356987, guid: cbec3ce211d11534bb6d4cf77ca95d9d, type: 3}
+  m_PrefabInstance: {fileID: 3295279196849771877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a87cfc124022a941a3c533850f47b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

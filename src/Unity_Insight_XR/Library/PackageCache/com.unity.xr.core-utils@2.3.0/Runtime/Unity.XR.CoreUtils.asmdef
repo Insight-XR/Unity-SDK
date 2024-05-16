@@ -1,0 +1,68 @@
+{
+    "name": "Unity.XR.CoreUtils",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "UnityEngine.SpatialTracking"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.modules.physics",
+            "expression": "1.0.0",
+            "define": "INCLUDE_PHYSICS_MODULE"
+        },
+        {
+            "name": "com.unity.ugui",
+            "expression": "1.0.0",
+            "define": "INCLUDE_UGUI"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "INCLUDE_INPUT_SYSTEM"
+        },
+        {
+            "name": "com.unity.xr.legacyinputhelpers",
+            "expression": "1.0.0",
+            "define": "INCLUDE_LEGACY_INPUT_HELPERS"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2021.3.11,2022.1)",
+            "define": "HAS_SET_LOCAL_POSITION_AND_ROTATION"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2022.1.19,2022.2)",
+            "define": "HAS_SET_LOCAL_POSITION_AND_ROTATION"
+        },
+        {
+            "name": "Unity",
+            "expression": "2022.2",
+            "define": "HAS_SET_LOCAL_POSITION_AND_ROTATION"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2021.3.17,2022.1)",
+            "define": "HAS_GET_POSITION_AND_ROTATION"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2022.2.3,2022.3)",
+            "define": "HAS_GET_POSITION_AND_ROTATION"
+        },
+        {
+            "name": "Unity",
+            "expression": "2022.3",
+            "define": "HAS_GET_POSITION_AND_ROTATION"
+        }
+    ],
+    "noEngineReferences": false
+}

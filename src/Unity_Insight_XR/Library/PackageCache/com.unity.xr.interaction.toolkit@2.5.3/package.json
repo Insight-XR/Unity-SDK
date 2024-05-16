@@ -1,0 +1,63 @@
+{
+  "name": "com.unity.xr.interaction.toolkit",
+  "displayName": "XR Interaction Toolkit",
+  "version": "2.5.3",
+  "unity": "2021.3",
+  "description": "A high-level, component-based, interaction system for creating VR and AR experiences. It provides a framework that makes 3D and UI interactions available from Unity input events. The core of this system is a set of base Interactor and Interactable components, and an Interaction Manager that ties these two types of components together. It also contains components that you can use for locomotion and drawing visuals.",
+  "keywords": [
+    "XR",
+    "VR",
+    "toolkit",
+    "interaction"
+  ],
+  "category": "XR",
+  "dependencies": {
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.mathematics": "1.2.6",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.xr.core-utils": "2.2.3",
+    "com.unity.xr.legacyinputhelpers": "2.1.10",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.physics": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Starter Assets",
+      "description": "Assets to streamline setup of behaviors, including a default set of input actions and presets for use with XR Interaction Toolkit behaviors that use the Input System.",
+      "path": "Samples~/Starter Assets"
+    },
+    {
+      "displayName": "Hands Interaction Demo",
+      "description": "Sample scene and other assets for hand-tracking integration with the XR Interaction Toolkit.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.xr.hands\">XR Hands</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.shadergraph\">Shader Graph</a>",
+      "path": "Samples~/Hands Interaction Demo"
+    },
+    {
+      "displayName": "AR Starter Assets",
+      "description": "Assets to streamline setup when building for Mobile AR or Mixed Reality with the XR Interaction Toolkit. This includes prefabs and demo scenes to get you started. Note: This depends on the Starter Assets sample package.",
+      "path": "Samples~/AR Starter Assets"
+    },
+    {
+      "displayName": "XR Device Simulator",
+      "description": "Assets related to the simulation of XR HMD and controllers.",
+      "path": "Samples~/XR Device Simulator"
+    },
+    {
+      "displayName": "Meta Gaze Adapter",
+      "description": "This sample provides an example to get eye tracking working with the Meta Quest Pro and the XRI Gaze Interactor.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:content/82022\">Oculus Integration Assets</a>",
+      "path": "Samples~/Meta Gaze Adapter"
+    }
+  ],
+  "_upm": {
+    "changelog": "### Fixed\n- Fixed issue where rotating on vertical planes with the `ARTransformer` would snap to an unintended rotation. (Backport from 3.0.0-pre.1)\n- Fixed failing unit tests caused by introduction of global actions in Input System 1.8.0. (Backport from 3.0.0-pre.1)\n- Fixed a math error in the `XRDistanceEvaluator` where `CalculateNormalizedScore` would return an incorrect score. (Backport from 3.0.0-pre.1)\n- Fixed an issue where the direct interactor wasn't correctly processing colliders after the first frame. ([XRIT-116](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-116)) (Backport from 3.0.0-pre.1)\n- Fixed a bug where a `NullReferenceException` was thrown when `Affordance Theme Datum` was not set. If it is null, an error is logged and the `AudioAffordanceReceiver` is disabled, but no exception is thrown. ([XRIT-107](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-107)) (Backport from 3.0.0-pre.1)\n- Fixed the `ActionBasedControllerManager` script in Starter Assets to not stop move locomotion when beginning to point at scrollable UI during locomotion. (Backport from 3.0.0-pre.1)\n- Fixed the `ActionBasedControllerManager` script in Starter Assets to not scroll UI when beginning to point at scrollable UI during locomotion until stopping locomotion. (Backport from 3.0.0-pre.2)\n- Fixed `XRPokeInteractor` and `TrackedGraphicRaycaster` to ensure poke interactor data is cleared when the UI element with a poke interaction is disabled. ([XRIT-115](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-115)) (Backport from 3.0.0-pre.2)\n - Fixed an issue where target filters could not influence the prioritized poke interactable. ([XRIT-114](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-114)) (Backport from 3.0.0-pre.2)\n- Fixed an issue in `XRUIInputModule` where display index was not being set for mouse or touch in the `PointerEventData` object causing it to always default to the first display. ([XRIT-125](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-125)) (Backport from 3.0.0-pre.2)\n- Fixed use of renamed Rigidbody properties in Unity 2023.3 to avoid script migration prompt. (Backport from 3.0.0-pre.2)\n- Fixed a small performance issue at startup by making XR Ray Interactor only search for AR Raycast Manager when both AR Foundation is installed and Enable AR Raycasting is enabled. (Backport from 3.0.0-pre.2)\n- Fixed an issue with two handed rotations using the XRGeneralGrabTransformer where some inconsistent motion would occur when the user would rotate more than 180 degrees in any axis. (Backport from 3.0.0-pre.2)\n- Fixed compilation errors on tvOS platform where `ENABLE_VR` is not defined. (Backport from 3.0.0-pre.2)\n- Fixed a bug in `XRSocketInteractor` that prevented the deselecting of the Starting Selected Interactable when Hover Socket Snapping was enabled. (Backport from 3.0.0-pre.2)\n- Fixed broken markdown links within tables in samples documentation in the manual. (Backport from 3.0.0-pre.2)"
+  },
+  "upmCi": {
+    "footprint": "bbec5449f771f5ada590e19f490170a6e5920f13"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git",
+    "type": "git",
+    "revision": "341ab102f0a73c29375c7b7de3e88a3171fc29d8"
+  }
+}

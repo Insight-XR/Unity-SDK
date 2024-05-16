@@ -1,0 +1,23 @@
+{
+  "name": "com.unity.burst",
+  "displayName": "Burst",
+  "version": "1.8.12",
+  "unity": "2020.3",
+  "description": "Burst is a compiler that translates from IL/.NET bytecode to highly optimized native code using LLVM.",
+  "dependencies": {
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.modules.jsonserialize": "1.0.0"
+  },
+  "_upm": {
+    "changelog": "### Fixed\n- Fixed the managed fallback for bursts intrinsic functions `cvt_ss2si`, `cvtss_si32`, and `cvtss_si64` to follow midpoint rounding standard of nearest even.\n- Fixed an issue where use of certain intrinsics could cause a compile error even if properly guarded by the appropriate `IsXXXSupported` property.\n- If an exception is thrown from burst compiled code in the Editor on Windows there was potential for certain callee saved registers to be corrupted.  In order to fix this ( editor only - player builds are unaffected), we now save some additional context on each entry point.\n- Fixed burst not differentiating between overloaded generic functions such as T foo(int val) and T foo(T val) when the function calls are foo(1); foo<int>(1). Burst would previously only compile the T foo(T val) function.\n- Fixed android builds throwing a NullReferenceException.\n- Fixed arithmetic and bitwise negation on native integers.\n- Fixed an issue where underflows of nint and nuint at compile time would lead to incorrect code.\n- Burst recompiles assemblies due to hashes mismatching because of the way assembly defines are combined into the hash.\n- Fixed constant SHUFFLE function not seen as a constant when called indirectly through a `FunctionPointer`\n\n### Added\n\n### Removed\n\n### Changed\n- Update default LLVM to version 16\n\n### Known Issues"
+  },
+  "upmCi": {
+    "footprint": "83c7877bf683e487ca4f8f8146121e603f612db4"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html",
+  "repository": {
+    "url": "git@github.cds.internal.unity3d.com:unity/burst",
+    "type": "git",
+    "revision": "a18fd968a92da11c38d1edd157e68ad9a490e67b"
+  }
+}

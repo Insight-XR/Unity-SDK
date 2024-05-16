@@ -1,0 +1,25 @@
+{
+    "name": "Unity.XR.CoreUtils.CodeSamples.Tests",
+    "rootNamespace": "",
+    "references": [
+        "Unity.XR.CoreUtils",
+        "Unity.XR.CoreUtils.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

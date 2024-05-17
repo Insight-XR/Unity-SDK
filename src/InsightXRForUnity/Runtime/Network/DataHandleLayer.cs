@@ -24,8 +24,8 @@ namespace InsightXR.Network
         public TriggerInputDetector ControllerInput;
         public GameObject Player;
         public GameObject ReplayCam;
-        public HandAnimator Lefthand;
-        public HandAnimator RightHand;
+        //public HandAnimator Lefthand;
+        //public HandAnimator RightHand;
         
         private (float,float) readleft;
         private (float, float) readright;
@@ -160,10 +160,10 @@ namespace InsightXR.Network
 
         private void FixedUpdate(){
             
-            readleft = Lefthand.GetData();
-            readright = RightHand.GetData();
+            //readleft = Lefthand.GetData();
+            //readright = RightHand.GetData();
 
-            HandData.Add((readleft.Item1, readleft.Item2, readright.Item1, readright.Item2));
+            //HandData.Add((readleft.Item1, readleft.Item2, readright.Item1, readright.Item2));
         }
         
 

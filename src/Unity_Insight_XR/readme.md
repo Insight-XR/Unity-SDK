@@ -91,4 +91,25 @@ https://github.com/norame1/Unity-SDK/assets/84630427/72d04a18-1312-402e-9db1-3d0
 
 
 
+Alternative Solution: Heatmap Visualization Using Shader Method and Raycasting
+In addition to using Unity's particle system for heatmap visualization, I implemented an alternative method that utilizes shaders and raycasting. This approach involves capturing interaction points via raycasting and using a shader to visualize these points as a heatmap on a quad.
+
+Implementation Steps:
+Setup Quad with Shader:
+
+Create a quad in the scene.
+Assign a material with a custom shader to the quad that will display the heatmap.
+Raycasting for Data Capture:
+
+Perform raycasting from the camera to detect interactions with objects.
+Capture the hit positions and use them to update the shader properties to visualize the heatmap.
+Storing and Updating Hit Points:
+
+Maintain an array to store hit points.
+Update the array with new hit points and pass it to the shader to refresh the heatmap visualization.
+
+
+
+https://github.com/norame1/Unity-SDK/assets/84630427/14045909-f3ed-4ec9-844a-1f9a0e4f6bc9
+
 

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0F95DA54-7750-BE36-5DA6-1A4926176A13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9DDB97F5-77C1-2ED9-BD0E-BC2A2D00407B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator", "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.csproj", "{F4348569-60E4-A779-A0BF-D33162848FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor", "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj", "{39734900-2A09-7FF9-2DFF-E04D21A1F32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.StarterAssets", "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj", "{3F8F7A18-1E19-2691-70B9-F39E494F82CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F95DA54-7750-BE36-5DA6-1A4926176A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F95DA54-7750-BE36-5DA6-1A4926176A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F95DA54-7750-BE36-5DA6-1A4926176A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F95DA54-7750-BE36-5DA6-1A4926176A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDB97F5-77C1-2ED9-BD0E-BC2A2D00407B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDB97F5-77C1-2ED9-BD0E-BC2A2D00407B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDB97F5-77C1-2ED9-BD0E-BC2A2D00407B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDB97F5-77C1-2ED9-BD0E-BC2A2D00407B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4348569-60E4-A779-A0BF-D33162848FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4348569-60E4-A779-A0BF-D33162848FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4348569-60E4-A779-A0BF-D33162848FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4348569-60E4-A779-A0BF-D33162848FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39734900-2A09-7FF9-2DFF-E04D21A1F32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39734900-2A09-7FF9-2DFF-E04D21A1F32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39734900-2A09-7FF9-2DFF-E04D21A1F32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39734900-2A09-7FF9-2DFF-E04D21A1F32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8F7A18-1E19-2691-70B9-F39E494F82CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8F7A18-1E19-2691-70B9-F39E494F82CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8F7A18-1E19-2691-70B9-F39E494F82CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8F7A18-1E19-2691-70B9-F39E494F82CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+.building-block-overlay
+{
+    max-height: 200px;
+    width: 200px;
+}
+
+.building-block-foldout_image
+{
+    padding: 0px 4px 0px -2px;
+}
+
+.building-block-button_image
+{
+    height: 20px;
+    width: 20px;
+}
+
+.building-block-button_text
+{
+    height: 20px;
+    padding-left: 10px;
+}
+
+.building-block-toolbar-text
+{
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    margin-left: 2px;
+    -unity-text-align: middle-left;
+}
+
+.building-block-label
+{
+    align-self: center;
+}
+
+.overlay-layout--toolbar-vertical .unity-toolbar-button
+{
+    margin :0px 0px 1px 0px;
+}

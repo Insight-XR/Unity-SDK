@@ -1,0 +1,662 @@
+        .text
+        .def        @feat.00;
+        .scl        3;
+        .type        0;
+        .endef
+        .globl        @feat.00
+.set @feat.00, 0
+        .intel_syntax noprefix
+        .file        "main"
+        .def        burst.initialize;
+        .scl        2;
+        .type        32;
+        .endef
+        .globl        burst.initialize
+        .p2align        4, 0x90
+burst.initialize:
+.Lfunc_begin0:
+.seh_proc burst.initialize
+        push        rbp
+        .seh_pushreg rbp
+        mov        rbp, rsp
+        .seh_setframe rbp, 0
+        .seh_endprologue
+        pop        rbp
+        ret
+.Lfunc_end0:
+        .seh_endproc
+
+        .def        burst.initialize.externals;
+        .scl        2;
+        .type        32;
+        .endef
+        .globl        burst.initialize.externals
+        .p2align        4, 0x90
+burst.initialize.externals:
+.Lfunc_begin1:
+.seh_proc burst.initialize.externals
+        push        rbp
+        .seh_pushreg rbp
+        mov        rbp, rsp
+        .seh_setframe rbp, 0
+        .seh_endprologue
+        pop        rbp
+        ret
+.Lfunc_end1:
+        .seh_endproc
+
+        .def        burst.initialize.statics;
+        .scl        2;
+        .type        32;
+        .endef
+        .globl        burst.initialize.statics
+        .p2align        4, 0x90
+burst.initialize.statics:
+.Lfunc_begin2:
+.seh_proc burst.initialize.statics
+        push        rbp
+        .seh_pushreg rbp
+        mov        rbp, rsp
+        .seh_setframe rbp, 0
+        .seh_endprologue
+        pop        rbp
+        ret
+.Lfunc_end2:
+        .seh_endproc
+
+        .def        d675c2aa053244579b646ec09368a505;
+        .scl        2;
+        .type        32;
+        .endef
+        .globl        d675c2aa053244579b646ec09368a505
+        .p2align        4, 0x90
+d675c2aa053244579b646ec09368a505:
+.Lfunc_begin3:
+.seh_proc d675c2aa053244579b646ec09368a505
+        push        rbp
+        .seh_pushreg rbp
+        sub        rsp, 48
+        .seh_stackalloc 48
+        lea        rbp, [rsp + 48]
+        .seh_setframe rbp, 48
+        .seh_endprologue
+        mov        eax, dword ptr [rbp + 48]
+        mov        dword ptr [rsp + 32], eax
+        call        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        nop
+        add        rsp, 48
+        pop        rbp
+        ret
+.Lfunc_end3:
+        .seh_endproc
+
+        .def        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null";
+        .scl        3;
+        .type        32;
+        .endef
+        .p2align        4, 0x90
+"Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null":
+.Lfunc_begin4:
+        .cv_func_id 0
+        .cv_file        1 "C:\\UnitySrc\\unity\\Runtime\\Jobs\\Managed\\IJob.cs"
+        .cv_loc        0 1 57 0
+.seh_proc "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        push        rbp
+        .seh_pushreg rbp
+        mov        rbp, rsp
+        .seh_setframe rbp, 0
+        .seh_endprologue
+.Ltmp0:
+        .cv_file        2 "C:\\UnitySrc\\unity\\Runtime\\Export\\NativeArray\\NativeArray.cs"
+        .cv_inline_site_id 1 within 0 inlined_at 1 58 0
+        .cv_file        3 "C:\\UnitySrc\\burst\\src\\com.unity.burst\\Tests\\Editor\\BurstInspectorGUITests.cs"
+        .cv_inline_site_id 2 within 1 inlined_at 3 393 0
+        .cv_loc        2 2 130 0
+        mov        eax, dword ptr [rcx + 8]
+        test        rax, rax
+.Ltmp1:
+        .cv_loc        1 3 393 0
+        je        .LBB4_1
+        mov        rdx, qword ptr [rcx]
+        vxorps        xmm0, xmm0, xmm0
+        .p2align        4, 0x90
+.LBB4_3:
+        .cv_loc        1 3 395 0
+        vaddss        xmm0, xmm0, dword ptr [rdx]
+        .cv_loc        1 3 393 0
+        add        rdx, 4
+        dec        rax
+        jne        .LBB4_3
+        jmp        .LBB4_4
+.LBB4_1:
+        vxorps        xmm0, xmm0, xmm0
+.LBB4_4:
+.Ltmp2:
+        .cv_inline_site_id 3 within 1 inlined_at 3 397 0
+        .cv_loc        3 2 194 0
+        mov        rax, qword ptr [rcx + 48]
+        vmovss        dword ptr [rax], xmm0
+.Ltmp3:
+        .cv_loc        0 1 59 0
+        pop        rbp
+        ret
+.Ltmp4:
+.Lfunc_end4:
+        .seh_endproc
+
+        .section        .drectve,"yn"
+        .ascii        " /EXPORT:\"burst.initialize\""
+        .ascii        " /EXPORT:\"burst.initialize.externals\""
+        .ascii        " /EXPORT:\"burst.initialize.statics\""
+        .ascii        " /EXPORT:d675c2aa053244579b646ec09368a505"
+        .section        .debug$S,"dr"
+        .p2align        2
+        .long        4
+        .long        241
+        .long        .Ltmp6-.Ltmp5
+.Ltmp5:
+        .short        .Ltmp8-.Ltmp7
+.Ltmp7:
+        .short        4353
+        .long        0
+        .byte        0
+        .p2align        2
+.Ltmp8:
+        .short        .Ltmp10-.Ltmp9
+.Ltmp9:
+        .short        4412
+        .long        0
+        .short        208
+        .short        0
+        .short        0
+        .short        91
+        .short        0
+        .short        14006
+        .short        0
+        .short        0
+        .short        0
+        .asciz        "Burst 0.0.91.0 (Frontend Version : 040e20f6-d3e4-45d8-b45b-06c6d673cedb)"
+        .p2align        2
+.Ltmp10:
+.Ltmp6:
+        .p2align        2
+        .long        246
+        .long        .Ltmp12-.Ltmp11
+.Ltmp11:
+        .long        0
+
+
+        .long        4112
+        .cv_filechecksumoffset        3
+        .long        391
+
+
+        .long        4115
+        .cv_filechecksumoffset        2
+        .long        129
+
+
+        .long        4118
+        .cv_filechecksumoffset        2
+        .long        192
+.Ltmp12:
+        .p2align        2
+        .long        241
+        .long        .Ltmp14-.Ltmp13
+.Ltmp13:
+        .short        .Ltmp16-.Ltmp15
+.Ltmp15:
+        .short        4422
+        .long        0
+        .long        0
+        .long        0
+        .long        .Lfunc_end4-"Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        .long        0
+        .long        0
+        .long        4126
+        .secrel32        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        .secidx        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        .byte        0
+        .asciz        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        .p2align        2
+.Ltmp16:
+        .short        .Ltmp18-.Ltmp17
+.Ltmp17:
+        .short        4114
+        .long        8
+        .long        0
+        .long        0
+        .long        0
+        .long        0
+        .short        0
+        .long        1212416
+        .p2align        2
+.Ltmp18:
+        .short        .Ltmp20-.Ltmp19
+.Ltmp19:
+        .short        4429
+        .long        0
+        .long        0
+        .long        4112
+        .cv_inline_linetable        1 3 391 .Lfunc_begin4 .Lfunc_end4
+        .p2align        2
+.Ltmp20:
+        .short        .Ltmp22-.Ltmp21
+.Ltmp21:
+        .short        4429
+        .long        0
+        .long        0
+        .long        4115
+        .cv_inline_linetable        2 2 129 .Lfunc_begin4 .Lfunc_end4
+        .p2align        2
+.Ltmp22:
+        .short        2
+        .short        4430
+        .short        .Ltmp24-.Ltmp23
+.Ltmp23:
+        .short        4429
+        .long        0
+        .long        0
+        .long        4118
+        .cv_inline_linetable        3 2 192 .Lfunc_begin4 .Lfunc_end4
+        .p2align        2
+.Ltmp24:
+        .short        2
+        .short        4430
+        .short        2
+        .short        4430
+        .short        2
+        .short        4431
+.Ltmp14:
+        .p2align        2
+        .cv_linetable        0, "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", .Lfunc_end4
+        .long        241
+        .long        .Ltmp26-.Ltmp25
+.Ltmp25:
+        .short        .Ltmp28-.Ltmp27
+.Ltmp27:
+        .short        4360
+        .long        4099
+        .asciz        "BurstInspectorGUITests/MyJob"
+        .p2align        2
+.Ltmp28:
+        .short        .Ltmp30-.Ltmp29
+.Ltmp29:
+        .short        4360
+        .long        4104
+        .asciz        "Unity.Collections.NativeArray`1<System.Single>"
+        .p2align        2
+.Ltmp30:
+        .short        .Ltmp32-.Ltmp31
+.Ltmp31:
+        .short        4360
+        .long        4107
+        .asciz        "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle"
+        .p2align        2
+.Ltmp32:
+        .short        .Ltmp34-.Ltmp33
+.Ltmp33:
+        .short        4360
+        .long        4124
+        .asciz        "Unity.Jobs.LowLevel.Unsafe.JobRanges"
+        .p2align        2
+.Ltmp34:
+.Ltmp26:
+        .p2align        2
+        .cv_filechecksums
+        .cv_stringtable
+        .long        241
+        .long        .Ltmp36-.Ltmp35
+.Ltmp35:
+        .short        .Ltmp38-.Ltmp37
+.Ltmp37:
+        .short        4428
+        .long        4130
+        .p2align        2
+.Ltmp38:
+.Ltmp36:
+        .p2align        2
+        .section        .debug$T,"dr"
+        .p2align        2
+        .long        4
+        .short        0x32
+        .short        0x1505
+        .short        0x0
+        .short        0x80
+        .long        0x0
+        .long        0x0
+        .long        0x0
+        .short        0x0
+        .asciz        "BurstInspectorGUITests/MyJob"
+        .byte        241
+        .short        0x46
+        .short        0x1505
+        .short        0x0
+        .short        0x80
+        .long        0x0
+        .long        0x0
+        .long        0x0
+        .short        0x0
+        .asciz        "Unity.Collections.NativeArray`1<System.Single>"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x2a
+        .short        0x1203
+        .short        0x150d
+        .short        0x3
+        .long        0x1001
+        .short        0x0
+        .asciz        "Inp\303\272t"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x1001
+        .short        0x30
+        .asciz        "Output"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x32
+        .short        0x1505
+        .short        0x2
+        .short        0x0
+        .long        0x1002
+        .long        0x0
+        .long        0x0
+        .short        0x60
+        .asciz        "BurstInspectorGUITests/MyJob"
+        .byte        241
+        .short        0x42
+        .short        0x1605
+        .long        0x0
+        .asciz        "C:\\UnitySrc\\burst\\src\\Unity.Burst.Tester\\unknown\\unknown"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0xe
+        .short        0x1606
+        .long        0x1003
+        .long        0x1004
+        .long        0x0
+        .short        0x4a
+        .short        0x1505
+        .short        0x0
+        .short        0x80
+        .long        0x0
+        .long        0x0
+        .long        0x0
+        .short        0x0
+        .asciz        "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle"
+        .byte        241
+        .short        0x8a
+        .short        0x1203
+        .short        0x150d
+        .short        0x3
+        .long        0x620
+        .short        0x0
+        .asciz        "m_Buffer"
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x8
+        .asciz        "m_Length"
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0xc
+        .asciz        "m_MinIndex"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x10
+        .asciz        "m_MaxIndex"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x1006
+        .short        0x18
+        .asciz        "m_Safety"
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x28
+        .asciz        "m_AllocatorLabel"
+        .byte        241
+        .short        0x46
+        .short        0x1505
+        .short        0x6
+        .short        0x0
+        .long        0x1007
+        .long        0x0
+        .long        0x0
+        .short        0x30
+        .asciz        "Unity.Collections.NativeArray`1<System.Single>"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0xe
+        .short        0x1606
+        .long        0x1008
+        .long        0x1004
+        .long        0x0
+        .short        0x4a
+        .short        0x1203
+        .short        0x150d
+        .short        0x3
+        .long        0x620
+        .short        0x0
+        .asciz        "versionNode"
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x8
+        .asciz        "version"
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0xc
+        .asciz        "staticSafetyId"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x4a
+        .short        0x1505
+        .short        0x3
+        .short        0x0
+        .long        0x100a
+        .long        0x0
+        .long        0x0
+        .short        0x10
+        .asciz        "Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle"
+        .byte        241
+        .short        0xe
+        .short        0x1606
+        .long        0x100b
+        .long        0x1004
+        .long        0x0
+        .short        0xa
+        .short        0x1002
+        .long        0x1000
+        .long        0x1000c
+        .short        0x6
+        .short        0x1201
+        .long        0x0
+        .short        0x1a
+        .short        0x1009
+        .long        0x3
+        .long        0x1000
+        .long        0x100d
+        .byte        0x0
+        .byte        0x0
+        .short        0x0
+        .long        0x100e
+        .long        0x0
+        .short        0x32
+        .short        0x1602
+        .long        0x1000
+        .long        0x100f
+        .asciz        "BurstInspectorGUITests.MyJob.Execute"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0xa
+        .short        0x1002
+        .long        0x1001
+        .long        0x1000c
+        .short        0x1a
+        .short        0x1009
+        .long        0x74
+        .long        0x1001
+        .long        0x1011
+        .byte        0x0
+        .byte        0x0
+        .short        0x0
+        .long        0x100e
+        .long        0x0
+        .short        0x3e
+        .short        0x1602
+        .long        0x1001
+        .long        0x1012
+        .asciz        "Unity.Collections.NativeArray`1<float>.get_Length"
+        .byte        242
+        .byte        241
+        .short        0xe
+        .short        0x1201
+        .long        0x2
+        .long        0x74
+        .long        0x40
+        .short        0x1a
+        .short        0x1009
+        .long        0x3
+        .long        0x1001
+        .long        0x1011
+        .byte        0x0
+        .byte        0x0
+        .short        0x2
+        .long        0x1014
+        .long        0x0
+        .short        0x3a
+        .short        0x1602
+        .long        0x1001
+        .long        0x1015
+        .asciz        "Unity.Collections.NativeArray`1<float>.set_Item"
+        .short        0x3a
+        .short        0x1505
+        .short        0x0
+        .short        0x80
+        .long        0x0
+        .long        0x0
+        .long        0x0
+        .short        0x0
+        .asciz        "Unity.Jobs.LowLevel.Unsafe.JobRanges"
+        .byte        241
+        .short        0xa
+        .short        0x1002
+        .long        0x1017
+        .long        0x1000c
+        .short        0x1a
+        .short        0x1201
+        .long        0x5
+        .long        0x100d
+        .long        0x620
+        .long        0x620
+        .long        0x1018
+        .long        0x74
+        .short        0xe
+        .short        0x1008
+        .long        0x3
+        .byte        0x0
+        .byte        0x0
+        .short        0x5
+        .long        0x1019
+        .short        0x62
+        .short        0x1203
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x0
+        .asciz        "BatchSize"
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x4
+        .asciz        "NumJobs"
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x74
+        .short        0x8
+        .asciz        "TotalIterationCount"
+        .byte        242
+        .byte        241
+        .short        0x150d
+        .short        0x3
+        .long        0x620
+        .short        0x10
+        .asciz        "StartEndIndex"
+        .short        0x3a
+        .short        0x1505
+        .short        0x4
+        .short        0x0
+        .long        0x101b
+        .long        0x0
+        .long        0x0
+        .short        0x18
+        .asciz        "Unity.Jobs.LowLevel.Unsafe.JobRanges"
+        .byte        241
+        .short        0xe
+        .short        0x1606
+        .long        0x101c
+        .long        0x1004
+        .long        0x0
+        .short        0x17a
+        .short        0x1601
+        .long        0x0
+        .long        0x101a
+        .asciz        "Unity.Jobs.IJobExtensions.JobStruct`1<BurstInspectorGUITests.MyJob>.Execute(ref BurstInspectorGUITests.MyJob data, System.IntPtr additionalPtr, System.IntPtr bufferRangePatchData, ref Unity.Jobs.LowLevel.Unsafe.JobRanges ranges, int jobIndex) -> void_930e313844f708dd8e72e0cb41431524 from UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        .byte        241
+        .short        0x3a
+        .short        0x1605
+        .long        0x0
+        .asciz        "C:\\UnitySrc\\burst\\src\\Unity.Burst.Tester\\unknown"
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0xe
+        .short        0x1605
+        .long        0x0
+        .asciz        "unknown"
+        .short        0xa
+        .short        0x1605
+        .long        0x0
+        .byte        0
+        .byte        243
+        .byte        242
+        .byte        241
+        .short        0x1a
+        .short        0x1603
+        .short        0x5
+        .long        0x101f
+        .long        0x0
+        .long        0x1020
+        .long        0x1021
+        .long        0x0
+        .byte        242
+        .byte        241
+        .globl        _fltused

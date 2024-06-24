@@ -1,0 +1,93 @@
+{
+    "name": "Unity.XR.Interaction.Toolkit",
+    "rootNamespace": "UnityEngine.XR.Interaction.Toolkit",
+    "references": [
+        "UnityEngine.UI",
+        "UnityEngine.SpatialTracking",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.ARFoundation",
+        "UnityEngine.XR.LegacyInputHelpers",
+        "Unity.InputSystem",
+        "Unity.XR.CoreUtils",
+        "Unity.XR.Management",
+        "Unity.Mathematics",
+        "Unity.Burst",
+        "Unity.XR.Hands",
+        "Unity.XR.OpenXR"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.4.0",
+            "define": "INPUT_SYSTEM_1_4_OR_NEWER"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.1.0-pre.4",
+            "define": "INPUT_SYSTEM_1_1_OR_NEWER"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "[1.1.0-preview.2,1.1.0-preview.3]",
+            "define": "INPUT_SYSTEM_1_1_PREVIEW"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "4.1.0",
+            "define": "AR_FOUNDATION_4_1_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "4.2.0",
+            "define": "AR_FOUNDATION_4_2_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "2.0.2",
+            "define": "AR_FOUNDATION_PRESENT"
+        },
+        {
+            "name": "com.unity.modules.animation",
+            "expression": "1.0.0",
+            "define": "ANIMATION_MODULE_PRESENT"
+        },
+        {
+            "name": "com.unity.modules.physics2d",
+            "expression": "1.0.0",
+            "define": "PHYSICS2D_MODULE_PRESENT"
+        },
+        {
+            "name": "com.unity.burst",
+            "expression": "1.6.6",
+            "define": "BURST_PRESENT"
+        },
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.1.0",
+            "define": "XR_HANDS_1_1_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.3.0",
+            "define": "XR_HANDS_1_3_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.management",
+            "expression": "4.0.1",
+            "define": "XR_MANAGEMENT_4_0_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.openxr",
+            "expression": "1.6.0",
+            "define": "OPENXR_1_6_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

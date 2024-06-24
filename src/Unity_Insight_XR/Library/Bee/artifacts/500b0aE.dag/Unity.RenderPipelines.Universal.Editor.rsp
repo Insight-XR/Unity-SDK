@@ -1,0 +1,603 @@
+-target:library
+-out:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Universal.Editor.dll"
+-refout:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Universal.Editor.ref.dll"
+-define:UNITY_2022_3_20
+-define:UNITY_2022_3
+-define:UNITY_2022
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2018_1_OR_NEWER
+-define:UNITY_2018_2_OR_NEWER
+-define:UNITY_2018_3_OR_NEWER
+-define:UNITY_2018_4_OR_NEWER
+-define:UNITY_2019_1_OR_NEWER
+-define:UNITY_2019_2_OR_NEWER
+-define:UNITY_2019_3_OR_NEWER
+-define:UNITY_2019_4_OR_NEWER
+-define:UNITY_2020_1_OR_NEWER
+-define:UNITY_2020_2_OR_NEWER
+-define:UNITY_2020_3_OR_NEWER
+-define:UNITY_2021_1_OR_NEWER
+-define:UNITY_2021_2_OR_NEWER
+-define:UNITY_2021_3_OR_NEWER
+-define:UNITY_2022_1_OR_NEWER
+-define:UNITY_2022_2_OR_NEWER
+-define:UNITY_2022_3_OR_NEWER
+-define:UNITY_INCLUDE_TESTS
+-define:ENABLE_AR
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_TEXTURE_STREAMING
+-define:ENABLE_VIRTUALTEXTURING
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_EDITOR_GAME_SERVICES
+-define:ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_MANAGED_JOBS
+-define:ENABLE_MANAGED_TRANSFORM_JOBS
+-define:ENABLE_MANAGED_ANIMATION_JOBS
+-define:ENABLE_MANAGED_AUDIO_JOBS
+-define:ENABLE_MANAGED_UNITYTLS
+-define:INCLUDE_DYNAMIC_GI
+-define:ENABLE_SCRIPTING_GC_WBARRIERS
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_VIDEO
+-define:ENABLE_ACCELERATOR_CLIENT_DEBUGGING
+-define:ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION
+-define:ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT
+-define:ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE
+-define:PLATFORM_STANDALONE
+-define:TEXTCORE_1_0_OR_NEWER
+-define:PLATFORM_STANDALONE_WIN
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_NVIDIA
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_OUT_OF_PROCESS_CRASH_HANDLER
+-define:ENABLE_CLUSTER_SYNC
+-define:ENABLE_CLUSTERINPUT
+-define:PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP
+-define:GFXDEVICE_WAITFOREVENT_MESSAGEPUMP
+-define:PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY
+-define:ENABLE_MONO
+-define:NET_4_6
+-define:NET_UNITY_4_8
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_UNITY_COLLECTIONS_CHECKS
+-define:ENABLE_BURST_AOT
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_DIRECTOR
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_TILEMAP
+-define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
+-define:ENABLE_LEGACY_INPUT_MANAGER
+-define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:USE_INPUT_SYSTEM_POSE_CONTROL
+-define:USE_INPUT_SYSTEM_POSE_CONTROL
+-define:USE_STICK_CONTROL_THUMBSTICKS
+-define:ENABLE_XR_MODULE
+-define:XR_MANAGEMENT_4_0_1_OR_NEWER
+-define:CSHARP_7_OR_LATER
+-define:CSHARP_7_3_OR_NEWER
+-define:UNITY_EDITOR_ONLY_COMPILATION
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.EditorToolbarModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.PresetsUIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.QuickSearchModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneViewModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.TextCoreFontEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.TextCoreTextEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIBuilderModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ContentLoadModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.GIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.NVIDIAModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.PropertiesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreFontEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreTextEngineModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsCommonModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.AppContext.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Buffers.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.Concurrent.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.NonGeneric.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.Specialized.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.Annotations.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.EventBasedAsync.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.TypeConverter.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Console.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Data.Common.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Contracts.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Debug.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.FileVersionInfo.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Process.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.StackTrace.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.TextWriterTraceListener.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Tools.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.TraceSource.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Drawing.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Dynamic.Runtime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.Calendars.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.Compression.ZipFile.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.DriveInfo.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.Watcher.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.IsolatedStorage.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.MemoryMappedFiles.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.Pipes.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.UnmanagedMemoryStream.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Expressions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Parallel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Queryable.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Memory.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Http.Rtc.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.NameResolution.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.NetworkInformation.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Ping.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Requests.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Security.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Sockets.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebHeaderCollection.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebSockets.Client.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebSockets.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ObjectModel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.DispatchProxy.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.ILGeneration.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.Lightweight.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.Reader.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.ResourceManager.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.Writer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.CompilerServices.VisualC.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Handles.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Numerics.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Formatters.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Json.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Xml.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Claims.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Algorithms.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Csp.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Encoding.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.X509Certificates.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Principal.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.SecureString.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Duplex.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Http.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.NetTcp.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Primitives.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Security.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.Encoding.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.Encoding.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.RegularExpressions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Overlapped.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.Extensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.Parallel.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Thread.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.ThreadPool.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Timer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ValueTuple.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.ReaderWriter.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XmlDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XmlSerializer.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XPath.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XPath.XDocument.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Microsoft.CSharp.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/mscorlib.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Core.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Data.DataSetExtensions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Data.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Drawing.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.IO.Compression.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.IO.Compression.FileSystem.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Net.Http.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Numerics.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Numerics.Vectors.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Runtime.Serialization.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Transactions.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
+-r:"Library/PackageCache/com.getinsightxr.unity-sdk@63ad455bbb/Runtime/Network/AmazonNetworking/AWSSDK.Core.3.7.302.16/lib/netstandard2.0/AWSSDK.Core.dll"
+-r:"Library/PackageCache/com.getinsightxr.unity-sdk@63ad455bbb/Runtime/Network/AmazonNetworking/AWSSDK.S3.3.7.305.31/lib/netstandard2.0/AWSSDK.S3.dll"
+-r:"Library/PackageCache/com.getinsightxr.unity-sdk@63ad455bbb/Runtime/Network/AmazonNetworking/Microsoft.Bcl.AsyncInterfaces.1.1.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
+-r:"Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll"
+-r:"Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
+-r:"Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+-r:"Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
+-r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
+-r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
+-r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll"
+-r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Burst.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Mathematics.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Universal.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ShaderGraph.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.XR.Management.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.XR.Management.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
+-analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/CinemachineUniversalPixelPerfectEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/CompositeShadowCaster2DEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Converter/BuiltInToURP2DConverterContainer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Converter/BuiltInToURP2DMaterialUpgrader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Converter/ParametricToFreeformLightUpgrader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Converter/UpgradeURP2DAssetsContainer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Converter/URP2DConverterUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/FreeformPathPresets.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/GameObjectCreation.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Light2DEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Light2DEditorUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/LightBatchingDebugger/LightBatchingDebugger.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/PixelPerfectCameraEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Renderer2DAnalytics.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Renderer2DDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/Renderer2DMenus.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/AssetCallbacks/CreateSpriteCustomLitShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/AssetCallbacks/CreateSpriteLitShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/AssetCallbacks/CreateSpriteUnlitShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/Nodes/LightTextureNode.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/Targets/SpriteSubTargetUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/Targets/UniversalSpriteCustomLitSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/Targets/UniversalSpriteLitSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShaderGraph/Targets/UniversalSpriteUnlitSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShadowCaster2DEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShadowCaster2DShapeTool.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/BezierUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/ControlPoint.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/EditablePath.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/EditablePathController.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/EditablePathExtensions.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/EditablePathUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/IEditablePath.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/IEditablePathController.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/ISnapping.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/IUndoObject.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/MultipleEditablePathController.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditablePath/Snapping.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/GenericScriptablePath.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/GenericScriptablePathInspector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/PathComponentEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/PathEditorTool.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/PathEditorToolExtensions.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/ScriptableData.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/ScriptablePath.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/EditorTool/ScriptablePathInspector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/ClickAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/CommandAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/Control.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/DefaultControl.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/GenericControl.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/GenericDefaultControl.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/GUIAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/GUIState.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/GUISystem.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/HoveredControlAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/IGUIState.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/LayoutData.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/GUIFramework/SliderAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/IndexedSelection.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/ISelectable.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/ISelection.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/ISelector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/PointRectSelector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/RectSelector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Selection/SerializableSelection.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Shapes/IShape.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Shapes/Polygon.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Shapes/ShapeExtensions.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/Shapes/Spline.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/View/CreatePointAction.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/View/Drawer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/View/EditablePathView.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/View/IDrawer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/ShapeEditor/View/IEditablePathView.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/2D/SortingLayerDropDown.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Analytics/AssetReimporterAnalytic.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AnimationClipUpgrader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AnimationClipUpgrader_Types.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssemblyInfo.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/AutodeskInteractiveMaterialImport.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/FBXArnoldSurfaceMaterialDescriptionPreprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/FBXMaterialDescriptionPreprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/MaterialPostprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/ModelPostProcessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/PhysicalMaterial3DsMaxPreprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/ShaderGraphMaterialsUpdater.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/SketchupMaterialDescriptionPostprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/ThreeDSMaterialDescriptionPostprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetPostProcessors/UniversalRenderPipelineGlobalSettingsPostprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/AssetVersion.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Environment.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Environment.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Output.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Output.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.PhysicalCamera.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.PresetInspector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Rendering.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Rendering.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineCameraUI.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Camera/UniversalRenderPipelineSerializedCamera.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ContextualMenuDispatcher.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/AnimationClipConverter.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/BuiltInToURPConverterContainer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/ConversionIndexers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/ConverterItemDescriptor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/ConverterItemInfo.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/Converters.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/Converters/RenderSettingsConverter.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/InitializeConverterContext.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/MaterialReferenceBuilder.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/ReadonlyMaterialConverter.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/RenderPipelineConverter.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/RenderPipelineConverterContainer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/RenderPipelineConvertersEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Converter/RunItemContext.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/CreateDecalProjector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/CreateDecalShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/DecalProjectorEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/DecalProjectorEditor.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/DecalShaderGraphGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/DisplacableRectHandles.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Decal/ProjectedTransform.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/DefaultScene/UniversalProjectSettings.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Deprecated.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/EditorUtils.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/SerializedUniversalRenderPipelineGlobalSettings.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/UniversalGlobalSettingsCreator.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/UniversalGlobalSettingsEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/UniversalRenderPipelineGlobalSettingsProvider.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/UniversalRenderPipelineGlobalSettingsUI.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/GlobalSettings/UniversalRenderPipelineGlobalSettingsUI.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/LightExplorer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Lighting/UniversalRenderPipelineLightUI.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Lighting/UniversalRenderPipelineLightUI.PresetInspector.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Lighting/UniversalRenderPipelineLightUI.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Lighting/UniversalRenderPipelineSerializedLight.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/BloomEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/ChannelMixerEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/ColorCurvesEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/ColorLookupEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/DepthOfFieldEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/FilmGrainEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/LiftGammaGainEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/MotionBlurEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/ShadowsMidtonesHighlightsEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/Overrides/TonemappingEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/PostProcessDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererDataPatcher.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/DecalRendererFeatureEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/FullScreenPassRendererFeatureEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/NewRendererFeatureDropdownItem.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/RenderObjectsPassFeatureEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/ScreenSpaceAmbientOcclusionEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RendererFeatures/ScreenSpaceShadowsEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/RenderStateDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/SavedParameter.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ScriptableRendererDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ScriptableRendererFeatureEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ScriptableRendererFeatureProvider.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderBuildPreprocessor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/AssetCallbacks/CreateFullscreenShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/AssetCallbacks/CreateLitShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/AssetCallbacks/CreateUnlitShaderGraph.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Includes/DecalMeshBiasTypeEnum.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Nodes/UniversalSampleBufferNode.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalDecalSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalFullscreenSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalLitSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/Targets/UniversalUnlitSubTarget.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalBlockFields.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalFields.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalMetadata.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalProperties.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalStructFields.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGraph/UniversalStructs.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/BaseShaderGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ParticleGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShaderGraphLitGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShaderGraphUnlitGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/BakedLitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/LitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/ParticlesLitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/ParticlesSimpleLitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/ParticlesUnlitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/SimpleLitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/Shaders/UnlitShader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShadingModels/BakedLitGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShadingModels/LitDetailGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShadingModels/LitGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/ShadingModels/SimpleLitGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderGUI/TerrainLitShaderGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderScriptableStripper.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderStripTool.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/ShaderUtils.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/TrackballUIDrawer.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalAdditionalCameraDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalAdditionalLightDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalAnalytics.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRendererDataEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineAsset/SerializedUniversalRenderPipelineAsset.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineAsset/UniversalRenderPipelineAssetUI.Drawers.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineAsset/UniversalRenderPipelineAssetUI.Skin.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineAssetEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineLightEditor.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalRenderPipelineMaterialUpgrader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UniversalSpeedTree8MaterialUpgrader.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UpgradeCommon.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/UpgradeUtility.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXAbstractParticleURPLitOutput.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXShaderGraphGUI.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXURPBinder.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXURPLitMeshOutput.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXURPLitPlanarPrimitiveOutput.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXURPLitQuadStripOutput.cs"
+"Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Editor/VFXGraph/VFXURPSubOutput.cs"
+"Library/PackageCache/org.khronos.unitygltf@dbd863412a/Editor/Scripts/ShaderGraph/InternalURP/PBRGraphUniversalGUI.cs"
+-langversion:9.0
+/unsafe+
+/deterministic
+/optimize+
+/debug:portable
+/nologo
+/RuntimeMetadataVersion:v4.0.30319
+
+/nowarn:0169
+/nowarn:0649
+/nowarn:0282
+/nowarn:1701
+/nowarn:1702
+/utf8output
+/preferreduilang:en-US
+
+-warn:0
+
+/additionalfile:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Universal.Editor.UnityAdditionalFile.txt"

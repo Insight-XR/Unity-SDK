@@ -1,0 +1,29 @@
+{
+  "name": "com.unity.searcher",
+  "displayName": "Searcher",
+  "version": "4.9.2",
+  "unity": "2019.1",
+  "description": "General search window for use in the Editor. First target use is for GraphView node search.",
+  "keywords": [
+    "search",
+    "searcher"
+  ],
+  "upm": {
+    "changelog": "- Fixed a bug that stopped keyboard keys from affecting navigation and interaction with search results list, unless user explicitly focused/click on list using the mouse [1396759]"
+  },
+  "upmCi": {
+    "footprint": "c003fc96927da2c24f950b99138713a642761fd1"
+  },
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.searcher.git",
+    "type": "git",
+    "revision": "7f9f75b04e97cf09c8ddc3968d059e74d6a2460a"
+  },
+  "samples": [
+    {
+      "displayName": "Searchers Samples",
+      "description": "Some Searcher's basic examples",
+      "path": "Samples~"
+    }
+  ]
+}

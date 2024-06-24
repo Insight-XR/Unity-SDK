@@ -1,0 +1,30 @@
+apiRules:
+  - exclude:
+      hasAttribute:
+        uid: System.ObsoleteAttribute
+      type: Member
+  - exclude:
+      hasAttribute:
+        uid: System.ObsoleteAttribute
+      type: Type
+  - exclude:
+      uidRegex: Tests$
+      type: Namespace
+  - exclude:
+      uidRegex: Editor$
+      type: Type
+  - exclude:
+      uidRegex: PropertyDrawer$
+      type: Type
+  - exclude:
+      uidRegex: EventMigrationUtility
+      type: Type
+  - exclude:
+      uidRegex: PackageManagerEditorHelper
+      type: Type
+  - exclude:
+      uidRegex: XRHelpURLConstants
+      type: Type
+  - exclude:
+      uidRegex: XRInteractionEditorUtility
+      type: Type

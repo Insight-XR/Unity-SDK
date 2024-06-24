@@ -22,6 +22,8 @@ namespace InsightXR.VR
         public int frame = 0;
         public int totalframes;
         public List<ObjectData> MotionRecord;
+        public List<ObjectData> MotionRecordLeft;
+        public List<ObjectData> MotionRecordRight;
         // public List<ObjectData> OriginRecord;
 
         public List<(float, float, float, float)> handposes;
@@ -30,9 +32,32 @@ namespace InsightXR.VR
         public Animator RightHand;
         //public GameObject DummyOrigin;
         public string VRCamName;
+        public string VRLeftCName;
+        public string VRRightCName;
+
+        // added transforms to get logged position and rotational data of the head and the controllers
+        public Transform Head;
+        public Transform LeftC;
+        public Transform RightC;
         public string OriginName;
         public GameObject Endscreen;
         public GameObject ReplayCam;
+
+        // prefabs of decals used
+        public GameObject HeadHeatMapDecal;
+        public GameObject LeftCHeatMapDecal;
+        public GameObject RightCHeatMapDecal;
+
+        // counter for object pooling purposes
+        public int HeadDCount, LeftDCount, RightDCount;
+
+        // List for object pooling of decals
+        public List<GameObject> instantiatedHeadDecalPrefabs = new List<GameObject>();
+        public List<GameObject> instantiatedLeftCDecalPrefabs = new List<GameObject>();
+        public List<GameObject> instantiatedRightCDecalPrefabs = new List<GameObject>();
+
+        // To show the heatmap data through Ui
+        public TMP_Text HeadText, LeftText, RightText;
         
 
 
@@ -89,7 +114,21 @@ namespace InsightXR.VR
                 callback(File.ReadAllText(UnityEngine.Device.Application.persistentDataPath + "/Saves/Save.json"));
             }
 
+            // Instatiation of Decals for object pooling
+            for (int i = 0; i < 50; i++){
+                GameObject Headdecal = Instantiate(HeadHeatMapDecal, Vector3.zero, Quaternion.identity);
+                instantiatedHeadDecalPrefabs.Add(Headdecal);
+            }
 
+            for (int i = 0; i < 50; i++){
+                GameObject LeftCdecal = Instantiate(LeftCHeatMapDecal, Vector3.zero, Quaternion.identity);
+                instantiatedLeftCDecalPrefabs.Add(LeftCdecal);
+            }
+
+            for (int i = 0; i < 50; i++){
+                GameObject RightCdecal = Instantiate(RightCHeatMapDecal, Vector3.zero, Quaternion.identity);
+                instantiatedRightCDecalPrefabs.Add(RightCdecal);
+            }
 
            
         }
@@ -97,7 +136,7 @@ namespace InsightXR.VR
         // Update is called once per frame
         void FixedUpdate()
         {
-
+            
             if (Input.GetKey(KeyCode.LeftArrow) && loaded && frame > 0)
             {
                 frame--;
@@ -113,17 +152,26 @@ namespace InsightXR.VR
                 RightHand.SetFloat("Grip", handposes[frame].Item4);
                 
                 
-                
+                HeatMap();              // function takes care of the heatmap.
+
                 if (frame == totalframes - 1)
                 {
                     Endscreen.SetActive(true);
                     Debug.Log("Last Frame");
+
+                    // resetting decal pool and UI
+                    Reset();
+                    
                 }
                 else
                 {
                     Endscreen.SetActive(false);
                 }
+                if(frame == 0){
 
+                    // resetting decal pool and UI
+                    Reset();
+                }
 
             }
 
@@ -135,15 +183,28 @@ namespace InsightXR.VR
                 ObjectDataLoader.DistributeData(frame);
 
 
+                
+
+                HeatMap();              // function takes care of the heatmap.
+
                 if (frame == totalframes - 1)
                 {
                     Endscreen.SetActive(true);
                     Debug.Log("Last Frame");
+
+                    // resetting decal pool and UI
+                    Reset();
                 }
                 else
                 {
                     Endscreen.SetActive(false);
                 }
+
+                if(frame == 0){
+                    // resetting decal pool and UI
+                    Reset();
+                }
+                
             }
         }
 
@@ -162,6 +223,8 @@ namespace InsightXR.VR
             frame = 0;
 
             MotionRecord = DownloadedData.ObjectMotionData[VRCamName];
+            MotionRecordLeft = DownloadedData.ObjectMotionData[VRLeftCName];
+            MotionRecordRight = DownloadedData.ObjectMotionData[VRRightCName];
             // OriginRecord = DownloadedData.ObjectMotionData[OriginName];
             transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(), MotionRecord[frame].GetRotation());
             // DummyOrigin.transform.SetLocalPositionAndRotation(OriginRecord[frame].GetPosition(),OriginRecord[frame].GetRotation());
@@ -178,6 +241,94 @@ namespace InsightXR.VR
 
             ObjectDataLoader.SetRigidbidyoff();
             loaded = true;
+        }
+
+        void HeatMap(){
+            // Getting the logged position and rotational data of head and controllers.
+            
+            Head.transform.SetLocalPositionAndRotation(MotionRecord[frame].GetPosition(),MotionRecord[frame].GetRotation());
+            LeftC.transform.SetLocalPositionAndRotation(MotionRecordLeft[frame].GetPosition(),MotionRecordLeft[frame].GetRotation());
+            RightC.transform.SetLocalPositionAndRotation(MotionRecordRight[frame].GetPosition(),MotionRecordRight[frame].GetRotation());
+
+            if (Head != null)
+            {
+                // Cast a ray from the Head
+                RaycastHit hit;
+                if (Physics.Raycast(Head.position, Head.forward, out hit))
+                {
+                    Debug.DrawLine(Head.position, hit.point, Color.green);
+
+                    // Moving the decal to the appropriate place to show thw heatmap.
+                    instantiatedHeadDecalPrefabs[HeadDCount].transform.position = Head.position;
+                    instantiatedHeadDecalPrefabs[HeadDCount].transform.rotation = Head.rotation;
+                    instantiatedHeadDecalPrefabs[HeadDCount].SetActive(true);
+                    HeadDCount++;
+
+                    if(HeadDCount == 50){                                       // object pooling
+                        HeadDCount = 0;
+                    }
+
+                    HeadText.text = hit.collider.gameObject.name;               // add data to UI
+                }
+            }
+            if (LeftC != null)
+            {
+                // Cast a ray from the leftController
+                RaycastHit hit;
+                if (Physics.Raycast(LeftC.position, LeftC.forward, out hit))
+                {
+                    Debug.DrawLine(LeftC.position, hit.point, Color.blue);
+
+                    // Moving the decal to the appropriate place to show thw heatmap.
+                    instantiatedLeftCDecalPrefabs[LeftDCount].transform.position = LeftC.position;
+                    instantiatedLeftCDecalPrefabs[LeftDCount].transform.rotation = LeftC.rotation;
+                    instantiatedLeftCDecalPrefabs[LeftDCount].SetActive(true);
+                    LeftDCount++;
+
+                    if(LeftDCount == 50){                                       // object pooling
+                        LeftDCount = 0;
+                    }
+
+                    LeftText.text = hit.collider.gameObject.name;               // add data to UI
+                }
+            }
+            if (RightC != null)
+            {
+                // Cast a ray from the rightController
+                RaycastHit hit;
+                if (Physics.Raycast(RightC.position, RightC.forward, out hit))
+                {
+                    Debug.DrawLine(RightC.position, hit.point, Color.red);
+
+                    // Moving the decal to the appropriate place to show thw heatmap.
+                    instantiatedRightCDecalPrefabs[RightDCount].transform.position = RightC.position;
+                    instantiatedRightCDecalPrefabs[RightDCount].transform.rotation = RightC.rotation;
+                    instantiatedRightCDecalPrefabs[RightDCount].SetActive(true);
+                    RightDCount++;
+
+                    if(RightDCount == 50){                                  // object pooling
+                        RightDCount = 0;
+                    }
+
+                    RightText.text = hit.collider.gameObject.name;               // add data to UI
+                }
+                
+            }
+        }
+
+        void Reset(){
+            foreach(GameObject decal in instantiatedHeadDecalPrefabs){
+                decal.SetActive(false);
+            }
+            foreach(GameObject decal in instantiatedLeftCDecalPrefabs){
+                decal.SetActive(false);
+            }
+            foreach(GameObject decal in instantiatedRightCDecalPrefabs){
+                decal.SetActive(false);
+            }
+            HeadText.text = "";
+            LeftText.text = "";
+            RightText.text = "";
         }
 
     }

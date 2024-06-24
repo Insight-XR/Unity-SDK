@@ -33,11 +33,16 @@
        "displayName": "Demo Car Configuration",
        "description": "A Car Customisation Scene optimised to be used with SDK",
        "path": "Samples~/CarConfigurator"
-    },
-    {
-      "displayName": "Demo XR interaction",
-      "description": "Integrated SDK into the XR Interaction Toolkit Sample Open Scene",
-      "path": "Samples~/XRIT"
-   }
+      },
+      {
+        "displayName": "Demo XR interaction",
+        "description": "Integrated SDK into the XR Interaction Toolkit Sample Open Scene",
+        "path": "Samples~/XRIT"
+      },
+      {
+        "displayName": "Heat map Demo Scene",
+        "description": "Demo scene to test particle and Shader heat map",
+        "path" : "Samples~/HeatMap"
+      }
   ]
   }

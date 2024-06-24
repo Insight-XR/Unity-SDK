@@ -1,0 +1,29 @@
+{
+  "name": "com.unity.toolchain.win-x86_64-linux-x86_64",
+  "displayName": "Toolchain Win Linux x64",
+  "description": "Cross-compilation toolchain to build player target Linux x86_64 on host Windows x86_64",
+  "version": "2.0.9",
+  "unity": "2019.4",
+  "keywords": [
+    "toolchain",
+    "windows",
+    "linux",
+    "cross-compilation"
+  ],
+  "dependencies": {
+    "com.unity.sysroot": "2.0.10",
+    "com.unity.sysroot.linux-x86_64": "2.0.9"
+  },
+  "_upm": {
+    "changelog": "Updated to Clang 9.0.1"
+  },
+  "upmCi": {
+    "footprint": "716df06c30c8556773adf3eb3ff9431ec1fc0e7c"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.toolchain.win-x86_64-linux-x86_64@2.0/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/com.unity.sysroot.git",
+    "type": "git",
+    "revision": "bf7a008256a1175e0f8a0d7d26d6826cbfbe1bb2"
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "name": "Unity.XR.Interaction.Toolkit.Editor",
+    "rootNamespace": "UnityEditor.XR.Interaction.Toolkit",
+    "references": [
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.ugui",
+        "UnityEngine.SpatialTracking",
+        "Unity.XR.ARFoundation",
+        "Unity.InputSystem",
+        "Unity.XR.CoreUtils",
+        "Unity.XR.CoreUtils.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.5.0",
+            "define": "INPUT_SYSTEM_1_5_OR_NEWER"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.1.0-pre.6",
+            "define": "INPUT_SYSTEM_1_1_OR_NEWER"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "[1.1.0-preview.1,1.1.0-preview.3]",
+            "define": "INPUT_SYSTEM_1_1_PREVIEW"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "5.0.0",
+            "define": "AR_FOUNDATION_5_0_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "2.0.2",
+            "define": "AR_FOUNDATION_PRESENT"
+        }
+    ],
+    "noEngineReferences": false
+}

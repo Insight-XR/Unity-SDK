@@ -1,0 +1,91 @@
+{
+    "name": "UnityGLTFScripts",
+    "rootNamespace": "",
+    "references": [
+        "GLTFSerialization",
+        "Unity.Timeline",
+        "Ktx",
+        "UnityGLTF.Helpers",
+        "Unity.InputSystem",
+        "Unity.Animation.Rigging",
+        "Draco",
+        "Unity.Meshopt.Decompress",
+        "Unity.Collections",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.atteneder.ktx",
+            "expression": "1.3.0",
+            "define": "HAVE_KTX"
+        },
+        {
+            "name": "com.unity.cloud.ktx",
+            "expression": "1.3.0",
+            "define": "HAVE_KTX"
+        },
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.0.0",
+            "define": "HAVE_TIMELINE"
+        },
+        {
+            "name": "com.unity.modules.physics",
+            "expression": "1.0.0",
+            "define": "UNITY_PHYSICS"
+        },
+        {
+            "name": "com.unity.modules.unitywebrequest",
+            "expression": "1.0.0",
+            "define": "UNITY_WEBREQUEST"
+        },
+        {
+            "name": "com.unity.modules.imgui",
+            "expression": "1.0.0",
+            "define": "UNITY_IMGUI"
+        },
+        {
+            "name": "com.unity.modules.animation",
+            "expression": "1.0.0",
+            "define": "UNITY_ANIMATION"
+        },
+        {
+            "name": "com.unity.modules.imageconversion",
+            "expression": "1.0.0",
+            "define": "UNITY_IMAGECONVERSION"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "HAVE_INPUTSYSTEM"
+        },
+        {
+            "name": "com.atteneder.draco",
+            "expression": "1.0.0",
+            "define": "HAVE_DRACO"
+        },
+        {
+            "name": "com.unity.cloud.draco",
+            "expression": "5.0.0",
+            "define": "HAVE_DRACO"
+        },
+        {
+            "name": "com.unity.meshopt.decompress",
+            "expression": "",
+            "define": "HAVE_MESHOPT_DECOMPRESS"
+        },
+        {
+            "name": "com.unity.cloud.draco",
+            "expression": "5.0.0",
+            "define": "HAVE_DRACO_VERSION_5"
+        }
+    ],
+    "noEngineReferences": false
+}

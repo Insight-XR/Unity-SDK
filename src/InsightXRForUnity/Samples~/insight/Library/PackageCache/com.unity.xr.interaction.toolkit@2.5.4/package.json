@@ -1,0 +1,63 @@
+{
+  "name": "com.unity.xr.interaction.toolkit",
+  "displayName": "XR Interaction Toolkit",
+  "version": "2.5.4",
+  "unity": "2021.3",
+  "description": "A high-level, component-based, interaction system for creating VR and AR experiences. It provides a framework that makes 3D and UI interactions available from Unity input events. The core of this system is a set of base Interactor and Interactable components, and an Interaction Manager that ties these two types of components together. It also contains components that you can use for locomotion and drawing visuals.",
+  "keywords": [
+    "XR",
+    "VR",
+    "toolkit",
+    "interaction"
+  ],
+  "category": "XR",
+  "dependencies": {
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.mathematics": "1.2.6",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.xr.core-utils": "2.2.3",
+    "com.unity.xr.legacyinputhelpers": "2.1.10",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.physics": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Starter Assets",
+      "description": "Assets to streamline setup of behaviors, including a default set of input actions and presets for use with XR Interaction Toolkit behaviors that use the Input System.",
+      "path": "Samples~/Starter Assets"
+    },
+    {
+      "displayName": "Hands Interaction Demo",
+      "description": "Sample scene and other assets for hand-tracking integration with the XR Interaction Toolkit.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.xr.hands\">XR Hands</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.shadergraph\">Shader Graph</a>",
+      "path": "Samples~/Hands Interaction Demo"
+    },
+    {
+      "displayName": "AR Starter Assets",
+      "description": "Assets to streamline setup when building for Mobile AR or Mixed Reality with the XR Interaction Toolkit. This includes prefabs and demo scenes to get you started. Note: This depends on the Starter Assets sample package.",
+      "path": "Samples~/AR Starter Assets"
+    },
+    {
+      "displayName": "XR Device Simulator",
+      "description": "Assets related to the simulation of XR HMD and controllers.",
+      "path": "Samples~/XR Device Simulator"
+    },
+    {
+      "displayName": "Meta Gaze Adapter",
+      "description": "This sample provides an example to get eye tracking working with the Meta Quest Pro and the XRI Gaze Interactor.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:content/82022\">Oculus Integration Assets</a>",
+      "path": "Samples~/Meta Gaze Adapter"
+    }
+  ],
+  "_upm": {
+    "changelog": "### Fixed\n- Fixed compilation errors on tvOS platform where `ENABLE_VR` is not defined when AR Foundation is installed. Also fixed when XR Hands is installed in the Hands Interaction Demo sample. (Backport from 3.0.0)\n- Fixed `TrackedGraphicRaycaster` to clear poke interaction data when disabled. ([XRIT-142](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-142)) (Backport from 3.0.0)\n- Fixed warning about use of deprecated `VersionsInfo.verified` by replacing with `VersionsInfo.recommended` in the Hands Interaction Demo sample in Unity 2022.2 and newer. (Backport from 3.0.0)\n- Fixed the XR Interactor Line Visual from bending towards an XR Interactable Snap Volume behind UI when the valid UI hit is closest. (Backport from 3.0.2)\n- Fixed tap gesture detection for selecting and spawning interactable objects in AR scenes. ([XRIT-145](https://issuetracker.unity3d.com/product/unity/issues/guid/XRIT-145)) (Backport from 3.0.2)\n  - Changed the Tap Start Position input action to remove the Tap interaction from the `tapStartPosition` binding in the Starter Assets sample `XRI Default Input Actions` asset. The sample will need to be reimported to remove the Tap interaction from the binding for taps to be functional. This change along with changes to the `XRScreenSpaceController` also fixes the selected object from staying selected and movable with the mobile device orientation for 0.2 seconds after a tap was released."
+  },
+  "upmCi": {
+    "footprint": "19789f1d7787c88d33738db380787389e56d3924"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git",
+    "type": "git",
+    "revision": "e01bea0029c4995e80fe3e3f8a24f92e1cad1f4c"
+  }
+}

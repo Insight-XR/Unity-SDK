@@ -1,0 +1,32 @@
+{
+  "name": "com.unity.xr.core-utils",
+  "displayName": "XR Core Utilities",
+  "version": "2.3.0",
+  "unity": "2019.4",
+  "unityRelease": "0f1",
+  "description": "Common utility classes for XR projects\nRefer to API documentation for details. Some particularly useful utilities include:\n▪ Geometry Utilities\n  ▪ Point of closest approach\n  ▪ Closest edge of a polygon\n  ▪ Check if point inside of polygon\n  ▪ Compute 2D convex hull\n▪ Collection pool\n▪ Math Utilities\n  ▪ Bounds extensions\n  ▪ Quaternion extensions\n▪ Editor GUI\n  ▪ Flags Property Drawer\n▪ Scriptable Settings (serialized project settings)\n▪ Conditional Compilation Utility\n▪ XR Origin Implementation",
+  "keywords": [
+    "xr",
+    "ar",
+    "augmented",
+    "reality",
+    "utility",
+    "utilities",
+    "core"
+  ],
+  "dependencies": {
+    "com.unity.modules.xr": "1.0.0"
+  },
+  "_upm": {
+    "changelog": "### Added\n\n- Added a new collection [ReadOnlyList\\<T\\>](xref:Unity.XR.CoreUtils.ReadOnlyList`1) as a more performant alternative to `ReadOnlyCollection`. `ReadOnlyList` improves upon `ReadOnlyCollection` by removing the heap allocations associated with `GetEnumerator()`.\n\n### Fixed\n\n- Fixed the XmlDocs issues for API documentation."
+  },
+  "upmCi": {
+    "footprint": "70f62d7d454b876888456487325a8f92c0a055e9"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.3/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.xr.core-utils.git",
+    "type": "git",
+    "revision": "ca388cb73dfca7c7e8c46caba82f4d8adfbc82d0"
+  }
+}

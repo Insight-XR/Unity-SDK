@@ -1,0 +1,23 @@
+{
+  "name": "com.unity.burst",
+  "displayName": "Burst",
+  "version": "1.8.13",
+  "unity": "2020.3",
+  "description": "Burst is a compiler that translates from IL/.NET bytecode to highly optimized native code using LLVM.",
+  "dependencies": {
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.modules.jsonserialize": "1.0.0"
+  },
+  "_upm": {
+    "changelog": "### Added\n- Added clearer diagnostic error for certain bad usages of IsSupportedXXX intrinsics.\n- Added support for Burst with the visionOS Simulator SDK.\n- Added support for Windows Arm64.\n\n### Fixed\n- Fixed InvalidCompilerException  when usage of IsSupportedXXX intrinsic results in no branches being generated.\n- Fixed information in documentation regarding scheduling generic jobs through generic methods.\n- Fixed a crash caused by arithmetic or bitwise negation on native integers followed by a cast to a pointer.\n- Fixed that the burst debug information folder would sometimes be saved in project root folder.\n- Fixed `System.ArgumentNullException` exception in ILPostProcessing when encountering a library using `mscorlib`\n- Fixed an issue where if two modules were referencing the same external method (dllImport) an internal compiler error could occur - \"Burst internal compiler error: Burst.Compiler.IL.CompilerException: Error while verifying module: DISubprogram attached to more than one function\"\n- Fixed \"Failed to find entry-points: ... An item with the same key has already been added\" error that could occur in the presence of precompiled (usually obfuscated) assemblies that contained methods overloaded only by return type\n\n### Removed\n\n### Changed\n\n### Known Issues"
+  },
+  "upmCi": {
+    "footprint": "fc98b3c710278f004ee0811a7e137dfa06141630"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html",
+  "repository": {
+    "url": "git@github.cds.internal.unity3d.com:unity/burst",
+    "type": "git",
+    "revision": "018c84715a0efcfda7f76841a1b0b0366e55f407"
+  }
+}

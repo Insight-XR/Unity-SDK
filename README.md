@@ -1,166 +1,99 @@
-# Welcome to InsightXR Analytics SDK for Unity! 🚀
+# InsightXR Analytics SDK for Unity
 
-Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates into Unity projects, providing users with a unique VR analytics experience. With just a designated API Key, developers can effortlessly incorporate our SDK into their projects. Gain valuable insights into user experiences within virtual reality with our powerful analytics dashboard.  
+Welcome to the InsightXR Analytics SDK for Unity! This SDK seamlessly integrates into Unity projects, providing users with a unique VR analytics experience. With just a designated API Key, developers can effortlessly incorporate our SDK into their projects. Gain valuable insights into user experiences within virtual reality with our powerful analytics dashboard.
 
 ## Setting up a VR Project
-We have tested the steps throughly with Unity versions 16f1 and 3D URP projects but this shall work with any higher version too.
-- Skip this Section is your VR Project is already setup
-- Go to the Package manager and install the `XR Plugin Management` and `OpenXR` Packages. It can be done by following below.
-- Navigate to *File*>*Build Settings*>*Player Settings*:
-  - Go `XR Plugin Management` and press `Install`  
-  - Select OpenXR Runtime for both PC and Android platforms
-  - It might ask for a Restart. Click Yes.
-  - Tick "Initialize XR on Startup" for testing in the editor
-  - Add desired VR headset's interaction profile under PC and Android tabs
-  - We are adding `Oculus Touch Controller Profile`
-  - Go to `Project Validation`. Click on `Fix all` for both PC and Android tabs. Even after clicking, it might be possible that error still appears. Its known issue. Please don't worry about the same.
-- Set Compiler to IL2CPP, build mode to arm(64) [Android], and compression to ASTC. You can find this in `Player` tab on left and then `Other Settings`
+
+We have thoroughly tested these steps with Unity versions 2021.3.26f1 and higher. Follow the instructions to set up your VR project.
 
 ## Installation
 
-### Step 1: GLTF Importer for Unity
+### Step 1: Install the InsightXR Analytics SDK
 
-A Package created that allows Users to import and export GLTF models into Unity. Check out [GLTF-Unity]([https://github.com/GlitchEnzo/NuGetForUnity](https://github.com/KhronosGroup/UnityGLTF)) for the git repository.
-<ins>Install Package via Git URL :</ins>
-```bash
-https://github.com/KhronosGroup/UnityGLTF.git/#release/2.11.0-rc
-```
+1. **Install the Package from GitHub:**
+   - Install the package via Git URL:
+     ```
+     https://github.com/Insight-XR/Unity-sdk.git?path=src/InsightXRForUnity
+     ```
+   - If you encounter SSL disconnect errors while installing the SDK, you can download the repository as a zip, extract it, then add the project from disk and select the `package.json` file in the `src/InsightXRForUnity` folder.
 
+2. **Install Oculus Integration (Deprecated) or Meta XR Interaction SDK:**
+   - If your Unity version is under 2021.3.26f1, install the Oculus Integration package:
+     [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-deprecated-82022)
+   - For Unity 2021.3.26f1 and above, install the Meta XR Interaction SDK from the Asset Store:
+     [Meta XR Interaction SDK](https://assetstore.unity.com/packages/tools/integration/meta-xr-interaction-sdk-265014)
+
+3. **Configure Project Settings:**
+   - Go to `File > Build Settings > Player Settings > InsightXR`.
+   - There are three fields: Customer ID, User ID, and API Key.
+     - Customer ID and API Key can be obtained from the dashboard.
+     - Ensure a unique User ID.
+   - Click Save.
+4. - Go to `File > Build Settings > Player Settings > Player`.
+   - `Allow downloads over HTTP should` be changed to `always allowed`.
 ### Step 2: Adding the Analytics SDK
 
-Next up is to install the InsightXR Analytics SDK
-<ins>Install Package via Git URL :</ins>
-```bash
-https://github.com/Insight-XR/Unity-sdk.git?path=src/InsightXRForUnity
-```
-If you have forked it and wish to use the same. Replace Insight-XR with `your-github-id` in above url.  
-*If you happen to face ssl disconnect error while installing sdk. You can always download the repo as zip, extract it, then `add project from disk` and select package.json file in `src/InsightXRForUnity` folder*
-### Step 3: Import the Extra Assets
+1. **Add the InsightTrackingManager Prefab:**
+   - Search for the `InsightTrackingManager` prefab from the InsightXRReplayTool package and add it to your scene or scenes.
 
-As a Versatile XR framework, we shall be installing and using assets from the XR Interaction Toolkit Package. We shall be using their starter assets and VR device Simulator
-```bash
-  Search Package : XR Interaction Toolkit
-        > Select the Package
-        > Click on Samples Tab
-        > Import Sample Starter Assets
-        > Import XR Device Simulator
-```
-### Step 4: Import Insight XR Samples
-*Please ensure to install all samples. Some samples inherit some files from other samples and would work only if all of them are imported*
-```bash
-  Search Package: InsightXR Unity SDK
-        > Select the Package
-        > Click on Samples Tab
-        > Import all samples 
-```
-For running project without headset, the installed `XR Device Simulator` will be useful. Once done, it can be activated as follows:
-
-  - Go to `File` > `Build Settings` > `Player settings`
-  - Cick on `XR Plug-in Management` > `XR Interaction Toolkit`
-  - Checkbox `Use` XR Device Simulator in scenes &#9745;
+2. **Configure Tracking Manager:**
+   - Add the `InsightSettingsSO` in the `Insight Settings` field in the `TrackingManager` script present in the `InsightTrackingManager`.
+   - Assign the `InsightTrackCenterEye` and `InsightTrackObject` to the camera GameObject.
+   - Assign the `InsightTrackHandAnchor` script and `InsightTrackObject` to the left and right hand controllers.Make sure you assign which hand is right or left. If you are using AutoHands, tick the AutoHands field.
+   - For `AutoHands`, you have to add 3 lines in the `Finger script` available in the `AutoHands folder`.
+   - The highlighted lines should be added to the script.
+   ![image](https://github.com/user-attachments/assets/cf8d065d-c65a-4c2a-b5a4-abeac9ce3e3d)
 
 
+   - For any other objects you want to track, assign the `InsightTrackObject` to them.
 
-## Project Setup
+3. **Register Tracked Objects:**
+   - In the Unity editor, click on `InsightXR > Manage Tracked Objects`.
+   - Click on `Register Tracked Objects in Open Scene` and `Register Tracked Objects in Assets`.
 
+4. **Export Static Objects:**
+   - Click on `Select Static Objects`.
+   - In your hierarchy, there will be a GameObject with the scene name. Right-click on it and select `Export to FBX`.
+   - Set the path to `InsightDeskCache/TrackedPrefabFBX/Models`. Ensure the export format is binary and embed textures are ticked. Click Export.
+   - `Delete` the GameObject (the one you exported to fbx) from the hierarchy.
 
-### Demo Setup:
-- Navigate to "Assets > Samples > InsightXR > `<version>` > Demo Ultimate XR Scene > SampleScene" for an in-depth look at how the SDK is used. Make sure that sample is imported by going to Window > Package manager > Insight XR > Samples > Demo Ultimate XR Scene
-- On the Hierarchy, Go to Template Setup > DataHandleLayer. You will find fields such as `[Customer ID, User ID, APIKEY, AWS Access Key, Aws Secret Access Key, Bucket Name]`
-- You can get Customer ID and APIKEY from [Dashboard](https://console.getinsightxr.com/). 
-- - You can set your User ID yourself. 
-- - For getting AWS Keys and Bucket Name, ping akshat@getinsightxr.com. We shall start populating these on Dashboard shortly!
-- On the Template Setup (Explained Below), An example is made for you to understand. This SampleScene also uses the template Setup
+5. **Register Skybox: (if skybox present)** 
+   - If you have a skybox or multiple skyboxes, ensure it is a 6-sided skybox.
+   - Drag the material to the “Drag and Drop a 6-sided Skybox Material” field and click on `Register Skybox` for all your skyboxes.
 
-<ins>Data Handle Layer</ins>
-|Value| Description/Use Case|
-|---|---|
-|Customer ID| The ID provided to you by the Customer Dashboard|
-|User ID| A Custom User ID you can set to whatever you want to differentiate and identify sessions|
-|API Key| The API provided by the console|
-|Replay Bucket URL| Any public Url that contains a direct link to a save file compatible with the scene. Used to WebGL testing. *Can be ignored for now*.|
+6. **Upload FBX Models:**
+   - Before upload ensure that the `InsightTrackingManager` is present in the hierarchy and has the `InsightSettingsSO` assigned. 
+   - Click on `Upload FBX Models` under `InsightXR > Manage Tracked Objects` in the editor. This creates a zip folder of all the models and uploads it to the dashboard server.
 
+## Recording and Viewing Sessions
 
-<ins>Network Uploader</ins>
-- `AWS Access Key`, `AWS Secret Access Key`, and `Bucket Name` are to be provided to customers.
+1. **Start the Session:**
+   - After models are successfully uploaded, you can start the session. The session starts recording, and when you stop the game, it will stop recording.
 
-**For setting up SDK on your own VR project. Kindly use the setup below. Else jump to Recording and Viewing section to try out demo scene itself.**
+2. **Local Replay:**
+   - To play in local replay, copy the session ID from the sessions folder in assets or from the console.
+   - Search for the replay scene or find it in `Assets/Samples/InsightXRReplayTool/ReplayScene`.
+   - Open the replay scene and click on `InsightReplayManager` in the hierarchy.
+   - Enter the session ID in the session ID field in the inspector.
+   - Run the scene to play the local replay of your session.
 
-### Prefabs:
-- Navigate to "Assets > Samples > InsightXR > <version> > Demo Ultimate XR Scene > SampleScene" for an in-depth look at how the SDK is used. Make sure that sample is imported by going to Window > Package manager > Insight XR > Samples > Demo Ultimate XR Scene
-- Required prefabs: "Datahandlelayer" and "Replay Camera".
-- The third prefab in the Prefabs section is a template setup you can use instead or check as a reference.
-- The Template Setup has the following:
-  - The Player (XR Origin)
-  - The Replay Camera (For Editor and WebGL replay)
-  - The DatahandleLayer (For All the settings, references and Keys)
-  -  Replay Logic (Example Code using the API to start and stop the session)
+3. **Dashboard Replay:**
+   - The same session with the same session ID will be present in the dashboard.
 
-### Tracking
-- Add the "InsightXRTrackedObject" script component to objects you want to track data for, making sure each tracked object has a `Unique Name`
-- Data is Tracked using Local Transforms, therefore, make sure the tracking script is added to all related objects
+## Key Features
 
-### DataHandleLayer And Networking
-- Feel Free to use the Template Setup for Pre-Configured Use or follow the following for manual setup
-  
-- In the `DataHandleLayer` script, there are many options to configure:
-  - In the References Tab, the controller input is already added, so you can ignore that.
-  - In the Player Option, drag your VR Player game Object into that reference, so that it can be disabled during mode execution.
-  - In the replay Cam Reference, drag and drop the Replay Camera.
-  - The Left hand and Right Hand Fields are references to the Animators of the hands of the "VR PLAYER". This SDK uses Oculus Hands as its default hands and tracks the animation data from them using these references.
-  - The Replay Mode toggle is used to determine if the game is to be played as a session or to be viewed as a recording. Running the game with the toggle does the respective disabling.
-  - Provide your Customer ID, User ID, Replay Bucket URL (For WebGL Replay), and your API Key in the given data.
-  - The details in the Network Uploader are Amazon S3 Information.
- 
-### Recording and Viewing
-- If You intend to View in Dashboard, then the follow this step, or skip
-  - Navigate to `Assets`>`UnityGLTF`.`Export Active Scene as GLTF`
-  - Save the Files to a folder outside your unity Project
-  - Compress up the files into a `.zip` format, and head to the `Projects` tab in the console to upload the model (The Zip File)
-  - Recordings made after the upload will be associated with this Model.
+- **Handles Failure Cases:**
+  - If the network gets disconnected, the session is saved locally and then sent to the dashboard once the network is retrieved. It will try to send the failed data every minute periodically. If it fails to send it in the same session, it will send it in the next session.
+- **Supports:**
+  - Multiple instantiation
+  - Late instantiation
+  - Hand animation
+  - Text tracking
+  - Multiple scenes
 
-- Make sure the `Replay` tick-mark on the DataHandLayer os off, this indicates that the session is recording
-- When a session is does recording, either press the `X Button on your Left Touch Controller`, or the `M Button the the Keyaboard`. This is to stop recording the session. This is purely game logic and part of the `Game Logic` Gameobject in the Template Setup.
-- During the Process, the motion data is then packed and saved locally for viewing purposes. If Networking is setup, then the SDK shall upload the Save File to the cloud location for dashboard use. (For online integration, do add your Customer Key and API Key)
+## Sample Scenes
 
-- To View the recording in the `Editor`, Click on the replay mode in the DataHandleLayer and use the `<` `>` keys to watch the recording in play mode.
-- To View the recording on the Dashboard, just login, locate the user ID you uploaded under, play the 3D rendered captured Motion Data
+- **Import Samples:**
+  - You can import samples from our scenes and test them to know more about the SDK.
 
-## Using the SDK
-- Utilize the `InsightXRAPI` script on the `DatahandleLayer`:
-  ```csharp
-  var API = FindObjectOfType<InsightXRAPI>();
-  API.RecordSession();
-  API.StopSession(bool uploadSaveFile);
-  API.StopSession(bool uploadSaveFile, bool CloseApplicationAfterSave);
-  API.IsRecording();  // bool
-  API.InReplayMode(); // bool
-  API.InsightLogEvent(string Event);
-- More API function are to come!
-
-## Building
-- When Building for `Android`, make sure that the Replay Toggle is false, otherwise the session wont be recorded
-- When Building for `WebGL`, ensure the Replay Toggle is On, and a Bucket URL is provided so that the file can be pulled from there.
-  - The URL can be any publicly available Replay File, even Github Gists are fine
-
-## Dive In!
-You're all set! With InsightXR Analytics SDK, you're not just building games or applications – you're creating data-driven experiences that engage, inform, and impress. We can't wait to see what you build.
-
-## Extra Information
-This SDK requires the following packages:
-  - **Unity Package Manager**:
-    - XR plugin management: Manages XR plugin configuration for different platforms
-    - OpenXR: Provides OpenXR support for XR applications
-    - XR Interaction toolkit: Facilitates interaction with VR controllers and objects
-    - Newtonsoft.Json: Handles JSON Serialization and Deserialization
-        - Package Name: `com.unity.nuget.newtonsoft-json`
-    - Editor Coroutines: Provides support for coroutines in editor scripts
-        - Package Name: `com.unity.editorcoroutines`
-  - **Built - In**:
-    - Amazon S3: Handles Uploading the Saved Recordings for Sessions
-    - Oculus Hands: For Showing Hands and Animations in VR.
-  - **External Sources**
-    - XR Interaction Toolkit Sample Starter Assets
-    - Git Hosted GLTF Importer and Exporter from `The Khronos Group`
-
-Stay tuned for more updates, and happy developing! 🛠️
+For more information, refer to our documentation and stay tuned for updates. Happy developing!

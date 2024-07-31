@@ -1,43 +1,72 @@
 {
-    "name": "com.getinsightxr.unity-sdk",
-    "version": "1.0.0",
-    "displayName": "InsightXR Unity SDK",
-    "description": "InsightXR Unity SDK for analytics and XR development",
-    "unity": "2021.3",
-    "author": {
-      "name": "Insight XR",
-      "email": "support@getinsightxr.com",
-      "url": "https://getinsightxr.com"
-    },
-    "dependencies": {
-      "com.unity.xr.core-utils": "2.2.3",
-      "com.unity.xr.interaction.toolkit": "2.5.3",
-      "com.unity.xr.management": "4.4.1",
-      "com.unity.textmeshpro": "3.0.6",
-      "com.unity.editorcoroutines": "1.0.0",
-      "com.unity.nuget.newtonsoft-json": "3.2.1"
-      
-    },
-    "samples": [
-      {
-          "displayName": "Demo BasketBall Scene",
-          "description": "Contains sample scene with template setup for a basketball game.",
-          "path": "Samples~/BasketBallScene"
-      },
-      {
-        "displayName": "Demo Ultimate XR Scene",
-        "description": "Uses UltimateXR's Open Scene as the base with template setup",
-        "path": "Samples~/UltimateXROpenScene"
-      },
-      {
-       "displayName": "Demo Car Configuration",
-       "description": "A Car Customisation Scene optimised to be used with SDK",
-       "path": "Samples~/CarConfigurator"
+  "name": "com.insightxr.insightxrreplaytool",
+  "version": "1.0.0",
+  "displayName": "InsightXR Replay Tool",
+  "description": "Improved Timer System for Unity that hooks into the Unity Player Loop.",
+  "unity": "2021.3",
+  "author": {
+    "name": "InsightXR"
+  },
+  "dependencies": {
+    "com.unity.xr.core-utils": "2.2.3",
+    "com.unity.xr.interaction.toolkit": "2.5.3",
+    "com.unity.xr.management": "4.4.1",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.editorcoroutines": "1.0.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.formats.fbx": "4.2.1"
+  },
+  "samples": [
+    {
+      "displayName": "Multiple Instantiation  Test Scene",
+      "description": "scene to test replay working for multiple instances",
+      "path": "Samples~/MultipleInstanceScene"
     },
     {
-      "displayName": "Demo XR interaction",
-      "description": "Integrated SDK into the XR Interaction Toolkit Sample Open Scene",
-      "path": "Samples~/XRIT"
-   }
+      "displayName": "Late Instantiation Test Scene",
+      "description": "scene to test replay working for late instances",
+      "path": "Samples~/LateInstanceScene"
+    },
+    {
+      "displayName": "Hands Animation Test Scene",
+      "description": "scene to test replay working for Hand Animation",
+      "path": "Samples~/HandsAnimationScene"
+    },
+    {
+      "displayName": "Text Tracking Test Scene",
+      "description": "scene to test replay working for Hand Animation",
+      "path": "Samples~/TextScene"
+    },
+    {
+      "displayName": "Space Shooter VR Scene",
+      "description": "Space vr Scene",
+      "path": "Samples~/SpaceShooterVRScene"
+    },
+    {
+      "displayName": "Basketball VR Scene",
+      "description": "Basketball court with interactable balls",
+      "path": "Samples~/BasketBallScene"
+    },
+    {
+      "displayName": "Ultimate XR Scene",
+      "description": "Spaceship Scene in VR",
+      "path": "Samples~/UltimateXRScene"
+    },
+    {
+      "displayName": "Factory VR Scene",
+      "description": "Factory Scene in VR",
+      "path": "Samples~/FactoryVRScene"
+    },
+    {
+      "displayName": "Brick Wall VR Scene",
+      "description": "Brick Wall Scene in VR",
+      "path": "Samples~/BrickWallScene"
+    },
+    {
+      "displayName": "School Hall VR Scene",
+      "description": "School Hall VR Scene",
+      "path": "Samples~/SchoolHallVRScene"
+    }
   ]
-  }
+}

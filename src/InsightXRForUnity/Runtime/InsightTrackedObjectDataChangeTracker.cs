@@ -234,14 +234,14 @@ namespace InsightDesk
                     {
                         newTexts.Add((instanceId, insightTrackedObjectData.textContent));
                         _lastObjectTextContent[instanceId] = insightTrackedObjectData.textContent;
-                        Debug.Log(insightTrackedObjectData.textContent);
+                        //Debug.Log(insightTrackedObjectData.textContent);
                     }
                 }
                 else
                 {
                     newTexts.Add((instanceId, insightTrackedObjectData.textContent));
                     _lastObjectTextContent.Add(instanceId, insightTrackedObjectData.textContent);
-                    Debug.Log(insightTrackedObjectData.textContent);
+                    //Debug.Log(insightTrackedObjectData.textContent);
                 }
             }
             var textSize = insightTrackedObjectData.textSize;

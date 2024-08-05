@@ -778,7 +778,7 @@ namespace InsightDesk
                 var response = await _httpClient.PostAsync(url, content);
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    Debug.Log($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
+                    //Debug.Log($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
                     UpdateStatusText($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
                     return true;
                 }
@@ -817,14 +817,14 @@ namespace InsightDesk
 
             if (!Directory.Exists(directoryPath))
             {
-                Debug.Log($"Directory does not exist: {directoryPath}");
+                //Debug.Log($"Directory does not exist: {directoryPath}");
                 return;
             }
 
             var files = Directory.GetFiles(directoryPath);
             if (files.Length == 0)
             {
-                Debug.Log($"No files to retry in directory: {directoryPath}");
+                //Debug.Log($"No files to retry in directory: {directoryPath}");
                 return;
             }
 
@@ -846,7 +846,7 @@ namespace InsightDesk
                 if (success)
                 {
                     File.Delete(file);
-                    Debug.Log($"<color=yellow>Successfully retried and posted chunk {chunkId} for session {sessionId} from local storage.</color>");
+                    //Debug.Log($"<color=yellow>Successfully retried and posted chunk {chunkId} for session {sessionId} from local storage.</color>");
                     anyChunkUploaded = true; // Mark that at least one chunk was uploaded
                 }
                 else
@@ -857,7 +857,7 @@ namespace InsightDesk
 
             if (anyChunkUploaded)
             {
-                Debug.Log("<color=yellow>All previous session data has been uploaded to the server.</color>");
+                Debug.Log("<color=green>All previous session data has been uploaded to the server.</color>");
             }
         }
 
@@ -989,7 +989,7 @@ namespace InsightDesk
         public void ShouldStop()
         {
             _shouldStop = true;
-            Debug.Log("Stopped Recording");
+            //Debug.Log("Stopped Recording");
         }
 
         public bool Join(int millisecondsTimeout)

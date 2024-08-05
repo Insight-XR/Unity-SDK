@@ -25,7 +25,6 @@ namespace InsightDesk
         private readonly short _tickRate;
         private readonly string _appVersion;
         private string _sessionId;
-
         public string SessionId => _sessionId;
         private int _nextChunkId = 0;
         private string _token = "";
@@ -681,12 +680,14 @@ namespace InsightDesk
 
             // Try to post the chunk to the server
             bool success = await PostChunkToServer(content, chunkId);
+            // Debug.Log(success);
             // Write the chunk to the local cache file regardless of post success
 #if UNITY_EDITOR
             AppendChunkToLocalCache(bytes, bytesLength, chunkId);
 #endif
             if (!success)
             {
+                // Debug.Log("inside1");
                 SaveChunkLocally(bytes, chunkId, bytesLength); // Pass the actual length
             }
             _replayByteArrayPool.Return(bytes);
@@ -770,7 +771,6 @@ namespace InsightDesk
                 content.Headers.Add("start_date_time", _startDateTime);
                 content.Headers.Add("end_date_time", _endDateTime);
                 content.Headers.Add("session_duration", _sessionDuration);
-                //Debug.Log(endDateTimeUtc);
 
                 int isLastChunk = 1; // Ensure only one value, either 0 or 1
                 content.Headers.Add("is_last", isLastChunk.ToString());
@@ -778,7 +778,7 @@ namespace InsightDesk
                 var response = await _httpClient.PostAsync(url, content);
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    // Debug.Log($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
+                    Debug.Log($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
                     UpdateStatusText($"Successfully posted chunk {chunkId} for session {sessionToUse} to server.");
                     return true;
                 }
@@ -803,44 +803,31 @@ namespace InsightDesk
             }
         }
 
-        private void UpdateStatusText(string message)
-        {
-            if (_statusText != null)
-            {
-                MainThreadDispatcher.Instance().Enqueue(() =>
-                {
-                    _statusText.text = message;
-                });
-            }
-        }
-
-        private void SaveChunkLocally(byte[] bytes, int chunkId, int bytesLength)
-        {
-            string directoryPath = Path.Combine(Application.persistentDataPath, "FailedChunks");
-
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-
-            var filePath = Path.Combine(directoryPath, $"{_sessionId}_{chunkId}.bin");
-
-            var trimmedBytes = new byte[bytesLength];
-            Array.Copy(bytes, 0, trimmedBytes, 0, bytesLength);
-            File.WriteAllBytes(filePath, trimmedBytes);
-            // Debug.Log($"Saved failed chunk {chunkId} for session {_sessionId} to {filePath}.");
-        }
-
         private async Task RetryFailedChunks()
         {
-            string directoryPath = Path.Combine(Application.persistentDataPath, "FailedChunks");
+            string directoryPath;
+
+#if UNITY_EDITOR
+    // If running in Unity Editor, use the specific directory on the computer
+    directoryPath = Path.Combine(FailedChunksDir);
+#else
+            // If running in APK build, use persistent data path
+            directoryPath = Path.Combine(Application.persistentDataPath, "FailedChunks");
+#endif
 
             if (!Directory.Exists(directoryPath))
             {
+                Debug.Log($"Directory does not exist: {directoryPath}");
                 return;
             }
 
             var files = Directory.GetFiles(directoryPath);
+            if (files.Length == 0)
+            {
+                Debug.Log($"No files to retry in directory: {directoryPath}");
+                return;
+            }
+
             bool anyChunkUploaded = false; // Variable to track successful uploads
 
             foreach (var file in files)
@@ -859,8 +846,12 @@ namespace InsightDesk
                 if (success)
                 {
                     File.Delete(file);
-                    // Debug.Log($"<color=yellow>Successfully retried and posted chunk {chunkId} for session {sessionId} from local storage.</color>");
+                    Debug.Log($"<color=yellow>Successfully retried and posted chunk {chunkId} for session {sessionId} from local storage.</color>");
                     anyChunkUploaded = true; // Mark that at least one chunk was uploaded
+                }
+                else
+                {
+                    Debug.LogError($"Failed to retry chunk {chunkId} for session {sessionId}.");
                 }
             }
 
@@ -870,7 +861,7 @@ namespace InsightDesk
             }
         }
 
-        // Call this method periodically to retry failed chunks
+
         private void PeriodicRetryFailedChunks()
         {
             var retryThread = new Thread(async () =>
@@ -884,6 +875,47 @@ namespace InsightDesk
 
             retryThread.Start();
         }
+
+        private void UpdateStatusText(string message)
+        {
+            if (_statusText != null)
+            {
+                MainThreadDispatcher.Instance().Enqueue(() =>
+                {
+                    _statusText.text = message;
+                });
+            }
+        }
+
+        private void SaveChunkLocally(byte[] bytes, int chunkId, int bytesLength)
+        {
+            string directoryPath;
+
+#if UNITY_EDITOR
+    // If running in Unity Editor, save to a specific directory on the computer
+    directoryPath = Path.Combine(FailedChunksDir);
+#else
+            // If running in APK build, save to persistent data path
+            directoryPath = Path.Combine(Application.persistentDataPath, "FailedChunks");
+#endif
+
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            var filePath = Path.Combine(directoryPath, $"{_sessionId}_{chunkId}.bin");
+            var trimmedBytes = new byte[bytesLength];
+            Array.Copy(bytes, 0, trimmedBytes, 0, bytesLength);
+            File.WriteAllBytes(filePath, trimmedBytes);
+
+#if UNITY_EDITOR
+    Debug.Log($"Saved failed chunk {chunkId} for session {_sessionId} to {filePath} (Editor).");
+#else
+            Debug.Log($"Saved failed chunk {chunkId} for session {_sessionId} to {filePath}.");
+#endif
+        }
+
 
         private async void ProcessEventBuffer()
         {
@@ -957,6 +989,7 @@ namespace InsightDesk
         public void ShouldStop()
         {
             _shouldStop = true;
+            Debug.Log("Stopped Recording");
         }
 
         public bool Join(int millisecondsTimeout)

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // Add this namespace for scene management
+using UnityEngine.SceneManagement;
+using Unity.Collections;
+using System.ComponentModel; // Add this namespace for scene management
 
 namespace InsightDesk
 {
@@ -14,7 +16,14 @@ namespace InsightDesk
             get { return _instanceId; }
         }
 
-        public ushort prefabId = 0;
+        [SerializeField]
+        [ReadOnly]
+        private ushort _prefabId = 0;
+        public ushort prefabId
+        {
+            get { return _prefabId; }
+            set { _prefabId = value; }
+        }
 
         private uint _instanceId = 0;
 

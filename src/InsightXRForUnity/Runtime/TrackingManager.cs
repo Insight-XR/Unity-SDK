@@ -66,6 +66,7 @@ namespace InsightDesk
 
         private TrackingManagerWorker _worker;
         public InsightSettingsSO insightSettings;
+        public InsightSettingsSO InsightSettings { get { return insightSettings; } }
 
         private void Awake()
         {

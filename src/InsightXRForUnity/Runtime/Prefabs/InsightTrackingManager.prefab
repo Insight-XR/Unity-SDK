@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7879126111003333203}
   - component: {fileID: 6214422202290153715}
+  - component: {fileID: 4104627326852530658}
   - component: {fileID: 3766435236869758074}
   - component: {fileID: 5335906373665357098}
   - component: {fileID: 6145231096018024141}
@@ -53,7 +54,19 @@ MonoBehaviour:
   logLevel: 1
   recordOnStart: 1
   recordOnStartMaxLengthMinutes: 1000
-  insightSettings: {fileID: 11400000, guid: 6effa0de54668f14f99c4ae66cd50149, type: 2}
+  insightSettings: {fileID: 11400000, guid: 45572b06f28f2094cbc4f35ba1bfd0e3, type: 2}
+--- !u!114 &4104627326852530658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703941046318538602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487b64c5708be5c49916238eb7d24ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3766435236869758074
 MonoBehaviour:
   m_ObjectHideFlags: 0

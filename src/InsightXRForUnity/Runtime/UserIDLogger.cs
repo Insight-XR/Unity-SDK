@@ -6,7 +6,7 @@ namespace InsightDesk
 {
     public class UserIDLogger : MonoBehaviour
     {
-        private InsightSettingsSO insightSettings;
+        private static InsightSettingsSO insightSettings;
 
         private void Awake()
         {
@@ -15,15 +15,27 @@ namespace InsightDesk
                 insightSettings = TrackingManager.instance.insightSettings;
             }
 
-            if (insightSettings != null)
-            {
-                //Debug.Log($"User ID found: {insightSettings.userID}");
-                Insight.Log(insightSettings.userID);
-            }
-            else
+            if (insightSettings == null)
             {
                 Debug.LogError("InsightSettingsSO asset not found!");
             }
+        }
+
+        public static void LogUserID(string userID)
+        {
+            if (insightSettings == null)
+            {
+                insightSettings = TrackingManager.instance.insightSettings;
+                if (insightSettings == null)
+                {
+                    Debug.LogError("InsightSettingsSO asset not found!");
+                    return;
+                }
+            }
+
+            insightSettings.userID = userID;
+
+            Insight.Log(insightSettings.userID);
         }
     }
 }

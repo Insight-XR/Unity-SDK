@@ -121,10 +121,29 @@ static void Init()
                 var allGameObjects = FindObjectsOfType<GameObject>().ToList();
                 var excludedObjects = manuallyAssignedObjects.Where(go => go != null && HasExcludedComponents(go)).ToHashSet();
 
-                // Filter out objects with Camera components, even if they are deep children
+                
                 objectsWithoutTrackScript = allGameObjects
-                    .Where(go => !HasExcludedComponents(go) && !excludedObjects.Contains(go) && go.activeSelf && !HasCameraComponentInHierarchy(go))
-                    .ToList();
+    .Where(go =>
+        // 1) must be active
+        go.activeSelf
+
+        // 2) must NOT have InsightTrackObject
+        && go.GetComponent<InsightTrackObject>() == null
+
+        // 3) doesn't have camera/tracking components
+        && !HasExcludedComponents(go)
+        && !excludedObjects.Contains(go)
+
+        // 4) no camera in the hierarchy
+        && !HasCameraComponentInHierarchy(go)
+
+        // 5) must have a MeshRenderer somewhere
+        && go.GetComponentInChildren<MeshRenderer>() != null
+    )
+    .ToList();
+
+
+
             }
             catch (Exception ex)
             {
@@ -160,17 +179,27 @@ static void Init()
             {
                 try
                 {
+                    // 1) If it's a Terrain, export to OBJ
                     if (go.GetComponent<Terrain>())
                     {
                         var terrainExportPath = Path.Combine("Assets", "InsightDeskCache", "TrackedTerrainObj", Application.version);
                         Directory.CreateDirectory(terrainExportPath);
                         ExportTerrain(go, terrainExportPath);
                     }
+                    // 2) Otherwise, duplicate it and exclude things you don't want
                     else
                     {
                         var duplicate = Instantiate(go, root.transform, true);
                         duplicate.name = go.name;
+
+                        // Remove objects with InsightTrackObject
                         ExcludeChildrenWithInsightTrackObject(duplicate);
+
+                        // Remove inactive children if they do NOT have InsightTrackObject
+                        ExcludeInactiveChildrenWithoutTrack(duplicate);
+
+                        // Remove *all* inactive children (regardless of track object)
+                        ExcludeInactiveChildren(duplicate);
                     }
                 }
                 catch (Exception ex)
@@ -178,13 +207,56 @@ static void Init()
                     Debug.LogError($"Error processing object {go.name}: {ex.Message}");
                     continue;
                 }
+
+                // Yield to let the editor breathe each iteration
                 yield return null;
             }
+
         }
 
         private bool HasCameraComponentInHierarchy(GameObject go)
         {
             return go.GetComponentInChildren<Camera>(true) != null;
+        }
+
+        private void ExcludeInactiveChildren(GameObject parent)
+        {
+            // Loop backwards so we can remove children safely while iterating
+            for (int i = parent.transform.childCount - 1; i >= 0; i--)
+            {
+                var childTransform = parent.transform.GetChild(i);
+                var childGO = childTransform.gameObject;
+
+                if (!childGO.activeSelf)
+                {
+                    // Remove the inactive child immediately
+                    DestroyImmediate(childGO);
+                }
+                else
+                {
+                    // Recursively check deeper children
+                    ExcludeInactiveChildren(childGO);
+                }
+            }
+        }
+
+        private void ExcludeInactiveChildrenWithoutTrack(GameObject parent)
+        {
+            foreach (Transform child in parent.transform)
+            {
+                var childGO = child.gameObject;
+                // If child is inactive *and* doesn't have InsightTrackObject, remove it
+                if (!childGO.activeSelf && childGO.GetComponent<InsightTrackObject>() == null)
+                {
+                    DestroyImmediate(childGO);
+                    // No need to recurse if we destroyed it
+                }
+                else
+                {
+                    // Otherwise, keep checking deeper children
+                    ExcludeInactiveChildrenWithoutTrack(childGO);
+                }
+            }
         }
 
 
